@@ -17,7 +17,7 @@ a {
 	color: #fff;
 }
 .layout  {
-	max-width: 1400px;
+	max-width: 1500px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -25,6 +25,25 @@ a {
 	content: '';
 	display: block;
 	clear: both;
+}
+.tri {
+	display: inline-block;
+	height: 0;
+	width: 0;
+	border-width: 20px;
+	border-style: solid;
+}
+.tri-left {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: rgb(41,51,77);
+}
+.tri-right {
+    border-top-color: transparent;
+    border-right-color: rgb(41,51,77);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
 }
 /*公共样式结束*/
 
@@ -84,6 +103,7 @@ header {
 }
 .layer {
 	height: 100%;
+	position: relative;
 }
 .layer .layer-logo {
 	position: absolute;
@@ -104,6 +124,8 @@ header {
 	bottom: -100px;
 	left: 30px;
 	text-align: center;
+	background-color: rgb(47,47,82);
+	z-index: 10;
 }
 .layer-monster .chat {
 	left: 200px;
@@ -111,6 +133,146 @@ header {
 .layer-monster img {
 	height: 80px;
 	margin-top: -25px;
+}
+.layer-mountain {
+	height: 100%;
+	position: relative;
+}
+.layer-mountain div {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-size: 100%  500px;
+}
+.lm1 {
+	background: url(../images/mountain1.png) center bottom no-repeat;
+	z-index: 5;
+}
+.lm2 {
+	background: url(../images/mountain2.png) center bottom no-repeat;
+	z-index: 3;
+}
+.lm3 {
+	background: url(../images/mountain3.png) center bottom no-repeat;
+	z-index: 2;
+}
+.layer-star div{
+	width: 5px;
+	height: 5px;
+	background: url(../images/star.png) no-repeat;
+	background-size: cover;
+	position: absolute;
+	animation: blink 3s infinite;
+}
+.ls1 {
+	top: 33%;
+	left: 16%;
+}
+.layer-star div.ls2 {
+	top: 60%;
+	left: 13%;
+	animation-delay: 1.5s;
+}
+.ls3 {
+	top: 41%;
+	left: 40%;
+}
+.layer-star div.ls4 {
+	right: 10%;
+	bottom: 40%;
+	animation-delay: 1.5s;
+}
+.ls5 {
+	right: 25%;
+	bottom: 70%;
+}
+@keyframes blink
+{
+	50% {
+		transform: scale(5);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+.layer-meteor div {
+	width: 80px;
+	height: 80px;
+	background: url(../images/meteor.png) no-repeat;
+	position: absolute;
+	z-index: 2;
+}
+.lmt1 {
+	top: 0;
+	left: 50%;
+	animation: slide1 5s linear  infinite;
+}
+.lmt2 {
+	top: 0;
+	right: 0;
+	animation: slide2 5s linear  infinite;
+}
+@keyframes slide1
+{
+	99.9% {
+		top: 70%;
+		left: 0;
+	}
+	100% {
+		top: 0;
+		left: 50%;
+		visibility: hidden;
+	}
+}
+@keyframes slide2
+{
+	99.9% {
+		top: 100%;
+		right: 40%;
+	}
+	100% {
+		top: 0;
+		right: 0;
+		visibility: hidden;
+	}
+}
+.layer-galaxy div {
+	height: 600px;
+	width: 100%;
+	position: absolute;
+	bottom: 100px;
+	background: url(../images/shadow.png) no-repeat;
+	background-size: cover;
+}
+.lg1 {
+	left: 0;
+	animation: galaxy1 150s infinite linear;
+}
+.lg2 {
+	left: 100%;
+	animation: galaxy2 150s infinite linear;
+}
+@keyframes galaxy1
+{
+	99.9% {
+		left: -100%;
+	}
+	100% {
+		left: 0;
+		visibility: hidden;
+	}
+}
+@keyframes galaxy2
+{
+	99.9% {
+		left: 0;
+	}
+	100% {
+		left: 100%;
+		visibility: hidden;
+	}
 }
 /*header结束*/
 
@@ -120,22 +282,30 @@ header {
 #carousel h2 {
 	font-size: 32px;
 	padding-top: 40px;
-	padding-bottom: 30px;
+	padding-bottom: 50px;
 }
 .mod-carousel li{
-	width: 470px;
+	width: 500px;
 	height: 500px;
 	padding: 20px;
 	float: left;
 	border: 18px solid #fff;
 	text-align: right;
 	background-size: cover;
-	transition: all 0.3s;
 	background-color: rgb(41,57,77);
+	transition: all 0.3s;
+}
+.mod-carousel li a {
+	transition: all 0.3s;
+}
+.mod-carousel ul {
+	position: relative;
 }
 .mod-carousel {
-	height: 500px;
+	height: 600px;
 	overflow: hidden;
+	position: relative;
+	padding-top: 50px;
 }
 .mod-carousel hr {
 	width: 50px;
@@ -158,6 +328,17 @@ header {
 	padding-bottom: 30px;
 	font-size: 20px;
 }
+.mod-carousel .tri {
+	position: absolute;
+}
+.mod-carousel .tri-left {
+	top: 46%;
+	right: -22px;
+}
+.mod-carousel .tri-right {
+	top: 46%;
+	left: -22px;
+}
 .mod-carousel li:nth-child(1) {
 	background-image: url(../images/bg0.png);
 }
@@ -178,7 +359,7 @@ header {
 }
 .mod-carousel li.active {
 	transform: scale(1.2);
-	z-index: 10;
+	z-index: 9;
 }
 /*carousel结束*/
 
@@ -312,6 +493,73 @@ header {
 	padding-top: 30px;
 	padding-bottom: 20px;
 }
+.notice-carousel {
+	height: 400px;
+	overflow: hidden;
+	background-color: rgb(37,37,69);
+}
+.notice-title {
+	background-color: rgb(142,147,165);
+}
+.contact {
+	background-color: rgb(142,147,165);
+	position: relative;
+}
+.contact p {
+	font-size: 20px;
+	color: #000;
+	padding-bottom: 15px;
+	padding-top: 80px;
+}
+.contact div {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	background-color: rgb(47,47,82);
+	z-index: 5;
+}
+.contact img {
+	width: 70px;
+	height: 70px;
+}
+.contact .mc1 {
+	bottom: -28px;
+	left: 20px;
+}
+.contact .mc2 {
+	bottom: -28px;
+	left: 150px;
+}
+.contact .weibo {
+	bottom: -28px;
+	right: 150px;
+	width: 60px;
+	height: 60px;
+}
+.contact .weibo img {
+	position: absolute;
+	top: -28px;
+	right: -4px;
+}
+.notice-title li {
+	font-size: 16px;
+	float: left;
+	margin-top: 40px;
+	margin-bottom: 60px;
+	margin-right: 100px;
+}
+.notice-title li:first-child {
+	margin-left: 200px;
+}
+.notice-carousel a:nth-child(1) {
+	background: url(../images/n1.png) center center no-repeat;
+	background-size: cover;
+	display: block;
+	width: 1100px;
+	height: 400px;
+	margin: 0 auto;
+}
 /*notice结束*/
 
 footer {
@@ -326,3 +574,4 @@ footer a {
 footer li {
 	display: inline-block;
 }
+/*footer结束*/
