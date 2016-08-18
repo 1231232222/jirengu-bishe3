@@ -253,8 +253,7 @@ body{
 .notice-move {
   animation: noticemove 20s linear infinite;
 }
-.notice-move.hover {
-  -webkit-animation-play-state: paused;
+.notice-move:hover {
   animation-play-state: paused;
 }
 .notice-ct{
