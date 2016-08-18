@@ -30,7 +30,7 @@ function Carousel($node){
     this.itemCount = this.item.length
     this.pre = $node.find('.tri-right')
     this.next = $node.find('.tri-left')
-    this.bullet = $node.find('.bullet')
+    this.Title = $('.notice-title')
 
     this.imgCt.css({
         width: this.itemCount* this.itemWidth
@@ -39,7 +39,7 @@ function Carousel($node){
     this.curIdx = 0
     this.isAnimate = false
 
-    this.init()
+    this.bind()
 }
 
 Carousel.prototype = {
@@ -51,7 +51,7 @@ Carousel.prototype = {
         _this.next.on('click',function(){
             _this.doNext()
         })
-        _this.bullet.find('li').on('click',function(){
+        _this.Title.find('li').on('mouseenter',function(){
             var idx = $(this).index()
             if(idx<_this.curIdx){
                 _this.doPre(_this.curIdx- idx)
@@ -66,6 +66,7 @@ Carousel.prototype = {
         var _this = this
         idx = idx || 1
         if(this.curIdx === 0){
+            _this.pre.addClass('active')
         	return
         }
         if(!_this.isAnimate){
@@ -74,8 +75,8 @@ Carousel.prototype = {
             _this.imgCt.animate({
                 left: '+=' + _this.itemWidth* idx
             },function(){
-                _this.curIdx--
-                _this.setBullet()
+                _this.curIdx = (_this.itemCount+ _this.curIdx- idx)% _this.itemCount
+                _this.setTitle()
                 _this.isAnimate = false
             })
         }
@@ -85,6 +86,7 @@ Carousel.prototype = {
         var _this = this
         idx = idx || 1
         if(this.curIdx === 3){
+            _this.next.addClass('active')
         	return
         }
         if(!_this.isAnimate){
@@ -93,8 +95,8 @@ Carousel.prototype = {
             _this.imgCt.animate({
                 left: '-=' + _this.itemWidth* idx
             },function(){
-                _this.curIdx++
-                _this.setBullet()
+                _this.curIdx = (_this.curIdx+ idx)% _this.itemCount
+                _this.setTitle()
                 _this.isAnimate = false
             })
         }
@@ -102,21 +104,21 @@ Carousel.prototype = {
 
     doScaleRight: function(){
     	this.item.removeClass('active').eq(this.curIdx+2).addClass('active')
+        this.pre.removeClass('active')
     },
 
     doScaleLeft: function(){
     	this.item.removeClass('active').eq(this.curIdx).addClass('active')
+        this.next.removeClass('active')
     },
 
-    setBullet: function(){
-        this.bullet.children().removeClass('active').eq(this.curIdx).addClass('active') 
-   },
-
-    init: function(){
-        this.bind()
-    }
-
+    setTitle: function(){
+        this.Title.children().removeClass('hover').eq(this.curIdx).addClass('hover') 
+   }
 }
 
 var $carousel1 = $('.mod-carousel')
 new Carousel($carousel1)
+
+var $carousel2 = $('.notice-carousel')
+new Carousel($carousel2)

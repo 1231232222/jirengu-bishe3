@@ -295,9 +295,6 @@ header {
 	background-color: rgb(41,57,77);
 	transition: all 0.3s;
 }
-.mod-carousel li a {
-	transition: all 0.3s;
-}
 .mod-carousel ul {
 	position: relative;
 }
@@ -338,6 +335,12 @@ header {
 .mod-carousel .tri-right {
 	top: 46%;
 	left: -22px;
+}
+.tri-left.active {
+	border-left-color: #ccc;
+}
+.tri-right.active {
+	border-right-color: #ccc;
 }
 .mod-carousel li:nth-child(1) {
 	background-image: url(../images/bg0.png);
@@ -494,12 +497,104 @@ header {
 	padding-bottom: 20px;
 }
 .notice-carousel {
-	height: 400px;
 	overflow: hidden;
 	background-color: rgb(37,37,69);
+	position: relative;
+}
+.notice-carousel .layout {
+	width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.notice-carousel>a {
+	position: absolute;
+	top: 50%;
+}
+.notice-carousel .tri-left {
+	border-left-color: rgb(247,136,1);
+	right: 0;
+}
+.notice-carousel .tri-right {
+	border-right-color: rgb(247,136,1);
+	left: 0;
+}
+.notice-carousel .tri-left.active {
+	border-left-color: #ccc;
+}
+.notice-carousel .tri-right.active {
+	border-right-color: #ccc;
+}
+.notice-carousel ul {
+	position: relative;
+}
+.notice-carousel li {
+	width: 1200px;
+	height: 400px;
+	float: left;
+}
+.notice-carousel li:nth-child(1) {
+	background: url(../images/n1.png) no-repeat;
+	background-size: cover;
+}
+.notice-carousel li:nth-child(2) {
+	background: url(../images/n2.png) no-repeat;
+	background-size: contain;
+}
+.notice-carousel li:nth-child(3) {
+	background: url(../images/n3.png) no-repeat;
+	background-size: contain;
+}
+.notice-carousel li:nth-child(4) {
+	background: url(../images/n4.png) no-repeat;
+	background-size: contain;
 }
 .notice-title {
 	background-color: rgb(142,147,165);
+	position: relative;
+}
+.notice-title li {
+	font-size: 16px;
+	float: left;
+	padding-top: 40px;
+	margin-bottom: 60px;
+	padding-right: 100px;
+}
+.notice-title li:first-child {
+	padding-left: 200px;
+}
+.notice-title li.hover a {
+	color: rgb(37,37,69);
+	font-weight: bold;
+    border-top-color: rgb(41,51,77);
+    border-left-color: rgb(41,51,77);
+}
+.arrow {
+	display: inline-block;
+	height: 0;
+	width: 0;
+	border-width: 15px;
+	border-style: solid;
+    border-top-color: rgb(142,147,165);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: rgb(142,147,165);
+    position: absolute;
+}
+.arrow.a1 {
+	top: 0;
+	left: 238px;
+}
+.arrow.a2 {
+	top: 0;
+	left: 441px;
+}
+.arrow.a3 {
+	top: 0;
+	left: 634px;
+}
+.arrow.a4 {
+	top: 0;
+	left: 822px;
 }
 .contact {
 	background-color: rgb(142,147,165);
@@ -541,24 +636,6 @@ header {
 	position: absolute;
 	top: -28px;
 	right: -4px;
-}
-.notice-title li {
-	font-size: 16px;
-	float: left;
-	margin-top: 40px;
-	margin-bottom: 60px;
-	margin-right: 100px;
-}
-.notice-title li:first-child {
-	margin-left: 200px;
-}
-.notice-carousel a:nth-child(1) {
-	background: url(../images/n1.png) center center no-repeat;
-	background-size: cover;
-	display: block;
-	width: 1100px;
-	height: 400px;
-	margin: 0 auto;
 }
 /*notice结束*/
 
