@@ -1,0 +1,411 @@
+/*content*/
+.layout {
+  margin: 0 auto;
+}
+ .section-course ,
+ .section-intro {
+  text-align: center;
+}
+.section-course h2 {
+  margin: 0 auto;
+  padding: 20px 40px;
+  font-size: 2em;
+}
+.mod-carousel {
+  position: relative;
+  height: 460px;
+  width: 1380px;
+  margin: 0 auto;
+  padding: 40px 0;
+  overflow: hidden;
+}
+.mod-carousel .prev,
+.mod-carousel .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-width: 16px;
+  border-style: solid;
+  z-index: 2;
+}
+.mod-carousel .prev.disable {
+  border-color: transparent  #ccc transparent transparent;
+}
+.mod-carousel .next.disable {
+  border-color: transparent  transparent transparent #ccc;
+}
+.mod-carousel .prev{
+  left:-6px;
+  border-color: transparent #2e2e4f transparent transparent
+}
+.mod-carousel .next {
+  right:-7px;
+  border-color:transparent transparent transparent #2e2e4f;
+}
+.mod-carousel .pannel-ct {
+  position: absolute;
+  z-index: 1;
+}
+.mod-carousel .pannel {
+  box-sizing: border-box;
+  float: left;
+  height: 460px;
+  width: 460px;
+  padding: 30px 26px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.mod-carousel .pannel.scale {
+  transform: scale(1.2,1.2);
+}
+
+.mod-carousel .pannel-ct  a {
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+  border: 8px solid transparent;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #29394d;
+
+}
+.mod-carousel .v0>a {
+  background-image: url(../images/bg0.png);
+}
+.mod-carousel .v1>a {
+  background-image: url(../images/bg1.png);
+}
+.mod-carousel .v2>a {
+  background-image: url(../images/bg2.png);
+}
+.mod-carousel .v3>a {
+  background-image: url(../images/bg3.png);
+}
+.mod-carousel .v4>a {
+  background-image: url(../images/bg4.png);
+}
+.intro-layers {
+  position: relative;
+  height: 900px;
+  overflow: hidden;
+}
+.intro-mountain {
+  position: absolute;
+  left:50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  height: 500px;
+  width: 500px;
+  margin-bottom: 370px;
+  background: url(../images/intro-mountain.png) center center no-repeat;
+  background-size: cover;
+  z-index: 3;
+}
+.intro-mountain img,
+.intro-mountain h3,
+.intro-mountain>div,
+.intro-weekly  {
+  position: absolute;
+}
+.intro-mountain img {
+  height: 50px;
+}
+
+.intro-mountain>div {
+  width: 250px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 12px;
+}
+.intro-mountain img.m1 {
+  right: 136px;
+  top: 77px;
+}
+.intro-mountain h3.m1 {
+  right: 0px;
+  top: 40px;
+}
+.intro-mountain div.m1 {
+  right: -150px;
+  top: 80px;
+}
+.intro-mountain img.m2 {
+  height: 40px;
+  left: 207px;
+  top: 132px;
+}
+.intro-mountain h3.m2 {
+  left: 40px;
+  top: 80px;
+}
+.intro-mountain div.m2 {
+  left: -115px;
+  top: 120px;
+}
+.intro-mountain img.m3 {
+  height: 40px;
+  right: 90px;
+  top: 266px;
+}
+.intro-mountain h3.m3 {
+  right: -30px;
+  top: 230px;
+}
+.intro-mountain div.m3 {
+  right: -230px;
+  top: 260px;
+}
+.intro-mountain img.m4 {
+  left: 166px;
+  top: 316px;
+}
+.intro-mountain h3.m4 {
+  left: 20px;
+  top: 300px;
+}
+.intro-mountain div.m4 {
+  left: -166px;
+  top: 330px;
+}
+.intro-weekly {
+  bottom: 0;
+  left: 50%;
+  width: 800px;
+  transform: translateX(-50%);
+  margin-bottom: 100px;
+  z-index: 2;
+}
+.intro-weekly>img {
+  float: left;
+  width: 300px;
+}
+.intro-weekly .weekly{
+  margin-left: 400px;
+  margin-top: 40px;
+}
+.intro-weekly h3 {
+  padding: 10px 0;
+  font-size: 36px;
+}
+.intro-weekly p {
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+.intro-weekly ul {
+  display: inline-block;
+  padding-right: 50px;
+  text-align: left;
+}
+.intro-weekly li {
+  display: list-item;
+  width: 100px;
+  list-style:disc;
+}
+.intro-weekly .btn {
+  display: block;
+  height: 32px;
+  width: 80px;
+  margin-top: 10px;
+  margin-left: 30px;
+  border-radius: 3px;
+  line-height: 32px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #d8677b;
+}
+.intro-bg1,
+.intro-bg2 {
+  position: absolute;
+  bottom: 0;
+  width: 110%;
+  margin-left:-5%;
+  margin-right: -5%;
+  margin-bottom: 15px;
+  z-index: 1;
+}
+
+.intro-bg1 {
+  height: 700px;
+  background: url(../images/intro-bg1.png) center center no-repeat;
+  background-size: cover;
+
+}
+.intro-bg2 {
+  height: 300px;
+  margin-bottom: 370px;
+  background: url(../images/intro-bg2.png) center center no-repeat;
+  background-size: cover;
+}
+.intro-star {
+ position: absolute;;
+ width: 100%;
+ height: 200px;
+ background: url(../images/intro-star.png) center center no-repeat;
+ z-index: 0;
+}
+.section-contract {
+  overflow: hidden;
+  background-color:#8e93a5
+}
+.section-contract .contract {
+  float: left;
+  margin-top: 40px;
+  margin-left: 60px;
+}
+.section-contract .contract>li {
+  position: relative;
+  bottom:-30px;
+  width: 90px;
+  height: 90px;
+  float: left;
+  margin-right: 40px;
+  border-radius: 50%;
+  background-color: #2f2f51;
+}
+.section-contract .contract a {
+  position: relative;
+  top: -30px;
+  display: block;
+  width: 90px;
+  height: 90px;
+
+}
+.section-contract .contract .qq2 {
+  background: url(../images/qq2.png) center center no-repeat;
+  background-size: contain;
+}
+.section-contract .contract .qq2:hover {
+  background: url(../images/qq2-hover.png) center center no-repeat;
+  background-size: contain;
+}
+.section-contract .contract .qq3 {
+  background: url(../images/qq3.png) center center no-repeat;
+  background-size: contain;
+}
+
+.section-contract .contract .qq3:hover {
+  background: url(../images/qq3-hover.png) center center no-repeat;
+  background-size: contain;
+}
+.section-contract h4 {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  color: #242443;
+}
+.section-contract .social {
+  position: relative;
+  bottom: -40px;
+  float: right;
+  margin-top:60px;
+  margin-right: 60px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #2f2f51;
+}
+.section-contract .social a {
+  position: relative;
+  top: -20px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../images/weibo.png) center center no-repeat;
+  background-size: contain;
+}
+/*bigevent*/
+.mod-bigevent .event-ct {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+.mod-bigevent .events {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.mod-bigevent .event-ct .prev,
+.mod-bigevent .event-ct .next {
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  transform:translateY(-50%);
+  border-width: 16px;
+  border-style: solid;
+  z-index: 2;
+}
+.mod-bigevent .event-ct .prev {
+  left: -15px;
+  border-color: transparent #f78801 transparent transparent;
+}
+.mod-bigevent .event-ct .next {
+  right: -15px;
+  border-color: transparent transparent transparent #f78801;
+}
+.mod-bigevent .event-ct  .prev.disable {
+  border-color: transparent #ccc transparent transparent;
+}
+.mod-bigevent .event-ct .next.disable {
+  border-color: transparent transparent transparent #ccc;
+}
+.mod-bigevent .events li {
+  float: left;
+  height: 100%;
+}
+.mod-bigevent .events a {
+  display: block;
+  height: 100%;
+  background-color: #252545;
+  background-position: center center;
+  background-size: 1100px 400px;
+  background-repeat: no-repeat;
+}
+.mod-bigevent .timeline li {
+  float:left;
+  height: 80px;
+  width: 100px;
+  margin-right: 200px;
+}
+.mod-bigevent .timeline .pointer {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-width: 16px;
+  border-style: solid;
+  border-color: #252545 transparent transparent #252545;
+  visibility: hidden;
+}
+.timeline .pointer.active {
+  visibility: visible;
+}
+.mod-bigevent .timeline a {
+  display: block;
+}
+/*footer*/
+#footer {
+  padding:20px;
+  font-size: 12px;
+}
+#footer ul {
+  text-align: center;
+  margin-bottom: 6px;
+}
+#footer ul>li {
+  display: inline-block;
+  border-right: 1px solid #fff;
+  padding-left: 6px;
+  padding-right: 6px
+}
+#footer ul>li:last-child {
+  border-right: 0px;
+}
+
+#footer li img {
+   height: 12px;
+}
