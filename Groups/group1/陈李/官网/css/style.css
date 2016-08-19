@@ -17,7 +17,7 @@ a {
 	color: #fff;
 }
 .layout  {
-	max-width: 1500px;
+	max-width: 1460px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -193,9 +193,6 @@ header {
 	50% {
 		transform: scale(5);
 	}
-	100% {
-		transform: scale(1);
-	}
 }
 .layer-meteor div {
 	width: 80px;
@@ -221,8 +218,6 @@ header {
 		left: 0;
 	}
 	100% {
-		top: 0;
-		left: 50%;
 		visibility: hidden;
 	}
 }
@@ -233,8 +228,6 @@ header {
 		right: 40%;
 	}
 	100% {
-		top: 0;
-		right: 0;
 		visibility: hidden;
 	}
 }
@@ -260,7 +253,6 @@ header {
 		left: -100%;
 	}
 	100% {
-		left: 0;
 		visibility: hidden;
 	}
 }
@@ -270,9 +262,48 @@ header {
 		left: 0;
 	}
 	100% {
-		left: 100%;
 		visibility: hidden;
 	}
+}
+.layer-weather {
+	width: 50px;
+	height: 50px;
+	background: url(../images/notice3.gif);
+	position: absolute;
+	right: -100px;
+	top: 150px;
+	z-index: 11;
+	animation: weather 20s infinite linear;
+}
+.layer-weather:hover {
+	animation-play-state: paused;
+}
+@keyframes weather
+{
+	90% {
+		transform: translateX(-1500px);
+	}
+	99.9% {
+		transform: translateX(-1500px);
+	}
+	100% {
+		visibility: hidden;
+	}
+}
+.layer-weather a {
+	font-size: 12px;
+}
+.weather-wrap {
+	width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	position: absolute;
+	top: -26px;
+	left: -60px;
+	padding: 3px;
 }
 /*header结束*/
 
@@ -284,15 +315,19 @@ header {
 	padding-top: 40px;
 	padding-bottom: 50px;
 }
-.mod-carousel li{
-	width: 500px;
-	height: 500px;
+.mod-carousel li a {
+	display: block;
+	width: 450px;
+	height: 450px;
 	padding: 20px;
-	float: left;
-	border: 18px solid #fff;
 	text-align: right;
 	background-size: cover;
 	background-color: rgb(41,57,77);
+	transition: all 0.3s;
+}
+.mod-carousel li {
+	float: left;
+	border: 18px solid #fff;
 	transition: all 0.3s;
 }
 .mod-carousel ul {
@@ -342,33 +377,40 @@ header {
 .tri-right.active {
 	border-right-color: #ccc;
 }
-.mod-carousel li:nth-child(1) {
+.mod-carousel li:nth-child(1)>a {
 	background-image: url(../images/bg0.png);
 }
-.mod-carousel li:nth-child(2) {
+.mod-carousel li:nth-child(2)>a {
 	background-image: url(../images/bg1.png);
 }
-.mod-carousel li:nth-child(3) {
+.mod-carousel li:nth-child(3)>a {
 	background-image: url(../images/bg2.png);
 }
-.mod-carousel li:nth-child(4) {
+.mod-carousel li:nth-child(4)>a {
 	background-image: url(../images/bg3.png);
 }
-.mod-carousel li:nth-child(5) {
+.mod-carousel li:nth-child(5)>a {
 	background-image: url(../images/bg4.png);
 }
-.mod-carousel li:nth-child(6) {
+.mod-carousel li:nth-child(6)>a{
 	background-image: url(../images/bg4.png);
 }
 .mod-carousel li.active {
 	transform: scale(1.2);
 	z-index: 9;
 }
+.mod-carousel li a:hover {
+	color: #000;
+	background-color: #fff;
+	border: 10px solid #000;
+}
 /*carousel结束*/
 
 #tree {
 	background-color: rgb(47,47,82);
 	padding-top: 50px;
+	position: relative;
+	overflow: hidden;
 }
 #tree h2 {
 	font-size: 32px;
@@ -385,6 +427,7 @@ header {
 	background: url(../images/intro-mountain.png) center center no-repeat;
 	background-size: cover;
 	position: relative;
+	z-index: 2;
 }
 .mod-tree img {
 	position: absolute;
@@ -457,6 +500,7 @@ header {
 	padding-bottom: 50px;
 	text-align: left;
 	position: relative;
+	z-index: 2;
 }
 .mod-paper img {
 	float: left;
@@ -484,6 +528,24 @@ header {
 	position: absolute;
 	right: 305px;
 	bottom: 70px;
+}
+.tree-bg div {
+	height: 1000px;
+	width: 100%;
+	background-size: contain;
+	position: absolute;
+}
+.tb1 {
+	background: url(../images/intro-bg1.png);
+	top: 197px;
+}
+.tb2 {
+	background: url(../images/intro-bg2.png);
+	top: 250px;
+}
+.tb3 {
+	background: url(../images/intro-star.png) no-repeat;
+	top: 200px;
 }
 /*tree结束*/
 

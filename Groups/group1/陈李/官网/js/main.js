@@ -1,4 +1,4 @@
-//hover更换图片
+// hover更换图片
 function hoverChange($node){
 	this.imgSrc = $node.attr('data-img')
 	this.gifSrc = $node.attr('data-gif')
@@ -17,12 +17,13 @@ hoverChange.prototype.bind = function($node){
 
 var $talk = $('.chat img')
 var $qq = $('.contact img')
-new hoverChange($talk)
-$qq.each(function(){
-	new hoverChange($(this))
+new hoverChange($talk)  // 首屏hover
+$qq.each(function(){    
+	new hoverChange($(this)) // 底部hover
 })
 
-//carousel
+
+// carousel
 function Carousel($node){
     this.imgCt = $node.find('ul')
     this.item = this.imgCt.find('li')
@@ -118,7 +119,64 @@ Carousel.prototype = {
 }
 
 var $carousel1 = $('.mod-carousel')
-new Carousel($carousel1)
+new Carousel($carousel1)   // 顶部轮播
 
 var $carousel2 = $('.notice-carousel')
-new Carousel($carousel2)
+new Carousel($carousel2)   // 底部轮播
+
+
+// weather
+$.ajax({
+    url: 'http://api.jirengu.com/weather.php',
+    type: 'get',
+    dataType: 'jsonp',
+    jsonpCallback: 'getWeather',
+})
+.done(function(ret) {
+    handleWeather(ret.results[0].index[0].des)
+})
+.fail(function() {
+    console.log("error")
+})
+
+function handleWeather(data){
+    var $weatherNode = $('.weather')
+    $weatherNode.text(data)
+    $weatherNode.attr('title', data)
+}
+
+
+// mountain
+function tinyShake($node){
+    this.lm1 = $('.lm1')
+    this.lm2 = $('.lm2')
+    this.lm3 = $('.lm3')
+    this.tb1 = $('.tb1')
+    this.tb2 = $('.tb2')
+
+    this.bind($node)
+}
+
+tinyShake.prototype.bind = function ($node){
+    var _this = this
+    $node.on('mouseenter', function(e){
+        _this.x = e.pageX
+        _this.y = e.pageY
+    })
+    $node.on('mousemove', function(e){
+        var x = e.pageX-_this.x
+        var y = e.pageY-_this.y
+        _this.lm1.css('transform', 'translate('+x/200+'px,'+y/150+'px)');
+        _this.lm2.css('transform', 'translate('+x/150+'px,'+y/100+'px)');
+        _this.lm3.css('transform', 'translate('+x/100+'px,'+y/50+'px)');
+
+        _this.tb1.css('transform', 'translate('+x/200+'px,'+y/100+'px)');
+        _this.tb2.css('transform', 'translate('+x/150+'px,'+y/50+'px)');
+    })
+}
+
+var $layer = $('.layer')
+new tinyShake($layer)
+
+var $tree = $('#tree')
+new tinyShake($tree)
