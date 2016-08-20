@@ -6,102 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ENVY</title>
-    <style>
-        html,body,ul,li,p,h1,h2,h3,div{
-            margin:0;
-            padding:0;
-            list-style: none;
-            font-family: serif,Arial,"Microsoft YaHei",sans-serif;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-        html,body{
-            height:100%;
-        }
-        a{
-            text-decoration: none;
-            color: #ffffff;
-        }
-        .tra{
-            display: inline-block;
-            width:0;
-            height:0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 5px solid #fff;
-            position: relative;
-            top:-2px;
-        }
-        .header{
-            position: relative;
-            height:100%;
-            background:radial-gradient(#61617b 10%,#2f2f52 80%);
-        }
-        .nav-ul{
-            position: absolute;
-            top:20px;
-            right:150px;
-            height: 35px;
-            border:1px solid #fff;
-            border-radius: 10px;
-            background-color: rgba(255,255,255,0.1);
-
-        }
-        .nav-ul>li{
-            float: left;
-            line-height: 35px;
-           padding:0  30px ;
-            border-right: 1px solid #fff;
-            position: relative;
-        }
-        .nav-ul>li:nth-child(5){
-            padding: 0 40px;
-        }
-        .nav-ul>li:last-child{
-            border:none;
-            padding-right: 40px;
-        }
-        .nav-ul>li a:hover{
-            font-weight: bolder;
-        }
-        .nav-ul:after{
-            content: '';
-            display: block;
-            clear: both;
-        }
-        .inner-nav-ul{
-            display: none;
-            padding: 3px;
-            border:1px solid #ffffff;
-            border-radius: 4px;
-            position: absolute;
-            top:100%;
-            left:0px;
-            background-color: rgba(255,255,255,0.1);
-        }
-        .inner-nav-ul>li{
-            color: #fff;
-            padding: 5px 30px;
-            border-bottom: 1px solid #fff;
-            text-align: center;
-            cursor: pointer;
-        }
-        .inner-nav-ul>li img{
-            border-radius: 50%;
-        }
-        .inner-nav-ul>li img:hover{
-
-        }
-        .inner-nav-ul>li:hover{
-            font-weight: bolder;
-        }
-        .inner-nav-ul>li:last-child{
-            border: none;
-        }
-        .nav-ul>li:hover .inner-nav-ul{
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/header.css">
 </head>
 <body>
 <div class="header">
@@ -148,8 +53,38 @@
 
         </ul>
     </div>
+
+    <div class="logo">
+
+    </div>
+
+    <div class="monster">
+        <div class="monster-red">
+            <img src="./img/gate.gif" alt="">
+        </div>
+        <div class="monster-blue">
+            <img src="./img/talk.png" alt="">
+        </div>
+    </div>
+
+
+    <div class="shadow">
+        <div class="shadow1">
+
+        </div>
+        <div class="shadow2">
+
+        </div>
+    </div>
+
+    <div class="mountain">
+        <div class="m1"></div>
+        <div class="m2"></div>
+        <div class="m3"></div>
+    </div>
+
 </div>
 
-<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.map"></script>
+
 </body>
 </html>

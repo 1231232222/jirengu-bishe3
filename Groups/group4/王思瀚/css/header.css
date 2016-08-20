@@ -1,0 +1,167 @@
+html,body,ul,li,p,h1,h2,h3,div{
+    margin:0;
+    padding:0;
+    list-style: none;
+    font-family: serif,Arial,"Microsoft YaHei",sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+html,body{
+    height:100%;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.tra{
+    display: inline-block;
+    width:0;
+    height:0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position: relative;
+    top:-2px;
+}
+.header{
+    position: relative;
+    height:100%;
+    background:radial-gradient(#61617b 10%,#2f2f52 80%);
+}
+.nav-ul{
+    position: absolute;
+    top:40px;
+    right:70px;
+    height: 35px;
+    border:1px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.1);
+
+}
+.nav-ul>li{
+    float: left;
+    line-height: 35px;
+    padding:0  30px ;
+    border-right: 1px solid #fff;
+    position: relative;
+}
+.nav-ul>li:nth-child(5){
+    padding: 0 40px;
+}
+.nav-ul>li:last-child{
+    border:none;
+    padding-right: 45px;
+}
+.nav-ul>li a:hover{
+    font-weight: bolder;
+}
+.nav-ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.inner-nav-ul{
+    display: none;
+    padding: 3px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    position: absolute;
+    top:100%;
+    left:0px;
+    background-color: rgba(255,255,255,0.1);
+}
+.inner-nav-ul>li{
+    color: #fff;
+    padding: 5px 30px;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.inner-nav-ul>li img{
+    border-radius: 50%;
+}
+.inner-nav-ul>li img:hover{
+
+}
+.inner-nav-ul>li:hover{
+    font-weight: bolder;
+}
+.inner-nav-ul>li:last-child{
+    border: none;
+}
+.nav-ul>li:hover .inner-nav-ul{
+    display: block;
+}
+.logo{
+    position: absolute;
+    background: url(../img/logo.png) no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 25vw;
+    z-index: 3;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.monster-red{
+    position: absolute;
+    bottom: -100px;
+    left:30px;
+    width: 160px;
+    height: 160px;
+    background-color: #303052;
+    border-radius: 50%;
+    z-index: 3;
+}
+.monster img{
+    position: absolute;
+    height:80px;
+    bottom: 0;
+    top:-30px;
+    left:30px;
+    cursor: pointer;
+}
+.monster-blue{
+    position: absolute;
+    bottom: -100px;
+    left: 230px;
+    width: 160px;
+    height: 160px;
+    background-size: contain;
+    background-color: #303052;
+    border-radius: 50%;
+    z-index: 3;
+}
+.shadow>div{
+    position: absolute;
+    bottom: 0;
+    width: 1400px;
+    height: 560px;
+    background: url(../img/shadow.png) center center no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.mountain{
+    height:100%;
+}
+.mountain div{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110%;
+    margin-left: -5%;
+    margin-bottom: -20px;
+    height: 100%;
+    background-size: 100vw 50vh;
+
+}
+.m1{
+    background: url("../img/mountain1.png") center bottom no-repeat;
+}
+.m2{
+    background: url("../img/mountain2.png")center bottom no-repeat;
+}
+.m3{
+    background: url("../img/mountain3.png")center bottom no-repeat;
+}
