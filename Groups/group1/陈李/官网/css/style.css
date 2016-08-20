@@ -323,7 +323,6 @@ header {
 	text-align: right;
 	background-size: cover;
 	background-color: rgb(41,57,77);
-	transition: all 0.3s;
 }
 .mod-carousel li {
 	float: left;
@@ -613,6 +612,7 @@ header {
 .notice-title {
 	background-color: rgb(142,147,165);
 	position: relative;
+	z-index: 2;
 }
 .notice-title li {
 	font-size: 16px;
