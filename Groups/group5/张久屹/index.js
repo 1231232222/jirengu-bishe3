@@ -209,7 +209,8 @@
 		}); 
 		
 		this.$cw.css({
-			'width': this.leng * this.$list.outerWidth(true),
+			//这里宽度 + this.leng是为了防止li元素宽度的小数会撑破ul元素 
+			'width': this.leng * this.$list.outerWidth(true) +this.leng, 
 			'height':  this.$list.outerHeight(true),
 			'top': '50%',
 			'transform': 'translateY(-50%)'
