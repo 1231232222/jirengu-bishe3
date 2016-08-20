@@ -4,715 +4,7 @@
 	<meta charset="UTF-8">
 	<title>饥人谷-最有爱的前端学习社区</title>
 	<link rel="stylesheet" type="text/css" href="css/icon/iconfont.css">
-	<style>
-		*{
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		body{
-		    font-family: serif,Arial,"Microsoft YaHei",sans-serif;
-		    font-size: 14px;
-		    line-height: 1.5;
-		    color: #fff;
-		}
-		body,html,.header{
-			height: 100%;
-		}
-		::-webkit-scrollbar{
-			display:none
-		}
-		a{
-			text-decoration: none;
-			color: inherit;
-		}
-		ul{
-			list-style: none;
-		}
-		hr{
-		  width: 40px;
-		  height: 6px;
-		  background: rgb(255,85,21);
-		  border:none;
-		  display:inline-block;
-		  margin:20px 0;
-		}
-		hr.blue{
-		  background: rgb(1,19,60)
-		}
-		hr.green{
-		  background: rgb(52,192,89);
-		}
-
-
-		.clearfix:after{
-			content: '';
-			display: block;
-			clear: both;
-		}
-
-		.header{
-			position: relative;
-			width: 100%;
-			background: radial-gradient(#61617b,#2f2f52 80%);
-			overflow: hidden;
-		}
-		.header .nav{
-			color: #fff;
-			position: absolute;
-			top: 50px;
-			right: 100px;
-			z-index: 5;
-		}
-		.header .nav > ul{
-			float: right;
-			border: 1px solid #fff;
-			border-radius: 10px;
-		}
-		@media screen and (max-width: 768px) {
-		    .header .nav > ul {
-		        margin: 8px;
-		    }
-		}
-		.header .nav > ul > li{
-			position: relative;
-			float: left;
-			padding: 8px 25px;
-			border-right: 1px solid #fff;
-		}
-		.header .nav > ul > li:last-child{
-			border-right: none;
-		}
-		
-		.header .nav > ul > li > .dropdown{
-			display: none;
-			position: absolute;
-			top: 120%;
-			left: 0;
-			border: 1px solid #fff;
-			border-radius: 8px;
-			width: 100%;
-			text-align: center;
-		}
-		.header .nav > ul > li:hover > .dropdown{
-			display: block;
-		}
-		.dropdown li {
-			padding-top: 8px;
-			padding-bottom: 8px;
-			border-bottom: 1px solid #fff;
-		}
-		.dropdown >li:last-child{
-			border-bottom: none;
-		}
-		.header .mountains{
-			height: 100%;
-			
-		}
-		.header .mountains .m{
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			z-index: 4;
-		}
-		.header .mountains .m1{
-			background: url(images/mountain1.png) center bottom no-repeat;
-			background-size: 100% 50%;
-		}
-		.header .mountains .m2{
-			background: url(images/mountain2.png) center bottom no-repeat;
-			background-size: 100% 50%;
-		}
-		.header .mountains .m3{
-			background: url(images/mountain3.png) center bottom no-repeat;
-			background-size: 100% 50%;
-		}
-
-		.header .logo{
-			width: 50%;
-			height: 310px;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%,-50%);
-			background: url(images/logo.png) 0 0 no-repeat;
-			background-size: contain;
-		}
-
-		.header .sky{
-			
-		}
-
-		.sky > div{
-		  width: 100%;
-		  height: 100%;
-		  background: url(images/shadow.png) center center no-repeat;
-		  background-size:cover;
-		  position:absolute;
-		  bottom:0;
-		  z-index: 1;
-		}
-		.sky .sky-animate1{
-		  left:0;
-		  animation:sky1 100s linear infinite;
-		}
-		.sky .sky-animate2{
-		  left:100%;
-		  animation:sky2 100s linear infinite;
-		  transform:rotateY(180deg);
-		}
-
-		@keyframes sky1{
-		  0%,100%{
-		    transform:translate(0);
-		  }
-		  50%{
-		    transform:translate(-100%);
-		  }
-		  50.01%{
-		    transform:translate(100%);
-		  }
-		}
-		@keyframes sky2{
-		  0%,100%{
-		    transform:translate(0);
-		  }
-		  99.9%{
-		    transform:translate(-200%);
-		  }
-		}
-
-		.star{
-		  position:absolute;
-		  width: 21px;
-		  height: 21px;
-		  background: url(images/star.png) 0 0 no-repeat;
-		  background-size:contain;
-		  
-		}
-		.star.star1{
-		  left:19%;
-		  top:71%;
-		  animation:star 2s linear infinite;
-		}
-		.star.star2{
-		  left:19%;
-		  top:30%;
-		  animation:star 2s 0.6s linear infinite;
-		  width: 5px;
-		  height: 5px;
-		}
-		.star.star3{
-		  left:27%;
-		  top:33%;
-		  animation:star 2s 1.3s linear infinite;
-		}
-		.star.star4{
-		  left:53%;
-		  top:64%;
-		  animation:star 2s 1.9s linear infinite;
-		  width: 10px;
-		  height: 10px;
-		}
-		.star.star5{
-		  left:47%;
-		  top:10%;
-		  animation:star 2s 2.5s linear infinite;
-		}
-		.star.star6{
-		  left:62%;
-		  top:53%;
-		  animation:star 2s 3s linear infinite;
-		  width: 15px;
-		  height: 15px;
-		}
-		.star.star7{
-		  left:79%;
-		  top:60%;
-		  animation:star 2s linear infinite;
-		}
-		.star.star8{
-		  left:90%;
-		  top:40%;
-		  animation:star 2s 0.6s linear infinite;
-		}
-
-
-		@keyframes star{
-		  0%,100%{
-		    transform:scale(1)
-		  }
-		  50%{
-		    transform:scale(0.5)
-		  }
-		}
-
-
-
-		.meteor > div{
-		  position:absolute;
-		  background: url(images/meteor.png) center center;
-		  width: 64px;
-		  height: 64px;
-		  background-size:cover;
-		}
-		.meteor1{
-		  right:-70px;
-		  top: 0;
-		  animation:meteor 10s linear infinite;
-		}
-		.meteor2{
-		  left:50%;
-		  top:-68px;
-		  animation:meteor 10s 2s linear infinite;
-		}
-
-		@keyframes meteor{
-		  0%,100%{
-		    transform:translate(0,0)
-		    opacity:1;
-		  }
-		  60%{
-		    transform:translate(-1000px,1000px)
-		  }
-		  61%,100%{
-		    opacity:0;
-		  }
-		}
-
-		.header .child-list > div{ 
-		    position: absolute;
-		    left: 30px;
-		    bottom: -100px;
-		    width: 160px;
-		    height: 160px;
-		    border-radius: 50%;
-		    background: #303052;
-		    z-index: 7;
-		}
-		.header .child-list > div.child2{
-			left: 230px;
-		}
-		.child-list > div > a {
-		    display: block;
-		    position: absolute;
-		    left: 50%;
-		    top: -20%;
-		    transform: translate(-50%);
-		}
-		.child-list > div.child2 > a{
-			top: -10%;
-		}
-
-
-
-		.header .notice{
-		  position: absolute;
-		  top:20%;
-		  left:101%;
-		  text-align:center;
-		  animation:notice 40s linear infinite;
-		}
-		.header .notice:hover{
-		  animation-play-state:paused;
-		}
-		.header .notice p{
-		  color:#fff;
-		  border: 1px solid #fff;
-		  border-radius:10px;
-		  background: rgba(72,76,104,0.8);
-		  padding:4px 15px;
-		  animation:notice-title 40s linear infinite;
-		}
-		.header .notice img{
-		  vertical-align:middle;
-		}
-
-		@keyframes notice{
-		  0%{
-		    transform:translate(0,0)
-		  }
-		  10%{
-		    transform:translate(-200px,0)
-		  }
-		  33%{
-		    transform:translate(-600px,70px)
-		  }
-		  67%{
-		    transform:translate(-1000px,35px)
-		  }
-		  90%{
-		    transform:translate(-1300px,0)
-		  }
-		  100%{
-		    transform:translate(-1600px,0)
-		  }
-		  
-		}
-
-		@keyframes notice-title{
-		  0%,10%,90%,100%{
-		    opacity:0;
-		  }
-		  13%,87%{
-		    opacity:1;
-		  }
-		}
-
-		.content .free-class{
-			background: rgb(48,48,82);
-		}
-		h1{
-			font-size: 32px;
-			text-align: center;
-			padding: 40px 0 20px;
-		}
-		.free-class .slide{
-			position: relative;
-			padding: 40px 0;
-			overflow: hidden;
-		}
-		.free-class .slide .item-ct{
-			position: relative;
-		}
-		.free-class .slide .item{
-		  width: 33.333%;
-		  background: #fff;
-		  height: 360px;
-		  float:left;
-		  border:1px solid #ddd;
-		  padding:20px;
-		}
-		.free-class .slide .item > a{
-		  display:block;
-		  height: 100%;
-		 background: url(http://jirengu.com/addons/theme/stv1/_static/app/index-new/imgs/bg1.png) center center no-repeat;
-		  background-color:rgb(46,36,79);
-		  background-size:cover;
-		  text-align:right;
-		  padding:20px;
-		  font-weight:bolder;
-		}
-		.free-class .slide .item.active{
-			transform: scale(1.15);
-			transition: all .4s;
-
-		}
-		.free-class .slide .item.active > a{
-		  color:#000;
-		  background-color:#fff;
-		  border:5px solid rgb(41,57,77)
-		}
-		.free-class .slide .item > a.left{
-		  text-align:left;
-		}
-		
-		.free-class .slide .item > a > .title{
-		  font-size:24px;
-		  margin-bottom:10px;
-		}
-
-
-		.free-class .slide .btn{
-		  display:block;
-		  position:absolute;
-		  top:50%;
-		  transform:translateY(-50%);
-		  width: 0;
-		  border: 20px solid rgb(46,46,79);
-		  
-		}
-		.free-class .slide .disabled{
-		  border:20px solid #aaa;
-		}
-		.free-class .slide .next{
-			transform: translate(50%,-50%);
-			border-top-color:transparent;
-			border-bottom-color:transparent;
-			border-right-color:transparent;
-			right:0;
-		}
-		.free-class .slide .prev{
-			transform: translate(-50%,-50%);
-			border-top-color:transparent;
-			border-bottom-color:transparent;
-			border-left-color:transparent;
-			left:0;
-		}
-		
-
-		.community{
-			height: 1100px;
-			text-align: center;
-			position: relative;
-			overflow: hidden;
-			background: radial-gradient(rgb(30,30,59),rgb(48,48,82));
-		}
-		.community > p{
-			font-size: 17px;
-			line-height: 32px;
-			padding: 0 10px;
-		}
-
-		.community .layer .shan1{   
-			position:absolute;
-			width: 100%;
-			height: 737px;
-			bottom: 0;
-			background: url(images/shequ/shan1.png) bottom center no-repeat;
-			background-size: cover;
-		}
-		.community .layer .shan2{
-			position: absolute;
-			width: 100%;
-			background: url(images/shequ/shan2.png) bottom center no-repeat;
-			background-size: cover;
-			height: 407px;
-			bottom: 0;
-			margin-bottom: 313px;
-		}
-
-		.community .layer .main{
-		    position: absolute;
-		    width: 511px;
-		    height: 500px;
-		    left: 50%;
-		    margin-top: 20px;
-		    transform: translate(-50%);
-		    background: url(images/shequ/shangu.png) center center no-repeat;
-		    background-size: cover;
-		    text-align: left;
-		}
-		.layer .main .item{
-			position: absolute;
-		}
-		.layer .main .item1{
-		    right: -164px;
-		    top: 53px;
-		}
-		.layer .main .item2{
-		    left: 45px;
-   			top: 94px;
-		}
-		.layer .main .item3{
-			right: -230px;
-			top: 254px;
-		}
-		.layer .main .item4{
-		    left: 17px;
-   			top: 298px;
-		}
-
-		.layer .main .item p{
-		    border: 1px solid #fff;
-		    background-color: rgba(48,53,77,0.5);
-		    border-radius: 8px;
-		    width: 300px;
-		    padding: 10px 20px;
-		    font-size: 14px;
-		    line-height: 1.5;
-		    color: #8aaaa9;
-		    
-		}
-		.layer .main .item1 p{
-			margin: 10px 0 0 20px;
-		}
-		.layer .main .item2 p{
-		    margin: 12px 0 0 -206px;
-		}
-		.layer .main .item3 p{
-		    margin: 12px 0 0 20px;
-		}
-		.layer .main .item4 p{
-		    margin: 12px 0 0 -206px;
-		}
-
-		.layer .main .item img{
-			width: 57px;
-		    height: 53px;
-		    position: absolute;
-		}
-		.layer .main .item1 img{   
-		    left: -46px;
-		    top: 25px;
-		}
-		.layer .main .item2 img{
-		    left: 131px;
-    		top: 38px;
-		}
-		.layer .main .item3 img{
-		    left: -72px;
-    		top: 6px
-		}
-		.layer .main .item4 img{
-	        left: 132px;
-			top: 23px;
-		}
-		h3{
-			font-size: 22px;
-		}
-
-		.zhoukan{
-			position: absolute;
-			bottom: 85px;
-			left: 50%;
-			transform: translate(-50%);
-			background: url('images/shequ/zhoukan.png') 0 center no-repeat;
-			background-size: 260px 210px;
-			padding-left: 326px;
-			text-align: left;
-		}
-		.zhoukan h2{
-			font-size: 42px;
-			font-weight: bold;
-			margin-bottom: 20px;
-		}
-		.zhoukan p{
-			font-size: 15px;
-			line-height: 2;
-			padding-left: 5px;
-		}
-		.zhoukan .btn{
-			display: inline-block;
-			background-color: rgb(227,98,101);
-			padding: 0px 10px;
-			border-radius: 10px;
-			margin-top: 22px;
-		}
-
-		.near-lesson{
-
-		}
-		.near-lesson h1{
-			height: 100px;
-			background: linear-gradient(to right,rgb(50,50,84),rgb(36,36,67) 70%,rgb(50,50,84))
-		}
-		.near-lesson .carousel{
-			position: relative;
-			background: rgb(36,36,67);
-			overflow: hidden;
-		}
-		.near-lesson .carousel ul{
-			position: relative;
-		}
-		.near-lesson .carousel > ul > li{
-			width: 100%;
-			float: left;
-		}
-		.near-lesson .carousel > ul > li > a{
-			display: block;
-			width: 100%;
-			height: 400px;
-			padding: 0 100px;
-		}
-		.near-lesson .carousel > ul > li > a >img{
-			width: 100%;
-			height: 100%;
-		}
-		.near-lesson .carousel .btn{
-		  display:block;
-		  position:absolute;
-		  top:50%;
-		  transform:translateY(-50%);
-		  width: 0;
-		  border: 20px solid rgb(247,136,1);
-		  
-		}
-		.near-lesson .carousel .disabled{
-		  border:20px solid #aaa;
-		}
-		.near-lesson .carousel .next{
-			border-top-color:transparent;
-			border-bottom-color:transparent;
-			border-right-color:transparent;
-			right:0;
-		}
-		.near-lesson .carousel .prev{
-			border-top-color:transparent;
-			border-bottom-color:transparent;
-			border-left-color:transparent;
-			left:0;
-		}
-		.near-lesson .timeline{
-			background: rgb(142,147,165);
-			height: 100px;
-			padding: 0 10%;
-		}
-		.near-lesson .timeline li{
-			position: relative;
-		    float: left;
-		    line-height: 30px;
-		    padding: 35px 0 10px 0;
-		    font-size: 18px;
-		    margin-right: 50px;
-		}
-		.near-lesson .timeline li.active a{
-			color: rgb(36,36,68);
-			font-weight: bold;
-		}
-		.near-lesson .timeline li.active .pointer{
-			position: absolute;
-			left: 50%;
-			margin-left: -5px;
-			top: 0;
-			width: 0;
-			border: 10px solid;
-			border-color: rgb(36,36,68) transparent transparent rgb(36,36,68);
-		}
-
-		.footer .contact{
-			background: rgb(142,147,165);
-			height: 150px;
-			padding-left: 50px;
-		}
-		.footer .contact .item{
-			float: left;
-			width: 33.333%;
-			position: relative;
-			top: 100%;
-			transform: translateY(-50%);
-		}
-		.footer .contact .item.text{
-			font-size: 22px;
-			color: rgb(36,36,68);
-			font-weight: bold;
-			margin-top: -21px;
-		}
-
-		.footer .contact .yuan{
-			position: relative;
-			display: inline-block;
-			width: 100px;
-			height: 100px;
-			border-radius: 50%;
-			background-color: rgb(36,36,68);
-			margin: 0 10px;
-		}
-		.footer .contact .yuan img{
-			width: 80px;
-			height: 80px;
-			position: absolute;
-			top: -27px;
-			left: 50%;
-			transform: translate(-50%);
-		}
-		.footer .contact .wei img{
-			width: 58px;
-			height: 58px;
-			top: -6px;
-		}
-
-		.footer .last{
-			padding: 30px;
-			background: rgb(36,36,68);
-			height: 100px;
-			text-align: center;
-			font-size: 12px;
-			line-height: 1.8;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
 	<div class="header">
@@ -797,20 +89,20 @@
 			<div class="slide">
 			  <ul class="clearfix item-ct">
 			     <li class='item'>
-			      <a href="" class=''>
-			        <hr class="blue">
+			      <a href="" style="background-image:url(images/slide-bg1.png)">
+			        <hr>
 			        <h3 class="title">00000000000000</h3>
 			        
 			        <p class="title-des">手把手教你写导航条</p>
-			        <hr class="blue">
+			        <hr>
 			        <p class="author">
 			          by 【 若愚 】
 			        </p>
-			        <hr class="blue">
+			        <hr>
 			      </a>
 			    </li>
 			    <li class='item active'>
-			      <a href="" class=''>
+			      <a href="" style="background-image:url(images/slide-bg2.png)">
 			        <hr class="blue">
 			        <h3 class="title">11111111111111</h3>
 			        
@@ -823,25 +115,12 @@
 			      </a>
 			    </li>
 			    <li class='item'>
-			      <a href="" class="left">
+			      <a href="" style="background-image: url(images/slide-bg3.png">
 			        <hr class="green">
-			        <h3 class="title">2222222222222</h3>
+			        <h3 class="title">222222222222</h3>
 			        
 			        <p class="title-des">手把手教你写导航条</p>
 			        <hr class="green">
-			        <p class="author">
-			          by 【 若愚 】
-			        </p>
-			        <hr class="green">
-			      </a>
-			    </li>
-			    <li class='item'>
-			      <a href="" class=''>
-			        <hr class="blue">
-			        <h3 class="title">333333333333</h3>
-			        
-			        <p class="title-des">手把手教你写导航条</p>
-			        <hr class="blue">
 			        <p class="author">
 			          by 【 若愚 】
 			        </p>
@@ -849,18 +128,45 @@
 			      </a>
 			    </li>
 			    <li class='item'>
-			      <a href="" class="left">
+			      <a href="" style="background-image: url(images/slide-bg4.png)">
+			        <hr class="blue">
+			        <h3 class="title">3333333333333</h3>
+			        
+			        <p class="title-des">手把手教你写导航条</p>
+			        <hr class="blue">
+			        <p class="author">
+			          by 【 若愚 】
+			        </p>
+			        <hr class="blue">
+			      </a>
+			    </li>
+			    <li class='item'>
+			      <a href="" style="background-image: url(images/slide-bg3.png">
 			        <hr class="green">
-			        <h3 class="title">44444444444</h3>
+			        <h3 class="title">44444444444444</h3>
 			        
 			        <p class="title-des">手把手教你写导航条</p>
 			        <hr class="green">
 			        <p class="author">
 			          by 【 若愚 】
 			        </p>
-			        <hr class="green">
+			        <hr class="blue">
 			      </a>
 			    </li>
+			    <li class='item'>
+			      <a href="" style="background-image: url(images/slide-bg4.png)">
+			        <hr class="blue">
+			        <h3 class="title">555555555</h3>
+			        
+			        <p class="title-des">手把手教你写导航条</p>
+			        <hr class="blue">
+			        <p class="author">
+			          by 【 若愚 】
+			        </p>
+			        <hr class="blue">
+			      </a>
+			    </li>
+			    
 			  </ul>
 			  <a class="btn next"></a>
 			  <a class="btn prev disabled"></a>
