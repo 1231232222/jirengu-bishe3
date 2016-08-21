@@ -44,9 +44,10 @@ a{
     padding:0  30px ;
     border-right: 1px solid #fff;
     position: relative;
+    z-index:2;
 }
 .nav-ul>li:nth-child(5){
-    padding: 0 40px;
+    padding: 0 43px;
 }
 .nav-ul>li:last-child{
     border:none;
@@ -60,19 +61,23 @@ a{
     display: block;
     clear: both;
 }
+.nav:after{
+    content: '';
+    display: block;
+    clear: both;
+}
 .inner-nav-ul{
     display: none;
-    padding: 3px;
     border:1px solid #ffffff;
     border-radius: 4px;
     position: absolute;
     top:100%;
-    left:0px;
+    left:5px;
     background-color: rgba(255,255,255,0.1);
 }
 .inner-nav-ul>li{
     color: #fff;
-    padding: 5px 30px;
+    padding: 5px 33px;
     border-bottom: 1px solid #fff;
     text-align: center;
     cursor: pointer;
@@ -84,7 +89,7 @@ a{
 
 }
 .inner-nav-ul>li:hover{
-    font-weight: bolder;
+    font-weight: bold;
 }
 .inner-nav-ul>li:last-child{
     border: none;
@@ -154,7 +159,6 @@ a{
     margin-bottom: -20px;
     height: 100%;
     background-size: 100vw 50vh;
-
 }
 .m1{
     background: url("../img/mountain1.png") center bottom no-repeat;

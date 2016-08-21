@@ -17,8 +17,6 @@
     color: #fff;
     font-size: 30px;
     top:40px;
-
-
 }
 .content .course .carousel {
     position: relative;
@@ -26,26 +24,133 @@
     left:100px;
 }
 .tree{
-    background:radial-gradient(#61617b 10%,#2f2f52 80%);
+    background: radial-gradient(#21213e 40%,#303052,#303052);
     position: relative;
     height: 100%;
     text-align: center;
 }
 .tree h2{
     position: relative;
-
     color: #ffffff;
-
     top:40px;
     font-size: 30px;
 }
 .tree p{
     position: relative;
     color: #ffffff;
-
     top: 60px;;
+}
+.tree-inner {
+    background: url("../img/shequ/shangu.png") no-repeat;
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -250px;
+    margin-bottom: 200px;
+    z-index: 3;
+}
+.tree-inner img.mon1{
+    position: absolute;
+    left:288px;
+    top:59px;
+    height:50px;
+}
+
+.tree-inner h3.mon1{
+    position: absolute;
+    left:350px;
+    top:20px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.tree-inner div.mon1{
+    color: #ffffff;
+    position: absolute;
+    top:70px;
+    left:400px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
+}
+.tree-inner img.mon2{
+    position: absolute;
+    left:190px;
+    top:110px;
+    height:38px;
+}
+
+.tree-inner h3.mon2{
+    position: absolute;
+    left:50px;
+    top:60px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.tree-inner div.mon2{
+    color: #ffffff;
+    position: absolute;
+    top:110px;
+    left:-120px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
+}
+.tree-inner img.mon3{
+    position: absolute;
+    left:333px;
+    top:215px;
+    height:40px;
+}
+
+.tree-inner h3.mon3{
+    position: absolute;
+   right: -60px;
+   top:215px;
+    color: #ffffff;
+    font-size: 24px;
+    width: 200px;
 
 }
-.content .tree p:last-child{
-    color:#000;
+
+.tree-inner div.mon3{
+    color: #ffffff;
+    position: absolute;
+    top:260px;
+    left:420px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
+}
+.tree-inner img.mon4{
+    position: absolute;
+    left:164px;
+    top:256px;
+    height:50px;
+}
+
+.tree-inner h3.mon4{
+    position: absolute;
+    left:30px;
+    top:245px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.tree-inner div.mon4{
+    color: #ffffff;
+    position: absolute;
+    top:290px;
+    left:-190px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
 }
