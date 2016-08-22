@@ -17,8 +17,6 @@
     color: #fff;
     font-size: 30px;
     top:40px;
-
-
 }
 .content .course .carousel {
     position: relative;
@@ -26,26 +24,210 @@
     left:100px;
 }
 .tree{
-    background:radial-gradient(#61617b 10%,#2f2f52 80%);
+    background: radial-gradient(#21213e 40%,#303052,#303052);
     position: relative;
     height: 100%;
     text-align: center;
 }
 .tree h2{
     position: relative;
-
     color: #ffffff;
-
     top:40px;
     font-size: 30px;
 }
 .tree p{
     position: relative;
     color: #ffffff;
-
     top: 60px;;
+}
+.tree-container{
+    position: relative;
+    height: 900px;
+    overflow: hidden;
+}
+.tree-inner {
+    background: url("../img/shequ/shangu.png")  no-repeat;
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -260px;
+    margin-bottom: 300px;
+    z-index: 3;
+}
+.tree-inner img.mon1{
+    position: absolute;
+    left:308px;
+    top:70px;
+    height:50px;
+}
+
+.tree-inner h3.mon1{
+    position: absolute;
+    left:370px;
+    top:40px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.tree-inner div.mon1{
+    color: #ffffff;
+    position: absolute;
+    top:90px;
+    left:420px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
+}
+.tree-inner img.mon2{
+    position: absolute;
+    left:210px;
+    top:130px;
+    height:38px;
+}
+
+.tree-inner h3.mon2{
+    position: absolute;
+    left:70px;
+    top:80px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.tree-inner div.mon2{
+    color: #ffffff;
+    position: absolute;
+    top:130px;
+    left:-110px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
+}
+.tree-inner img.mon3{
+    position: absolute;
+    left:359px;
+    top:255px;
+    height:40px;
+}
+
+.tree-inner h3.mon3{
+    position: absolute;
+   right: -80px;
+   top:235px;
+    color: #ffffff;
+    font-size: 24px;
+    width: 200px;
 
 }
-.content .tree p:last-child{
-    color:#000;
+
+.tree-inner div.mon3{
+    color: #ffffff;
+    position: absolute;
+    top:280px;
+    left:440px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
+}
+.tree-inner img.mon4{
+    position: absolute;
+    left:170px;
+    top:305px;
+    height:50px;
+}
+
+.tree-inner h3.mon4{
+    position: absolute;
+    left:30px;
+    top:295px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.tree-inner div.mon4{
+    color: #ffffff;
+    position: absolute;
+    top:340px;
+    left:-190px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
+}
+.tree-bg1{
+    position: absolute;
+    width:100%;
+    bottom:0;
+    height: 825px;
+    background: url(../img/shequ/shan1.png) bottom center no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+.tree-bg2{
+    position: absolute;
+    bottom: 0;
+    width: 110%;
+    margin-bottom: 390px;
+    height: 368px;
+    background: url(../img/shequ/shan2.png) bottom center no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.tree-star{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 600px;
+    width: 100%;
+    height:249px;
+    background:url(../img/shequ/star.png)bottom center no-repeat;
+    background-size: cover;
+    z-index:0;
+}
+.weekly{
+    position: relative;
+    z-index:3;
+    width: 800px;
+    text-align: left;
+    margin: -290px auto 0;
+}
+.weekly img{
+    float: left;
+    width:300px;
+}
+.weekly-intro{
+    color: #ffffff;
+    margin-left: 320px;
+}
+.weekly h3{
+    font-size: 32px;
+    padding:10px 0;
+}
+.weekly  p.weekly-p{
+    font-size: 16px;
+    padding:0 10px;
+    position: relative;
+    top:0;
+}
+.btn{
+    color:#fff;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #e36265;
+    padding:3px 10px;
+    border-radius: 12px;
+}
+.weekly ul{
+    position: relative;
+    left:20px;
+    width: 50%;
+    float: left;
+    margin-top: 10px;
+}
+.weekly ul li{
+    list-style-type: disc;
 }

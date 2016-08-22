@@ -14,7 +14,7 @@
 .mod-carousel {
   position: relative;
   height: 460px;
-  width: 1380px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 40px 0;
   overflow: hidden;
@@ -63,30 +63,60 @@
   transform: scale(1.2,1.2);
 }
 
-.mod-carousel .pannel-ct  a {
+.mod-carousel .pannel>a {
   box-sizing: border-box;
   display: block;
   height: 100%;
   border: 8px solid transparent;
+  padding: 50px;
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
   background-color: #29394d;
 
 }
+.mod-carousel .pannel h3 {
+  font-size: 2em;
+}
+.mod-carousel .pannel h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.mod-carousel .pannel hr {
+  display: inline-block;
+  width: 4em;
+  height: 0.4em;
+  margin:2em 0;
+  border: 0;
+  background-color: #00bdb1;
+}
+.mod-carousel .v1 hr {
+  background-color: #e38465;
+}
+.mod-carousel .v2 hr,
+.mod-carousel .v4 hr {
+  background-color: #ff5515;
+}
+
 .mod-carousel .v0>a {
+  text-align: left;
   background-image: url(../images/bg0.png);
 }
 .mod-carousel .v1>a {
+  text-align: left;
   background-image: url(../images/bg1.png);
 }
 .mod-carousel .v2>a {
+  text-align: right;
   background-image: url(../images/bg2.png);
 }
 .mod-carousel .v3>a {
+  text-align: right;
   background-image: url(../images/bg3.png);
 }
 .mod-carousel .v4>a {
+  text-align: left;
   background-image: url(../images/bg4.png);
 }
 .intro-layers {
@@ -122,6 +152,9 @@
   border-radius: 8px;
   padding: 12px;
 }
+.intro-mountain h3 {
+  font-size: 1.6em;
+}
 .intro-mountain img.m1 {
   right: 136px;
   top: 77px;
@@ -131,8 +164,8 @@
   top: 40px;
 }
 .intro-mountain div.m1 {
-  right: -150px;
-  top: 80px;
+  right: -194px;
+  top: 87px;
 }
 .intro-mountain img.m2 {
   height: 40px;
@@ -141,10 +174,10 @@
 }
 .intro-mountain h3.m2 {
   left: 40px;
-  top: 80px;
+  top: 73px;
 }
 .intro-mountain div.m2 {
-  left: -115px;
+  left: -150px;
   top: 120px;
 }
 .intro-mountain img.m3 {
@@ -158,19 +191,19 @@
 }
 .intro-mountain div.m3 {
   right: -230px;
-  top: 260px;
+  top: 279px;
 }
 .intro-mountain img.m4 {
   left: 166px;
   top: 316px;
 }
 .intro-mountain h3.m4 {
-  left: 20px;
-  top: 300px;
+  left: 13px;
+  top: 280px;
 }
 .intro-mountain div.m4 {
-  left: -166px;
-  top: 330px;
+  left: -178px;
+  top: 328px;
 }
 .intro-weekly {
   bottom: 0;
@@ -211,7 +244,7 @@
   height: 32px;
   width: 80px;
   margin-top: 10px;
-  margin-left: 30px;
+  margin-left: -30px;
   border-radius: 3px;
   line-height: 32px;
   text-decoration: none;
@@ -222,22 +255,22 @@
 .intro-bg2 {
   position: absolute;
   bottom: 0;
-  width: 110%;
-  margin-left:-5%;
-  margin-right: -5%;
+  width: 120%;
+  margin-left:-10%;
+  margin-right: -10%;
   margin-bottom: 15px;
   z-index: 1;
 }
 
 .intro-bg1 {
-  height: 700px;
+  height: 800px;
   background: url(../images/intro-bg1.png) center center no-repeat;
   background-size: cover;
 
 }
 .intro-bg2 {
   height: 300px;
-  margin-bottom: 370px;
+  margin-bottom: 340px;
   background: url(../images/intro-bg2.png) center center no-repeat;
   background-size: cover;
 }
@@ -372,6 +405,10 @@
   width: 100px;
   margin-right: 200px;
 }
+.timeline .active a{
+  color: #252545;
+  font-weight: bolder;
+}
 .mod-bigevent .timeline .pointer {
   display: inline-block;
   height: 0;
@@ -381,7 +418,7 @@
   border-color: #252545 transparent transparent #252545;
   visibility: hidden;
 }
-.timeline .pointer.active {
+.timeline .active .pointer{
   visibility: visible;
 }
 .mod-bigevent .timeline a {
@@ -408,4 +445,131 @@
 
 #footer li img {
    height: 12px;
+}
+
+/*dialog*/
+
+.dialog-model {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  color: #666;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 1s;
+}
+.dialog-model.hidden {
+  display: none;
+}
+
+.dialog-model .dialog {
+  position: absolute;
+  width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 6px #ccc;
+  transition: 1s
+}
+.dialog-model .header {
+  padding: 0.6em 1.2em;
+  line-height: 2;
+  border-bottom: 1px solid #ccc;
+}
+.dialog-model .header .close {
+  float: right;
+  height: 100%;
+  font-size: 20px;
+  color: #ccc;
+}
+.dialog-model .header .close:hover {
+  color: #666;
+}
+.dialog-model .header .title {
+  margin-top: 7px;
+  margin-right: 40px;
+  overflow: hidden;
+}
+.dialog-model .body {
+  padding: 0.3em 2em 1.2em 2em;
+  color: #333;
+}
+.dialog-model .body label {
+  padding-top: 0.8em;
+  padding-bottom:0.5em;
+  display: block;
+  font-weight: bolder;
+}
+.dialog-model .form-group input {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0.4em;
+  line-height: 1.6;
+  background-color: rgb(250, 255, 189);
+}
+.dialog-model .form-bottom {
+  margin-top: 1.6em;
+}
+.dialog-model .form-bottom .submit-btn {
+  float: right;
+}
+.dialog-model .submit-btn .btn {
+  line-height: 36px;
+  height: 36px;
+  font-size: 14px;
+}
+.dialog-model .form-bottom .remember {
+  height: 36px;
+  line-height: 36px;
+}
+.dialog-model .remember span {
+  cursor: pointer;
+}
+input.btn {
+  border-width: 0;
+  border-radius: 0.3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* 提示窗口*/
+div.msg-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: 50%;
+  border-radius: 6px;
+  box-shadow: 0 0 3px #ccc;
+  padding: 10px;
+  transform: translateX(-50%);
+  line-height: 40px;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.8;
+}
+.msg-info.log {
+  background-color: green;
+}
+.msg-info.log:before{
+  position: relative;
+  top: 3px;
+  content: "\f00c";
+  font-size: 28px;
+}
+.msg-info.error {
+  background-color: red;
+}
+.msg-info.error:before {
+  position: relative;
+  top: 3px;
+  content: "\f06a";
+  font-size: 28px;
+
 }

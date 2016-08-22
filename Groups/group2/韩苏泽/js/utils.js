@@ -91,3 +91,40 @@ var throttleFactory = function(fn, time) {
   };
 
 };
+ // 单例函数 不知道用没用到 不删了
+var creatSingleton = function(fn) {
+  var instance;
+  return function() {
+    if(instance) {
+      return instance;
+    }
+    return instance = fn.apply(this,arguments);
+  }
+}
+
+// 通用迭代器
+var isArrayLike = function(arr) {
+  if (typeof arr === 'object' &&
+      Number.isFinite(arr.length) &&
+      arr.length >= 0 &&
+      Math.floor(arr.length) === arr.length &&
+      arr.length < Math.pow(2, 32) - 1) {
+        return true;
+  }
+
+  return false;
+}
+var each = function(obj, fn) {
+  if (isArrayLike(obj)) {
+    for (var i = 0, len = obj.length; i < len; i++) {
+      fn.call(obj[i], obj[i], i);
+    }
+
+  } else if(typeof obj === 'object') {
+    for (var i in obj) {
+      fn.call(obj[i], obj[i], i);
+    }
+
+  }
+
+};
