@@ -40,6 +40,11 @@
     color: #ffffff;
     top: 60px;;
 }
+.tree-container{
+    position: relative;
+    height: 900px;
+    overflow: hidden;
+}
 .tree-inner {
     background: url("../img/shequ/shangu.png")  no-repeat;
     background-size: contain;
@@ -182,4 +187,47 @@
     background:url(../img/shequ/star.png)bottom center no-repeat;
     background-size: cover;
     z-index:0;
+}
+.weekly{
+    position: relative;
+    z-index:3;
+    width: 800px;
+    text-align: left;
+    margin: -290px auto 0;
+}
+.weekly img{
+    float: left;
+    width:300px;
+}
+.weekly-intro{
+    color: #ffffff;
+    margin-left: 320px;
+}
+.weekly h3{
+    font-size: 32px;
+    padding:10px 0;
+}
+.weekly  p.weekly-p{
+    font-size: 16px;
+    padding:0 10px;
+    position: relative;
+    top:0;
+}
+.btn{
+    color:#fff;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #e36265;
+    padding:3px 10px;
+    border-radius: 12px;
+}
+.weekly ul{
+    position: relative;
+    left:20px;
+    width: 50%;
+    float: left;
+    margin-top: 10px;
+}
+.weekly ul li{
+    list-style-type: disc;
 }
