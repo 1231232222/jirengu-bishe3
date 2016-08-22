@@ -5,6 +5,7 @@
     <title>饥人谷-最有爱的前端学习网站</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
   </head>
   <body>
   <div id="header">
@@ -29,9 +30,9 @@
       </div>
       <div class="layer-logo"></div>
       <div class="layer-mountains">
-        <div class="layer-mountain1"></div>
-        <div class="layer-mountain2"></div>
         <div class="layer-mountain3"></div>
+        <div class="layer-mountain2"></div>
+        <div class="layer-mountain1"></div>
       </div>
       <div class="layer-notice">
       </div>
@@ -48,20 +49,24 @@
         <ul class="layer-nav">
           <li class="parent-link">
             <a href="javascript:void(0)">课程</a>
-            <ul class="child-nav">
-              <li><a href="">视频</a></li>
-              <li><a href="">课件</a></li>
-              <li><a href="">讲师</a></li>
-            </ul>
+            <div class="dropdown">
+              <ul class="child-nav">
+                <li><a href="">视频</a></li>
+                <li><a href="">课件</a></li>
+                <li><a href="">讲师</a></li>
+              </ul>
+            </div>
           </li>
           <li class="parent-link">
             <a href="javascript:void(0)">报名</a>
-            <ul class="child-nav">
-              <li><a href="">关于</a></li>
-              <li><a href="">班级</a></li>
-              <li><a href="">收费</a></li>
-              <li><a href="">预约</a></li>
-            </ul>
+            <div class="dropdown">
+              <ul class="child-nav">
+                <li><a href="">关于</a></li>
+                <li><a href="">班级</a></li>
+                <li><a href="">收费</a></li>
+                <li><a href="">预约</a></li>
+              </ul>
+            </div>
           </li>
           <li>
             <a href="">作品</a>
@@ -72,10 +77,21 @@
           <li>
             <a href="">博客</a>
           </li>
-          <li class="parent-link">
+          <li class="parent-link userSwicth">
             <a href="javascript:void(0)">登入</a>
-            <ul class="dropdown">
-            </ul>
+            <div class="dropdown">
+              <ul class="child-nav tourist">
+                <li><a href="javascript:void(0)" id="login">登录</a></li>
+                <li><a href="javascript:void(0)" id="register">注册</a></li>
+              </ul>
+              <ul class="child-nav userinfo hidden">
+                <li><a href="javascript:void(0)" class="user"></a></li>
+                <li><a href="javascript:void(0)">设置</a></li>
+                <li><a href="javascript:void(0)">课程</a></li>
+                <li><a href="javascript:void(0)">书包</a></li>
+                <li><a href="javascript:void(0)" id= "cancel-login">注销</a></li>
+              </ul>
+            </div>
           </li>
         </ul>
     </div>
@@ -86,12 +102,64 @@
         <h2>免费公开课</h2>
         <div class="mod-carousel">
           <ul class ="pannel-ct clearfix">
-            <li class="pannel v1"><a href=""></a></li>
-            <li class="pannel v2"><a href=""></a></li>
-            <li class="pannel v3"><a href=""></a></li>
-            <li class="pannel v4"><a href=""></a></li>
-            <li class="pannel v0"><a href=""></a></li>
-            <li class="pannel v0"><a href=""></a></li>
+            <li class="pannel v1">
+              <a href="" title="轻分享第2期-前端找工作不完全装X指南（下）">
+                <hr>
+                <h3>轻分享第2期-前端找工作不完全装X指南（下）</h3>
+                <p>前端找工作不完全装X指南</p>
+                <hr>
+                <p>by【】</p>
+                <hr>
+              </a>
+            </li>
+            <li class="pannel v2">
+              <a href="" title="轻分享第2期-前端找工作不完全装X指南（上）">
+                <hr>
+                <h3>轻分享第2期-前端找工作不完全装X指南（上）</h3>
+                <p>前端找工作不完全装X指南</p>
+                <hr>
+                <p>by【】</p>
+                <hr>
+              </a>
+            </li>
+            <li class="pannel v3">
+              <a href="" title="问答-find-filter-回调函数-服务器搭建">
+                <hr>
+                <h3>问答-find-filter-回调函数-服务器搭建</h3>
+                <p>问答findfilter回调函数服务器搭建</p>
+                <hr>
+                <p>by【】</p>
+                <hr>
+              </a>
+            </li>
+            <li class="pannel v4">
+              <a href="" title="问答-响应式-浮动clearfix-美感-如何和产品沟通-console.log-任务1-9">
+                <hr>
+                <h3>问答-响应式-浮动clearfix-美感-如何和产品沟通-console.log-任务1-9</h3>
+                <p>问答-响应式-浮动clearfix-美感-如何和产品沟通-console.log-任务1-9</p>
+                <hr>
+                <p>by【若愚】</p>
+                <hr>
+            </a>
+          </li>
+            <li class="pannel v0">
+              <a href="" title="任务班-JS问答">
+                <hr>
+                <h3>任务班-JS问答</h3>
+                <p>JS问答</p>
+                <hr>
+                <p>by【若愚】</p>
+                <hr>
+              </a>
+            </li>
+            <li class="pannel v0">
+              <a href="">
+                <hr>
+                <h3>更多精彩</h3>
+                <p>查看全部公开课</p>
+                <hr>
+              </a>
+            </li>
           </ul>
           <a href="javascript:void(0)" class="prev"></a>
           <a href="javascript:void(0)" class="next"></a>
@@ -150,8 +218,8 @@
               </ul>
             </div>
             <ul class="timeline clearfix">
-              <li>
-                <span class="pointer active"></span>
+              <li class="active">
+                <span class="pointer"></span>
                 <a href="">预约免费试听</a>
               </li>
               <li>
@@ -201,8 +269,70 @@
       </ul>
     </div>
   </div>
+  <div class="dialog-model hidden" id="login-dialog">
+    <div class="dialog show">
+      <div class="header clearfix">
+        <a href="javascript:void(0)" class="close"><span>×</span></a>
+        <h4 class="title">登录</h4>
+      </div>
+      <div class="body">
+        <form action="">
+          <ul>
+            <li class="form-group">
+              <label>邮箱/用户名/手机号</label>
+              <input type="text" name ="username">
+            </li>
+            <li class="form-group">
+              <label>密码</label>
+              <input type="password" name="pwd">
+            </li>
+            <li class="form-bottom clearfix">
+              <div class="submit-btn"><input type="submit" class="btn submit"  value="登陆"></div>
+              <div class="remember"><input type="checkbox" name="login-remember"><span>记住我</span></div>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="dialog-model hidden" id="register-dialog">
+    <div class="dialog show">
+      <div class="header clearfix">
+        <a href="javascript:void(0)" class="close"><span>×</span></a>
+        <h4 class="title">注册</h4>
+      </div>
+      <div class="body">
+        <form action="">
+          <ul>
+            <li class="form-group">
+              <label>邮箱</label>
+              <input type="text" name ="email">
+            </li>
+            <li class="form-group">
+              <label>用户名</label>
+              <input type="text" name ="username">
+            </li>
+            <li class="form-group">
+              <label>密码</label>
+              <input type="password" name="pwd">
+            </li>
+            <li class="form-bottom clearfix">
+              <div class="submit-btn"><input type="submit" class="btn submit" value="注册"></div>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </div>
     <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
     <script src="js/utils.js"></script>
+    <script src="js/mock.js"></script>
+    <script src= "js/userInfo.js"></script>
+    <script src="js/flyMonster.js"></script>
+    <script src="js/mountain.js"></script>
+    <script src="js/carsouel.js"></script>
+    <script src="js/bigEvent.js"></script>
+    <script src="js/msgInfo.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
