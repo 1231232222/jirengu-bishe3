@@ -1,0 +1,42 @@
+.next{
+    position: relative;
+}
+.next>h2{
+    color:#fff;
+    font-size: 32px;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #2f2f51;
+}
+.section-contact {
+    background-color: #8e93a5;
+    min-height: 40px;
+}
+.section-contact .contact{
+    float: left;
+}
+.section-contact .contact li{
+    float: left;
+    width: 90px;
+    height: 90px;
+    background-color: #335;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-left: 30px;
+    position: relative;
+    top:30px;
+}
+.section-contact:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.section-contact img{
+    display: block;
+    position: relative;
+    top:-30px;
+    left:5px;
+    width: 90px;
+    height: 90px;
+}
