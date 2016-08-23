@@ -1,0 +1,238 @@
+/* reset */
+@charset "utf-8";
+body,div,p,li,ol,ul,h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}
+html,body {
+	height: 100%;
+	font-family: '微软雅黑';
+}
+a {
+	text-decoration: none;
+}
+li { 
+	list-style: none;
+}
+.border-none {
+	border: none !important;
+}
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+header {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	background-color: rgb(47,47,82);
+}
+header > .nav {
+	height: 60px;
+	line-height: 60px;
+	margin-top: 90px;
+	margin-right: 100px;
+	border: 1px solid #fff;
+	border-radius: 6px;
+	float: right;
+	font-size: 26px;
+}
+header > .nav > li {
+	float: left;
+	border-right: 1px solid #fff;
+}
+header > .nav > li > a {
+	display: block;
+	padding: 0 20px;
+	color: #fff;
+}
+header .background-layer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+header .mountain-list {
+	width: 100%;
+	height: 100%;
+}
+header .mountain-list > .moun-1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/moun-1.png) bottom left no-repeat;
+}
+header .mountain-list > .moun-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/moun-2.png)  right bottom no-repeat;
+}
+header .mountain-list > .moun-3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/moun-3.png) 60px bottom  no-repeat;
+}
+header .shadow-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+header .shadow-list > .shadow-1 {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/starts-list.png) 0 80px no-repeat;
+}
+header .logo {
+	position: absolute;
+	top: 25%;
+	left: 28%;
+	width: 100%;
+	height: 100%;
+	background: url(../img/jirengu.png) 0 0 no-repeat;
+}
+
+.main {
+	background-color: rgb(48,48,82);
+}
+.main > .course {
+	padding-top: 60px;
+}
+.course > h2 {
+	text-align: center;
+
+}
+.course .slider-wrap {
+	width: 100%;
+}
+.course .slider > li {
+	float: left;
+	box-sizing: border-box;
+	width: 33.33%;
+	height: 360px;
+	padding: 20px;
+	background: #fff;
+	text-align: right;
+}
+.course .slider > li > a {
+	display: block;
+	box-sizing: border-box;
+	height: 100%;
+	padding: 20px;
+	color: #fff;
+	background-color: rgb(48,48,82);
+}
+.course .slider h4 {
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+.course .slider h4+p {
+	margin-bottom: 40px;
+}
+.course .slider .item-1 {
+	background-image: url(../img/course-1.png);
+	background-position: 0 bottom;
+	background-repeat: no-repeat;
+}
+.course .slider .item-2 {
+	background-image: url(../img/course-2.png);
+	background-position: 0 bottom;
+	background-repeat: no-repeat;
+}
+.course .slider .item-3 {
+	text-align: left;
+	background-image: url(../img/course-3.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+.about-jirengu {
+	position: relative;
+	background: url(../img/zhoukan-di.png)  0 bottom no-repeat; 
+	background-size: contain;
+}
+.about-jirengu .weekly {
+	padding-top: 25px;
+	padding-bottom: 60px;
+}
+.about-jirengu .weekly > .content {
+	padding-left: 50%; 
+	background: url(../img/weekly.png) 35% 0 no-repeat; 
+	background-size: contain;
+	text-align: left;
+	font-size: 20px;
+}
+.about-jirengu .weekly h4 {
+	font-size: 44px; 
+}
+.near-course h4 {
+	 padding-top: 40px;
+	 padding-bottom: 30px; 
+	 font-size: 45px; 
+	 text-align: center;
+}
+.near-course .time-line {
+	height: 90px;
+	border: 1px solid #ccc; 
+	padding-top: 40px;
+	text-align: center;
+	font-size: 20px; 
+	padding-bottom: 150px;
+}
+.near-course .monster-list {
+	position: relative; 
+	width: 100%;
+}
+.near-course .monster-list > .left {
+	float: left;
+}
+.near-course .monster-list > .right {
+	float:right;
+}
+.about-jirengu article {
+	text-align: center;
+	line-height: 2;
+	color: #fff;
+}
+.about-jirengu article > h4 {
+	font-size: 45px;
+}
+.about-jirengu .tree {
+	height: 720px; 
+	width:820px; 
+	margin: 0 auto; 
+	background: url(../img/tree.png) 0 0 no-repeat;
+}
+
+.time-line span{
+	margin: 0 70px;
+}
+
+.monster-list .mon {
+	float: left;
+	width: 100px;
+	height: 95px;
+	border: 1px solid #ccc;
+}
+
+footer { 
+	padding-top: 25px;
+	padding-bottom: 40px; 
+	background: rgb(48,48,82); 
+	text-align: center;
+	color: #fff;
+}
+footer a {
+	color: #fff;
+}
