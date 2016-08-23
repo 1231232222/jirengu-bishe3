@@ -1,0 +1,666 @@
+html,body,div,ul {
+	margin: 0;
+	padding: 0;
+}
+html,body,#header {
+	height: 100%
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+* {
+	color: #fff;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.layout {
+	margin: 0 auto;
+}
+.pre-arrow {
+	position: absolute;
+	display: block;
+	top:50%;
+	transform:translate(0,-50%);
+	left:-14px;
+	border-width: 15px;
+	border-style: solid;
+	border-color: transparent #303052 transparent transparent;
+}
+.next-arrow {
+	position: absolute;
+	display: block;
+	top:50%;
+	transform:translate(0,-50%);
+	right:-14px;
+	border-width: 15px;
+	border-style: solid;
+	border-color: transparent transparent transparent  #303052 ;
+}
+#header {
+	position: relative;
+	background: url(../img/bgd-1.jpg);
+	overflow: hidden;
+	z-index: 0;
+}
+#header .nav a:hover {
+	text-shadow:1px 1px;
+}
+#header .nav {
+	position: absolute;
+	z-index: 108;
+	top:20px;
+	right: 80px;
+}
+#header .nav>li{
+	float: left;
+	width: 100px;
+	text-align: center;
+}
+#header .nav>li>a {
+	display: block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	border-width: 1px 1px 1px 0px;
+	border-color: #fff;
+	border-style: solid;
+}
+#header .nav>li:first-child>a {
+	border-left: 1px solid #fff;
+	border-radius: 10px 0px 0px 10px;
+}
+#header .nav>li:last-child>a {
+	border-radius: 0px 10px 10px 0px;
+}
+#header .nav ul {
+	display: none;
+	margin-top:20px;
+	border: 1px solid #fff;
+	border-radius: 8px;
+}
+#header .nav li:hover ul {
+	display: block;
+}
+#header .nav ul a {
+	display: block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-top: 1px solid #ccc;
+}
+#header .nav ul li:first-child a {
+	border-top:0px;
+}
+
+#header ul ul .user-pic {
+	position: relative;;
+	height: 70px;
+}
+#header ul .user-pic a {
+	position: absolute;
+	display: block;
+	width: 45px;
+	height: 45px;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	border-radius: 50%;
+	background: red;
+	overflow: hidden;
+}
+
+#header .logo {
+	position:absolute;
+	top:50%;
+	left: 50%;
+	transform:translate(-50%,-50%); 
+}
+@keyframes shadowone 
+{
+	0%    {left: 0%}
+	100%   {left: -100%}
+}
+@keyframes shadowtwo {
+	0%    {left: 100%}
+	100%   {left: 0%}
+}
+#header .shadow div {
+	position: absolute;
+	width: 1366px;
+	height: 500px;
+	background: url(../img/bot.png) 0px 00px no-repeat;
+	background-size: cover;
+}
+#header .shadow .shadow-one {
+	animation: shadowone 100s linear 0s infinite normal ;
+}
+#header .shadow .shadow-two {
+	animation: shadowtwo 100s linear 0s infinite normal ;
+}
+#header .mountain {
+	height: 100%;
+}
+#header .mountain div {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;	
+	
+}
+#header .mountain .mountain-one {
+	background: url(../img/mountain1.png) bottom no-repeat;
+	background-size: 100% 50%;
+	z-index: 102;
+}
+#header .mountain .mountain-two {
+	background: url(../img/mountain2.png) bottom no-repeat;
+	background-size: 100% 50%;
+	z-index: 101;
+}
+#header .mountain .mountain-thr {
+	background: url(../img/mountain3.png) bottom no-repeat;
+	background-size: 100% 50%;
+	z-index: 99;
+}
+#header .meteor-star div{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	background: url(../img/meteor.png) center no-repeat;
+}
+@keyframes meteor1
+{
+ 0    {top:top-100%;left: 100%}
+25%   {top:-50px;left: 40%;}
+75%   {top:80%;left: -50px;}
+100%  {top:150%;left: -100% }
+}
+#header .meteor-star .meteor1 {
+	animation: meteor1 10s linear 3s infinite normal ;
+}
+@keyframes meteor2
+{
+0    {top:top-100%;left: 150%}
+25%   {top:-50px;left: 100%;}
+75% {top:100%;left: 60%;}
+100%   {top:top-100%;left: 0%}
+}
+#header .meteor-star .meteor2 {
+	animation: meteor2 10s linear 5s infinite normal ;
+}
+@keyframes flicker  
+	{
+	0%    {width: 5px;height:3px;}
+	50%     {width: 30px;height: 30px;}
+	100%   {width: 5px;height: 5px;}
+}
+#header .star-flicker div{
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background: url(../img/star.png) center no-repeat;
+	background-size: cover;
+}
+#header .star-flicker .flicker1 {
+	top: 60%;
+	left: 10%;
+	animation: flicker 6s linear 0s infinite normal; 
+}
+#header .star-flicker .flicker2 {
+	top: 40%;
+	left: 20%;
+	animation: flicker 6s linear 1s infinite normal; 
+}
+#header .star-flicker .flicker3 {
+	top: 80%;
+	left: 500%;
+	animation: flicker 6s linear 2s infinite normal; 
+}
+#header .star-flicker .flicker4 {
+	top: 30%;
+	left: 90%;
+	animation: flicker 6s linear 3s infinite normal; 
+}
+#header .star-flicker .flicker5 {
+	top: 70%;
+	left: 20%;
+	animation: flicker 6s linear 4s infinite normal; 
+}
+#header .star-flicker .flicker5 {
+	top: 70%;
+	left: 80%;
+	animation: flicker 6s linear 5s infinite normal; 
+}
+#header .gif-ct  *{
+	position: absolute;
+	z-index: 104;
+}
+#header .gif-ct div{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: #303052;
+}
+#header .gif-ct div:first-child {
+	left: 30px;
+	bottom: -75px
+}
+#header .gif-ct div:last-child {
+	left: 220px;
+	bottom: -75px
+}
+#header .gif-ct a {
+	display: block;
+	z-index: 105;
+	bottom: 0px;
+	width: 150px;
+	height: 100px;
+}
+#header .gif-ct .gate {
+	left: 30px;
+	background: url(../img/gate.gif) center no-repeat;
+	background-size: contain;
+}
+#header .gif-ct .talk {
+	left:220px;
+	background: url(../img/talk.png) center no-repeat;
+	background-size: contain;
+}
+#header .gif-ct .talk:hover {
+	background: url(../img/talk.gif) center no-repeat;
+	background-size: contain;
+}
+@keyframes weather
+	{
+	0    {left:100%;opacity:0.9;}
+	100%   {left:-50%;opacity:0;}
+	}
+#header .weather a {
+	display: block;
+	overflow: hidden;
+	height: 20px;
+	line-height: 20px;
+	font-size: 10px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	opacity: 0.5;
+}
+#header .weather {
+	position: absolute;
+	top:15%;
+	left: 100%;
+	z-index: 120;
+	width:200px;
+	height: 90px;
+	background:url(../img/notice3.gif) bottom no-repeat;
+	animation: weather 15s linear 0s infinite normal; 
+}
+#header .weather:hover {
+	animation-play-state: paused;
+}
+#header .weather:hover p {
+	opacity: 0;
+}
+
+#content {
+	margin-top: -30px;
+	padding-top: 50px;
+	background:#303052;
+}
+#content h2 {
+	margin: 30px auto;
+	width: 1326px;
+	text-align: center;
+	font-size: 30px;
+}
+#content .carousel {
+	position: relative;
+	height: 600px;
+	overflow: hidden;
+	width: 100%;
+	background:#303052;
+}
+#content .carousel ul {
+	position: absolute;
+	top:50%;
+	transform:translate(0,-50%);
+	height: 80%;
+}
+#content .carousel ul li {
+	float: left;
+	position: relative;
+	z-index: 100;
+	background-color:#fff; ;
+	padding: 19px;
+	border:1px solid #ccc;
+	z-index: 99;
+}
+#content .carousel .scale-big {
+	transform:scale(1.1);
+	transition: transform 0.6s;
+	z-index: 100;
+}
+#content .carousel li a {
+	display: block;
+	padding: 20px;
+	height: 80%;
+	border: 10px solid #29394d;
+	background-color: #29394d;
+}
+
+#content .carousel  li:hover * {
+	color: #000;
+}
+#content .carousel li hr {
+	display: inline-block;
+	width: 40px;
+	height: 5px;
+}
+#content .carousel  li:hover>a {
+	background-color: #fff;
+}
+#content .carousel a.bg0	{
+	background-image: url(../img/bg0.png) ;
+}
+#content .carousel a.bg1	{
+	background-image: url(../img/bg1.png) ;
+}
+#content .carousel a.bg2	{
+	background-image: url(../img/bg2.png) ;
+}
+#content .carousel a.bg3	{
+	background-image: url(../img/bg3.png) ;
+}
+.carousel a.bg4	{
+	background-image: url(../img/bg4.png) ;
+}
+.carousel li:nth-child(2n) div {
+	padding: 10px;
+	text-align: right;
+}
+.carousel li:nth-child(2n) hr {
+	background: yellow;
+}
+.carousel li:nth-child(2n+1) hr {
+	background: red;
+}
+#content .info {
+	padding-top: 30px;
+}
+#content .info>p {
+	width:700px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+#content .info {
+	position: relative;
+	height: 700px;
+	
+}
+#content .mountain {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+	width: 600px;
+	height: 500px;
+	background: url(../img/intro-mountain.png) bottom no-repeat;
+	background-size:contain;
+	z-index: 100;
+}
+#content  .info-star {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: url(../img/intro-star.png) top no-repeat;
+	z-index: 99;
+}
+#content  .mountain *{
+	position: absolute;
+	z-index: 10;
+}
+#content .mountain h3 {
+	font-size: 1.5em;
+	width: 200px;
+}
+#content .mountain img {
+	width: 50px;
+	height: 50px;
+}
+#content .mountain p {
+	width: 300px;
+	padding: 10px;
+	border:1px solid #fff;
+	border-radius: 10px;
+	text-align: center;
+}
+#content .item1 img {
+	top:116px;
+	left: 225px;
+}
+#content .item1 h3 {
+	top:79px;
+	left: 75px;
+}
+#content .item1 p {
+	top:150px;
+	left: -150px;
+}
+#content .item2 img {
+	top:78px;
+	left: 360px;
+}
+#content .item2 h3 {
+	top:8px;
+	left: 428px;
+}
+#content .item2 p {
+	top:90px;
+	left: 465px;
+}
+#content .item3 img {
+	top:311px;
+	left: 225px;
+}
+#content .item3 h3 {
+	top:275px;
+	left:70px;
+}
+#content .item3 p {
+	top:340px;
+	left: -150px;
+}
+#content .item4 img {
+	top:252px;
+	left: 415px;
+}
+#content .item4 h3 {
+	top:230px;
+	left: 480px;
+}
+#content .item4 p {
+	top:290px;
+	left:500px;
+}
+#content .layer {
+	position: relative;
+	height: 300px;
+}
+#content .magazine {
+	position: absolute;
+	width: 800px;
+	height: 300px;
+	left: 315px;
+	top:30px;
+	z-index: 90;
+}
+#content .magazine .item {
+	float: left;
+	width: 400px;
+}
+#content .magazine h2 {
+	margin-top: -10px;
+	text-align: left;
+}
+
+#content .magazine ul {
+	width: 400px;
+	margin-left: -100px;
+}
+#content .magazine ul li  {
+	margin-left: 100px;
+	margin-top: 10px;
+	width: 100px;
+	list-style: disc;
+	float: left;
+}
+#content .magazine a {
+	margin-top: 20px;
+	display: block;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 15px;
+	background: #e36265;
+} 
+#content .mou-bgd {
+	position: relative;
+	height: 550px;
+}
+#content .mou-bgd div {
+	position: absolute;
+	margin-left: -60px;
+	width: 110%;
+	height: 750px;
+}
+#content .moun-bg1 {
+	bottom:-280px;
+	background: url(../img/intro-bg1.png) center no-repeat;
+	background-size: 100%,250%;
+	z-index: 89;
+}
+#content .moun-bg2 {
+	background: url(../img/intro-bg2.png) 0 0 no-repeat;
+	background-size: 100%,250%;
+	bottom: -320px;
+	z-index: 88;
+}
+#content .course {
+	position: relative;
+}
+#content .course h2 {
+	background: #2f2f51;
+	height: 60px;
+	line-height: 60px;
+	margin: 0 auto;
+}
+#content .carousel-course {
+	position: relative;
+	width: 100%;
+	height: 500px;
+	background: #252545;
+}
+ .carousel-course ul:first-child a {
+	display: block;
+	width: 100%;
+	height: 500px;
+	background-size: contain;
+}
+#content .carousel-course .pre-arrow{
+	border-color: transparent yellow transparent transparent;
+}
+#content .carousel-course .next-arrow {
+	border-color: transparent transparent transparent yellow;
+}
+#content .img-ct {
+	position: absolute;
+}
+#content .img-ct li {
+	float: left;
+	height: 100%
+}
+#content .carousel-course .list1 {
+	background: url(../img/list1.png);
+}
+#content .carousel-course .list2 {
+	background: url(../img/list2.png);
+}
+#content .carousel-course .list3 {
+	background: url(../img/list3.png);
+}
+#content .carousel-course .list4 {
+	background: url(../img/list4.png);
+}
+#content .bullet {
+	position: absolute;
+	height: 50px;
+	left: 100px;
+	bottom: -50px;
+}
+#content .bullet li {
+	float: left;
+}
+#content .bullet li a {
+	position: relative;
+	display: block;
+	height: 100px;
+	width: 150px;
+	line-height: 100px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+#content .bullet li .finger {
+	position: absolute;
+	top:0;
+	left: 50%;
+	transform;translate(-50%,0)
+	display: block;
+	width: 0px;
+	border-width: 15px;
+	border-style: solid;
+	border-color: #252545 transparent transparent #252545 ;
+
+}
+#content .bullet .active {
+	color: #252545;
+}
+#content .section {
+	margin-top: -20px;
+	height: 200px;
+	background:#737990;
+}
+#content .section h4 {
+	padding-top: 180px;
+	text-align: center;
+	color: #bbb;
+}
+
+
+#footer {
+	background: #252545;
+}
+#footer p {
+	margin: 0px;
+	padding: 0px;
+	font-size: 10px;
+	text-align: center;
+}
+#footer p:first-child{
+	padding-top: 30px;
+}
+#footer p:last-child{
+	padding-bottom: 30px;
+}
+#footer p span {
+	padding-right:10px;
+	padding-left:10px;
+}
