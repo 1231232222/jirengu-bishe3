@@ -1,6 +1,6 @@
 
-
-$.fn.Carousel=function(){
+define(['./jquery.js'],function($){
+	$.fn.Couse=function(){
 	function Carousel($imgct){
 				this.$imgct=$imgct;
 				this.$item=$imgct.children();
@@ -32,7 +32,7 @@ Carousel.prototype={
 				this.$next.on("click",function(){
 						me.playNext();
 				});
-				this.$bullet.on('mouseover',"li" ,function(){
+				this.$bullet.on('mouseenter',"li" ,function(){
 				var idx = $(this).index();
 				if(me.cur<idx){
 					me.playNext(idx-me.cur);
@@ -95,8 +95,12 @@ Carousel.prototype={
 		new Carousel ($(this))
 	})
 }
+	return $.fn.Couse
+})
 
- $(".carousel-course").find(".img-ct").Carousel();
+
+
+
 
 
 

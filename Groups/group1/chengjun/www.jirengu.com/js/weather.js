@@ -1,4 +1,6 @@
-var Weather=(function(){
+
+define(['./jquery.js'],function($){
+	var Weather=(function(){
 	function init(){
 		$.ajax({
      	url:"http://api.jirengu.com/weather.php",
@@ -30,7 +32,8 @@ var Weather=(function(){
 		init:init
 	}
 })();
- Weather.init();
- $(".weather").find("a").on("click",function(){
-		console.log("ok")
-		})
+	return Weather
+})
+
+
+

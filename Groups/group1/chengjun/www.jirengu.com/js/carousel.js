@@ -1,17 +1,16 @@
-
-
-$.fn.Carousel=function(){
+define(['./jquery.js'],function($){
+	
+	$.fn.Carousel=function(){
 function Carousel($imgct){
 	this.$ct=$imgct;
 	this.$carousel=this.$ct.parent()
 	this.$item=$imgct.children();
 	this.$count=$imgct.children().length;
-	this.$itemWidth=this.$carousel.width()/3; //获取子元素宽度
-	this.init();
 	this.bind();
 }
 Carousel.prototype={
 		init:function(){
+			this.$itemWidth=this.$carousel.width()/3; //获取子元素宽度
 			this.$ct.css({
 				"width":this.$itemWidth*this.$count,
 				"height":this.$itemWidth,
@@ -23,6 +22,11 @@ Carousel.prototype={
 
 		bind:function(){
 			var me=this;
+			this.init();
+			window.onresize=function(){
+				me.init();
+			}
+			
 			 this.cur=1;
 			$(".pre-arrow").on("click",function(){
 				me.palyPre();
@@ -51,7 +55,12 @@ Carousel.prototype={
 		new Carousel ($(this))
 	})
 }
- $(".imgct").Carousel();
+
+	return $.fn.Carousel
+})
+
+
+
 
 
 
