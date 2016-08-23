@@ -122,6 +122,9 @@ a {
 	left: 50%;
 	transform:translate(-50%,-50%); 
 }
+#header .logo img {
+	width: 
+}
 @keyframes shadowone 
 {
 	0%    {left: 0%}
@@ -349,9 +352,14 @@ a {
 	z-index: 100;
 }
 #content .carousel li a {
+	position: absolute;
 	display: block;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
 	padding: 20px;
-	height: 80%;
+	height: 78%;
+	width: 78%;
 	border: 10px solid #29394d;
 	background-color: #29394d;
 }
@@ -491,6 +499,7 @@ a {
 }
 #content .layer {
 	position: relative;
+	overflow: hidden;
 	height: 300px;
 }
 #content .magazine {
@@ -533,7 +542,8 @@ a {
 } 
 #content .mou-bgd {
 	position: relative;
-	height: 550px;
+	overflow: hidden;
+	height: 850px;
 }
 #content .mou-bgd div {
 	position: absolute;
@@ -542,7 +552,7 @@ a {
 	height: 750px;
 }
 #content .moun-bg1 {
-	bottom:-280px;
+	bottom:40px;
 	background: url(../img/intro-bg1.png) center no-repeat;
 	background-size: 100%,250%;
 	z-index: 89;
@@ -550,7 +560,7 @@ a {
 #content .moun-bg2 {
 	background: url(../img/intro-bg2.png) 0 0 no-repeat;
 	background-size: 100%,250%;
-	bottom: -320px;
+	bottom: -20px;
 	z-index: 88;
 }
 #content .course {
@@ -564,14 +574,17 @@ a {
 }
 #content .carousel-course {
 	position: relative;
-	width: 100%;
-	height: 500px;
+	overflow: hidden;
+	height: 600px;
+	background: #737990;
+}
+.carousel-course ul:first-child {
 	background: #252545;
+	height: 80%;
 }
  .carousel-course ul:first-child a {
 	display: block;
-	width: 100%;
-	height: 500px;
+	height: 100%;
 	background-size: contain;
 }
 #content .carousel-course .pre-arrow{
@@ -603,7 +616,7 @@ a {
 	position: absolute;
 	height: 50px;
 	left: 100px;
-	bottom: -50px;
+	top:80%;
 }
 #content .bullet li {
 	float: left;
@@ -634,12 +647,12 @@ a {
 	color: #252545;
 }
 #content .section {
-	margin-top: -20px;
-	height: 200px;
+	margin-top: -30px;
+	height: 100px;
 	background:#737990;
 }
 #content .section h4 {
-	padding-top: 180px;
+	padding-top: 80px;
 	text-align: center;
 	color: #bbb;
 }
