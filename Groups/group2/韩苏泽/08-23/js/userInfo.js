@@ -11,7 +11,7 @@ var dialogModel = (function() {
 
   DialogModelFn.prototype.hide = function() {
     this.$dialogModel.addClass('hidden');
-    this.$dialog.removeClass('move');
+    this.$dialog.css('top', 0);
   };
 
   DialogModelFn.prototype.bindEvent = function() {
