@@ -259,7 +259,7 @@ body{
   top: 30%;
 }
 .notice-move {
-  animation: noticemove 18s linear infinite;
+  animation: noticemove 54s linear infinite;
 }
 
 .move1,
@@ -292,12 +292,15 @@ body{
   background-size: contain;
 }
 .notice .weather {
+  height: 38px;
+  width: 38px;
   background: url(../images/notice3.gif) center center no-repeat;
   background-size: contain;
 }
 
 @keyframes noticemove {
-  0 {
+  0
+  100% {
     transform: translateX(0);
     opacity: 0;
   }
@@ -305,14 +308,19 @@ body{
     transform: translateX(0);
     opacity: 1;
   }
-  95% {
+  38% {
     transform: translateX(-1350px);
     opacity: 0.3;
   }
-  99.99% {
+  39.99% {
     transform: translateX(-1400px);
     opacity: 0;
   }
+  40% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
 
 }
 
