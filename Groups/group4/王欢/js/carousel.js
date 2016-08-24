@@ -4,18 +4,17 @@
 		$imgList = $this.find('ul'),
 		$list = $imgList.children(),
 		$next = $this.find('.next'),
-		$prev = $this.find('.prev')
+		$prev = $this.find('.prev'),
+		width = $(window).width()/3,
+		count = $list.size(),
+		currIdx = 1,
+		isAnimate = false;
 
-		$list.outerWidth($(window).width()/3)
-
-		var width = $list.outerWidth(),
-			count = $list.size(),
-			currIdx = 1,
-			isAnimate = false;
 
 		$imgList.css({
 			'width':width*count
 		});
+		$list.outerWidth(width)
 
 		$next.on('click',function(e){
 			e.preventDefault();
