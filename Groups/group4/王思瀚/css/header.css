@@ -146,11 +146,80 @@ a{
     background: url(../img/shadow.png) center center no-repeat;
     background-size: cover;
     z-index: 1;
+
+
+}
+.shadow .shadow1{
+    left:0;
+    animation:mymove 600s linear infinite;
+}
+.shadow .shadow2{
+    left:70%;
+    animation:mymove2 600s linear infinite;
+    transform: rotateY(180deg);
+}
+@keyframes mymove {
+    0% {transform: translate(0,0)}
+    50%{transform:translate(-1400px,0)}
+    50.01%{transform: translate(1400px,0)}
+    100%{transform: translate(0,0)}
+}
+@keyframes mymove2 {
+    0%{transform: translate(0,0)}
+    99.99%{transform: translate(-2880px,0)}
+    100%{transform: translate(0,0)}
+}
+.star{
+    z-index:2;
+    position: absolute;
+    width:21px;
+    height: 21px;
+    background: url("../img/star.png");
+    background-size: contain;
+}
+.layer-star .pos1{
+    left:10%;
+    top:60%;
+    animation: starblink 2s 0s infinite;
+}
+.layer-star .pos2{
+    left:30%;
+    top:50%;
+    animation: starblink 2s 0.8s infinite;
+}
+.layer-star .pos3{
+    left:40%;
+    top:45%;
+    animation: starblink 2s 0.7s infinite;
+}
+.layer-star .pos4{
+    left: 60%;
+    top:55%;
+    animation: starblink 2s 1.3s infinite;
+}
+.layer-star .pos5{
+    left:71%;
+    top:70%;
+    animation: starblink 2s 1.6s infinite;
+}
+.layer-star .pos6{
+    left:85%;
+    top:40%;
+    animation: starblink 2s 1.6s infinite;
+}
+.layer-star .pos7{
+    left:90%;
+    top:65%;
+    animation: starblink 2s 0s infinite;
+}
+@keyframes starblink {
+    0%,100%{transform: scale(1)}
+    50%{transform: scale(.3)}
 }
 .mountain{
     height:100%;
 }
-.mountain div{
+.mountain div {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -159,6 +228,7 @@ a{
     margin-bottom: -20px;
     height: 100%;
     background-size: 100vw 50vh;
+    z-index: 1;
 }
 .m1{
     background: url("../img/mountain1.png") center bottom no-repeat;
