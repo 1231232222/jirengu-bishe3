@@ -84,6 +84,7 @@ a{
 }
 .inner-nav-ul>li img{
     border-radius: 50%;
+    transition: .8s;
 }
 .inner-nav-ul>li img:hover{
 
