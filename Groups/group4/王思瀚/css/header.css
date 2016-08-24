@@ -108,7 +108,46 @@ a{
     left:50%;
     transform: translate(-50%,-50%);
 }
+.layer-notice{
 
+    z-index: 5;
+    text-align: center;
+}
+.notice-move{
+    position: absolute;
+    top:16%;
+    animation: noticemove 40s linear infinite;
+    left:102%;
+}
+@keyframes noticemove{
+    0%{transform: translate(0,0)}
+    100%,60%{transform:translate(-1600px,0)}
+}
+.notice-a{
+    display: block;
+    padding: 3px 5px;
+    background: rgba(255,255,255,.1);
+    font-size: 13px;
+    box-shadow: 0 0 3px #fff;
+    border-radius: 3px;
+    width: 200px;
+    height:18px;
+    opacity: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    animation: noticehide 40s linear infinite;
+}
+@keyframes noticehide {
+    0%,10%,50%{opacity: 0}
+    12%,48%{opacity: 1}
+}
+.notice-img{
+    display: inline-block;
+    background: url("../img/notice3.gif");
+    background-size: contain;
+    width: 50px;
+    height:50px;
+}
 .monster-red{
     position: absolute;
     bottom: -100px;
@@ -215,6 +254,39 @@ a{
 @keyframes starblink {
     0%,100%{transform: scale(1)}
     50%{transform: scale(.3)}
+}
+
+.meteor1 {
+    background: url("../img/meteor.png")center center no-repeat;
+    width: 64px;
+    height:64px;
+    background-size: contain;
+    z-index:3;
+    position: absolute;
+    right: -68px;;
+    top:0;
+    animation: meteorshot1 10s 0s linear infinite;
+}
+@keyframes meteorshot1 {
+    0%{transform: translate(0,0);opacity: 1}
+    60%{transform: translate(-1000px,1000px);opacity: 1}
+    100%,61%{opacity: 0}
+}
+.meteor2 {
+    background: url("../img/meteor.png")center center no-repeat;
+    width: 64px;
+    height:64px;
+    background-size: contain;
+    z-index:3;
+    position: absolute;
+    left:500px;
+    top:-60px;
+    animation: meteorshot2 10s 1.6s linear infinite;
+}
+@keyframes meteorshot2 {
+    0%{transform: translate(0,0);opacity: 1}
+    60%{transform: translate(-1000px,1000px);opacity: 1}
+    100%,61%{opacity: 0}
 }
 .mountain{
     height:100%;
