@@ -9,7 +9,7 @@
 <body>
 	<div class="header">
 		<ul class="navbar">
-			<li><a href="">课程</a>
+			<li><a href="">课程<span class="caret"></span></a>
 				<div class="drop">
 					<ul>
 						<li><a href="#">视频</a></li>
@@ -19,7 +19,7 @@
 				</div>
 				
 			</li>
-			<li><a href="#">报名</a>
+			<li><a href="#">报名<span class="caret"></span></a>
 				<div class="drop">
 					<ul>
 						<li><a href="#">关于</a></li>
@@ -32,7 +32,7 @@
 			</li>
 			<li><a href="">作品</a></li>
 			<li><a href="">社区</a></li>
-			<li><a href="">博客</a>
+			<li><a href="">博客<span class="caret"></span></a>
 				<div class="drop">
 					<ul>
 						<li><a href="#">关于</a></li>
@@ -43,7 +43,7 @@
 				</div>
 				
 			</li>
-			<li><a href="">登陆</a>
+			<li><a href="">登陆<span class="caret"></span></a>
 				<div class="drop">
 					<ul>
 						<li><a href="#">登陆</a></li>
@@ -54,9 +54,12 @@
 			</li>
 		</ul>
 		<img src="images/header-icon.png" alt="" class="header-icon">
-		<img src="images/mountain1.png" alt="" class="mountain1">
-		<img src="images/mountain2.png" alt="" class="mountain2">
-		<img src="images/mountain3.png" alt="" class="mountain3">
+		<div class="content-mountain">
+			<img src="images/mountain1.png" alt="" class="mountain1 moveByCursor">
+			<img src="images/mountain2.png" alt="" class="mountain2 moveByCursor">
+			<img src="images/mountain3.png" alt="" class="mountain3 moveByCursor">
+		</div>
+		
 		<img src="images/meteor.png" alt="" class="meteor1">
 		<img src="images/meteor.png" alt="" class="meteor2">
 		<img src="images/galaxy.png" alt="" class="galaxy">
@@ -79,27 +82,52 @@
 				<ul class="free-open-class ct clearfix">
 					<li >
 						<a href="" class="bg1">
-						
+							<hr>
+							<h3>轻分享第2期-前端找工作不完全装X指南（下）</h3>
+							<p>前端找工作不完全装X指南</p>
+							<hr>
+							<p>by 谷民</p>
+							<hr>
 						</a>
 					</li>
 					<li class="active" 
 						><a href="" class="bg2 ">
-						
+							<hr>
+							<h3>轻分享第2期-前端找工作不完全装X指南（下）</h3>
+							<p>前端找工作不完全装X指南</p>
+							<hr>
+							<p>by 谷民</p>
+							<hr>
 						</a>
 					</li>
 					<li >
 						<a href="" class="bg3">
-						
+							<hr>
+							<h3>轻分享第2期-前端找工作不完全装X指南（下）</h3>
+							<p>前端找工作不完全装X指南</p>
+							<hr>
+							<p>by 谷民</p>
+							<hr>
 						</a>
 					</li>
 					<li>
 						<a href="" class="bg4">
-						
+							<hr>
+							<h3>轻分享第2期-前端找工作不完全装X指南（下）</h3>
+							<p>前端找工作不完全装X指南</p>
+							<hr>
+							<p>by 谷民</p>
+							<hr>
 						</a>
 					</li>
 					<li>
 						<a href="" class="bg5">
-						
+							<hr>
+							<h3>轻分享第2期-前端找工作不完全装X指南（下）</h3>
+							<p>前端找工作不完全装X指南</p>
+							<hr>
+							<p>by 谷民</p>
+							<hr>
 						</a>
 					</li>
 					<span class="arror pre disabled"></span>
@@ -118,13 +146,32 @@
 			<div>
 				<img src="images/content-mountain.png"" alt="" class="mountain-body">
 				<img src="images/mons1.gif" alt="" class="mons1">
+				<div class="intro1">
+					<h3>导师棒棒哒</h3>
+					<p>饥人谷所有的授课导师均是百度腾讯阿里有多年工作经验的在职工程师，带你走出迷茫无助的学习时光。</p>
+				</div>
 				<img src="images/mons2.gif" alt="" class="mons2">
+				<div class="intro2">
+					<h3>课程最实用</h3>
+					<p>课程内容均来自各个导师所在公司工作、面试实践。课程设置是以培养能做事、会思考的工程师为标准。</p>
+				</div>
 				<img src="images/mons3.gif" alt="" class="mons3">
+				<div class="intro3">
+					<h3>教学最人性</h3>
+					<p>给老师最大的教学便利，给同学最全面的关注关怀是教导员妹妹日思夜想的事。在这里会让你深切感受饥人谷人用心、用情的做事风格。</p>
+				</div>
 				<img src="images/mons4.gif" alt="" class="mons4">
+				<div class="intro4">
+					<h3>导师棒棒哒</h3>
+					<p>直播课+任务班的教学模式，既让大家能够快速搭建知识体系，又能让大家自己学着走路学着思考。下课不是结课，而是学习的开始。</p>
+				</div>
 			</div>
 		</div>
-		<div class="content-bg">
-			<div class="content-bg1">
+		<div class="content-bg-wrap">
+			<div class="content-bg moveByCursor">
+			
+			</div>
+			<div class="content-bg1 moveByCursor">
 			
 			</div>
 
@@ -142,6 +189,7 @@
 						<li>谷中趣事</li>
 						<li>点滴记录</li>
 					</ul>
+					<p><a href="#" class="btn">进入周刊</a></p>
 				</div>
 			</div>
 			
@@ -179,7 +227,42 @@
 	</div>
 
 	<div class="footer">
-
+		<div class="join-us">
+			<p>加入饥人谷，成为一名自豪的 Hunger 吧!</p>
+		
+			<div class="semi-circle1">
+				<img src="images/qq1.png" alt="" class="qqcontact1">
+			</div>
+			<div class="semi-circle2"> 
+				<img src="images/qq2.png" alt="" class="qqcontact2">
+			</div>
+			<div class="semi-circle3"> 
+				<img src="images/weibo.png" alt="" class="weibo">
+			</div>
+			
+		</div>
+		<div class="legal-info ">
+			<div class="layout">
+				<ul class="about">
+					<li> 关于我们 |</li>
+					<li> 加入我们 |</li>
+					<li> 报名收费 |</li>
+					<li> 资源下载 |</li>
+					<li> 饥人谷API |</li>
+					<li> 学员技术博客</li>
+				</ul>
+				<ul class="contact">
+					<li> 邮箱: hunger@jirengu.com | </li>
+					<li> 电话: 0571-56011710 | </li>
+					<li> 合作伙伴： Leanote </li>
+				</ul>
+				<ul class="licence">
+					<li> 浙公网安备 33010802005164号 | </li>
+					<li> © 2014-2015 饥人谷版权所有 浙ICP备14041127号-1 </li>
+				</ul>
+			</div>
+			
+		</div>
 
 	</div>
 
@@ -198,13 +281,16 @@
 			curIndex:0,
 			playing:false,
 			clock:0,
-
 			init:function(){
 				this.preset();
 				this.bindEvent();
 			},
 			preset:function(){
-				this.ct.css({width:this.item.outerWidth()*this.item.length});
+				var actualWidth = document.body.offsetWidth*this.item.css('width').slice(0,-2)/1366;
+				var carouselWidth = document.body.offsetWidth*this.carousel.css('width').slice(0,-2)/1366;
+				// this.carousel.css({width:carouselWidth});
+				this.item.css({width:actualWidth});
+				this.ct.css({width:actualWidth*this.item.length});
 			},
 			bindEvent:function(){
 				var that=this;
@@ -244,8 +330,6 @@
 
 						that.nav.find('li').eq(that.curIndex).addClass('active');
 					}
-
-
 					if(that.curIndex===0){
 						that.pre.addClass('disabled');
 					}
@@ -256,27 +340,41 @@
 					}else if(that.curIndex===that.item.length-1){
 						that.next.addClass('disabled');
 					}
-					// console.log(that.curIndex);
 					that.playing=false;
 				});
 			},	
-	
-			// autoPlay:function(){
-			// 	var that=this;
-			// 	this.clock=setInterval(function(){
-			// 		that.play(1,"fast");
-			// 	},3000)
-			// },
-			// stop:function(){
-			// 	clearInterval(this.clock);
-			// }
 		}
 
-		// 	$(".carousel").each(function(){
-		// 	new Carousel($(this),true).init();
-		// })
 		new Carousel($(".carousel").eq(0),true).init();
 		new Carousel($(".carousel").eq(1),false).init();
+
+
+		var moveByCursor = (function(){
+			var cursor;
+			var offset={x:0,y:0};
+			function init(parent){
+				$(parent).on('mousemove',function(e){
+					cursor = cursor || {x:e.pageX,y:e.pageY};
+					offset.x+=(e.pageX-cursor.x);
+					offset.y+=(e.pageY-cursor.y);
+					var translateRatio = function(ratio){
+						return 'translate('+((offset.x)/ratio)+'px, '+((offset.y)/ratio)+'px)';
+					}
+					$(this).find('.moveByCursor').each(function(){
+						$(this).css('transform',translateRatio(($(this).index()+1)*30));
+					});
+					cursor.x=e.pageX;
+					cursor.y=e.pageY;
+				})
+			}
+			return {init:init};
+		}());
+
+		moveByCursor.init('.content-mountain');
+		moveByCursor.init('.content-bg-wrap');
+		
+
+
 
 	</script>
 </body>
