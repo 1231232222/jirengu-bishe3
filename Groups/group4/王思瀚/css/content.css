@@ -18,11 +18,62 @@
     font-size: 30px;
     top:40px;
 }
-.content .course .carousel {
+
+
+
+.content .course .carousel{
     position: relative;
     top:50px;
-    left:100px;
+    height: 600px;
+    position: relative;
+    background-color: #303052;
+    text-align: left;
 }
+
+.content .course .carousel ul{
+    position: absolute;
+    left:0;
+    width:2692px;
+
+}
+.carousel .list a.bg1{
+    display: block;
+    background: url("../img/carousel/bg1.png");
+}
+/*.content .course .carousel  .list .line{*/
+    /*position: relative;*/
+    /*width: 46px;*/
+    /*height:6px;*/
+    /*background-color: #e38465;*/
+/*}*/
+/*.content .course .carousel .list{*/
+    /*border: 1px solid #ccc;*/
+    /*float: left;*/
+    /*background-color: #29394d;*/
+    /*transition: .3s;*/
+/*}*/
+/*.content .course .carousel .list:after{*/
+    /*content: '';*/
+    /*display: block;*/
+    /*clear: both;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .tree{
     background: radial-gradient(#21213e 40%,#303052,#303052);
     position: relative;
