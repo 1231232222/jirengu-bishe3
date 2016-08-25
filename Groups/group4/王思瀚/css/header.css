@@ -135,6 +135,7 @@ a{
     height:18px;
     opacity: 1;
     text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
     animation: noticehide 40s linear infinite;
 }
