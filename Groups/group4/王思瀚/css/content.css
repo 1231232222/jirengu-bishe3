@@ -18,22 +18,18 @@
     font-size: 30px;
     top:40px;
 }
-.content .course .carousel{
+.carousel{
    margin-top: 50px;
-    height: 600px;
     background-color: #303052;
     text-align: left;
     overflow: hidden;
     padding: 40px 0;
+    position: relative;
+    width:1593px;
+    height:462px;
 }
 .carousel ul{
     position: absolute;
-    width:2900px;
-}
-.content .course .carousel ul:after{
-    content: '';
-    display: block;
-    clear: both;
 }
 .carousel .list{
     background-color: #ffffff;
@@ -43,20 +39,30 @@
     min-height:400px;
     min-width:400px;
 }
+.carousel ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
 .carousel .list a.bg1{
     background: url("../img/carousel/bg1.png") center center no-repeat;
 }
 .carousel .list a.bg2{
-background: url("../img/carousel/bg2.png") center center no-repeat;
+    background: url("../img/carousel/bg2.png") center center no-repeat;
 }
 .carousel .list a.bg3{
-background: url("../img/carousel/bg3.png") center center no-repeat;
+    background: url("../img/carousel/bg3.png") center center no-repeat;
 }
 .carousel .list a.bg4{
-background: url("../img/carousel/bg4.png") center center no-repeat;
+    background: url("../img/carousel/bg4.png") center center no-repeat;
 }
 .carousel .list a.bg5{
-background: url("../img/carousel/bg1.png") center center no-repeat;
+    background: url("../img/carousel/bg1.png") center center no-repeat;
+}
+.carousel .list a.s1:hover{
+    background-color: #ffffff;
+    border: 8px solid #29394d;
+    color: #000;
 }
 .carousel .list a.s1{
     display: block;
@@ -90,22 +96,34 @@ background: url("../img/carousel/bg1.png") center center no-repeat;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.carousel .arrow{
+    position: absolute;
+    transform: translateY(-40px);
+    top: 50%;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    transition: .6s;
+    z-index: 99;
+}
+.carousel .pre{
+    left: -16px;
+    border-right: 16px solid #ccc;
+    border-top: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+}
+.carousel .next{
+    right: -16px;
+    border-right: 16px solid transparent;
+    border-top: 16px solid transparent;
+    border-left: 16px solid #2E2E4F;
+    border-bottom: 16px solid transparent;
+}
+.active{
+    transform: scale(1.2);
+    z-index: 15;
+}
 .tree{
     background: radial-gradient(#21213e 40%,#303052,#303052);
     position: relative;
