@@ -1,117 +1,104 @@
 .content{
     height:100%;
     position: relative;
-}
-.content:after{
-    content: '';
-    display: block;
-    clear: both;
-}
-.content .course{
     background-color: #303052;
-    height:600px;
-    text-align: center;
+    padding: 20px;
 }
-.content .course>h2{
-    position: relative;
-    color: #fff;
+.content>h2{
+    margin: 0 auto;
+    width: 200px;
     font-size: 30px;
-    top:40px;
+    color:#fff;
 }
-.carousel{
-   margin-top: 50px;
-    background-color: #303052;
-    text-align: left;
-    overflow: hidden;
-    padding: 40px 0;
+.content .carousel{
     position: relative;
-    width:1593px;
-    height:462px;
+    height: 600px;
+    margin: 10px auto;
+    min-width: 500px;
+    overflow: hidden;
 }
-.carousel ul{
+.carousel .carousel-warp{
+    box-sizing: border-box;
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
-.carousel .list{
-    background-color: #ffffff;
-    padding: 30px;
-    border: 1px solid #cccccc;
+.carousel .carousel-warp .list{
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 19px;
     float: left;
-    min-height:400px;
-    min-width:400px;
+    min-height: 240px;
+    transition: .5s;
 }
-.carousel ul:after{
+.carousel .carousel-warp:after{
     content: '';
     display: block;
     clear: both;
 }
-.carousel .list a.bg1{
-    background: url("../img/carousel/bg1.png") center center no-repeat;
-}
-.carousel .list a.bg2{
-    background: url("../img/carousel/bg2.png") center center no-repeat;
-}
-.carousel .list a.bg3{
-    background: url("../img/carousel/bg3.png") center center no-repeat;
-}
-.carousel .list a.bg4{
-    background: url("../img/carousel/bg4.png") center center no-repeat;
-}
-.carousel .list a.bg5{
-    background: url("../img/carousel/bg1.png") center center no-repeat;
-}
-.carousel .list a.s1:hover{
-    background-color: #ffffff;
-    border: 8px solid #29394d;
-    color: #000;
-}
-.carousel .list a.s1{
+.carousel .carousel-warp .list>a{
+    box-sizing: border-box;
     display: block;
-    text-align: left;
     background-color: #29394d;
-    padding: 30px 26px;
+    border: 8px solid #29394d;
+    padding: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: .5s;
     height: 100%;
-    border: 8px solid transparent;
-    background-size: cover;
-    transition: .3s;
-    min-height: 300px;
-    z-index: 3;
 }
-
-.carousel .list a>h2{
+.carousel .carousel-warp .list>a:hover{
+    background-color: #fff;
+    color:#000;
+}
+.carousel .carousel-warp .list a hr{
+    display: inline-block;
+    width: 46px;
+    height: 9px;
+    background-color: orange;
+    border:none;
+    margin: 15px 0;
+    /*这块的是不是外边距合并了,修改为inlineblok后消失*/
+}
+.carousel .carousel-warp .list h3{
     font-size: 30px;
 }
-.carousel .list a>p{
-    font-size:16px;
-    margin: 15px 0;
+.carousel .carousel-warp .list a p{
+    font-size: 18px;
 }
-.carousel .list a hr{
-    background-color: #e38465;
-    width: 40px;
-    height: 6px;
-    display: inline-block;
-    border: none;
+.carousel .carousel-warp .list .bg1{
+    text-align: left;
+    background-image: url('../img/carousel/bg1.png');
+    background-size: cover;
 }
-.carousel .list h2, .list p{
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+.carousel .carousel-warp .list .bg2{
+    text-align: right;
+    background-image: url('../img/carousel/bg2.png');
+    background-size: cover;
+}
+.carousel .carousel-warp .list .bg3{
+    text-align: right;
+    background-image: url('../img/carousel/bg3.png');
+    background-size: cover;
+}
+.carousel .carousel-warp .list .bg4{
+    text-align: right;
+    background-image: url('../img/carousel/bg4.png');
+    background-size: cover;
+}
+.carousel .carousel-warp .list .bg5{
+    text-align: left;
+    background-image: url('../img/carousel/bg1.png');
+    background-size: cover;
 }
 .carousel .arrow{
     position: absolute;
-    transform: translateY(-40px);
     top: 50%;
     width: 0;
     height: 0;
     cursor: pointer;
-    transition: .6s;
-    z-index: 99;
-}
-.carousel .pre{
-    left: -16px;
-    border-right: 16px solid #ccc;
-    border-top: 16px solid transparent;
-    border-left: 16px solid transparent;
-    border-bottom: 16px solid transparent;
 }
 .carousel .next{
     right: -16px;
@@ -120,10 +107,18 @@
     border-left: 16px solid #2E2E4F;
     border-bottom: 16px solid transparent;
 }
+.carousel .pre{
+    left: -16px;
+    border-right: 16px solid #ccc;
+    border-top: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+}
 .active{
     transform: scale(1.2);
     z-index: 15;
 }
+
 .tree{
     background: radial-gradient(#21213e 40%,#303052,#303052);
     position: relative;
