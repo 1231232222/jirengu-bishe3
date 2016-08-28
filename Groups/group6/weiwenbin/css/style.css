@@ -31,7 +31,7 @@ html,body {
 }
 header {
 	height: 100%;
-	background: radial-gradient(rgba(47,47,82,0.6)0%, rgba(47,47,82,0.8)30%,rgba(47,47,82,1)100%);
+	background: #303052;
 	position: relative;
 	overflow: hidden;
 }
