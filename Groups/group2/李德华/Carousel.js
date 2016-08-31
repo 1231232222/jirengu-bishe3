@@ -17,7 +17,7 @@ $.fn.carousel = function(width, active, fn) {
   });
   function action(index) {
     var x = index * width + $ul.offset().left;
-    if (x > 0 || x < $container.width() - $ul.width()) {
+    if (x > 1 || x < $container.width() - $ul.width()) {
       return;
     }
     fn(items.eq(itemTag), items.eq(itemTag - index));

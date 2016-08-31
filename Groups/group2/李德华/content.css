@@ -146,7 +146,6 @@
   height: 400px;
   position: relative;
 }
-.zoom {
+.zoomIn {
   transform:scale(1.15);
-  transition: transform 1s;
 }
