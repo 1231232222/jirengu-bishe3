@@ -109,7 +109,7 @@
   position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 .class-carousel>.pre-btn {
   height: 100%;
