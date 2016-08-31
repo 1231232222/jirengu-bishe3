@@ -47,7 +47,7 @@ a{
     z-index:2;
 }
 .nav-ul>li:nth-child(5){
-    padding: 0 43px;
+    padding: 0 46px;
 }
 .nav-ul>li:last-child{
     border:none;
@@ -135,6 +135,7 @@ a{
     height:18px;
     opacity: 1;
     text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
     animation: noticehide 40s linear infinite;
 }
