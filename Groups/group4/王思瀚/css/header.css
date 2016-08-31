@@ -39,7 +39,6 @@ a{
     border:1px solid #fff;
     border-radius: 10px;
     background-color: rgba(255,255,255,0.1);
-
 }
 .nav-ul>li{
     float: left;
@@ -77,6 +76,13 @@ a{
     top:100%;
     left:5px;
     background-color: rgba(255,255,255,0.1);
+}
+.textnow{
+    position: absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    padding-top: 20px;
 }
 .inner-nav-ul>li{
     color: #fff;
