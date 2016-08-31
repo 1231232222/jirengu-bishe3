@@ -1,6 +1,5 @@
 .content{
-    height:100%;
-    position: relative;
+    height:800px;
     background-color: #303052;
     padding: 20px;
 }
@@ -121,11 +120,11 @@
 
 .tree{
     background: radial-gradient(#21213e 40%,#303052,#303052);
-    position: relative;
-    height: 100%;
     text-align: center;
+    height: 988px;
     overflow: hidden;
 }
+
 .tree h2{
     position: relative;
     color: #ffffff;
@@ -140,6 +139,7 @@
 .tree-container{
     position: relative;
     height: 900px;
+    width:100%;
     overflow: hidden;
 }
 .tree-inner {
@@ -258,7 +258,8 @@
 }
 .tree-bg1{
     position: absolute;
-    width:100%;
+    width:110%;
+    left:0;
     bottom:0;
     height: 825px;
     background: url(../img/shequ/shan1.png) bottom center no-repeat;
@@ -268,7 +269,7 @@
 .tree-bg2{
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 110%;
     margin-bottom: 390px;
     height: 368px;
     background: url(../img/shequ/shan2.png) bottom center no-repeat;

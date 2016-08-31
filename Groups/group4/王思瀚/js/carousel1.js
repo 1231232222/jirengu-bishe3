@@ -8,7 +8,8 @@ function carousel($dom){
         'height':this.$list.width()
     });
     this.$ul.css({
-        'width':this.imgCount * this.$list.width(),
+        'width':this.imgCount * this.$list.width()+300,
+        //会宽度不够变成两行，如果不加的话
         'height':this.$list.height()
     });
     this.next = this.$cur.find('.next');

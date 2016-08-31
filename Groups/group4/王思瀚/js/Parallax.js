@@ -2,7 +2,7 @@
  * Created by envy on 2016/8/24.
  */
 var $header = $('.header');
-var $content = $('.content');
+var $content = $('.tree');
 var $m1 = $('.m1'),
         $m2 = $('.m2'),
         $m3 = $('.m3'),
