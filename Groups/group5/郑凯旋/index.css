@@ -177,6 +177,10 @@ img{
 	}
 }
 
+#header .mountain-layer{
+	height:100%;
+}
+
 #header .mountain1{
 	position: absolute;
 	width: 100%;
@@ -211,38 +215,40 @@ img{
 	right: 85px;
 	height: 40px;
 	width: 555px;
+	z-index:999;
 }
 #header .bar-wrap{
 	border: 1px solid #fff;
 	border-radius: 6px;
 	width: 100%;
 	min-width: 260px;
+	height:37px;
 	background: rgba(255,255,255,.1);
-}
-#header .bar-wrap:after{
-	content: "";
-	display: block;
-	clear: both;
 }
 #header .bar-wrap>.list{
 	float: left;
-	height: 35px;
-	border-right: 1px solid #fff;
-	width: 16.47%;
+	width: 16.66%;
 	text-align: center;
 }
-
-#header .bar-wrap>.list:last-child{
-	border-right:none;
-}
-
-#header .list a{
+#header .list>a{
 	text-decoration: none;
 	color: #fff;
+	font-size: 14px;
 	display: block;
 	line-height: 35px;
 }
-
+#header .bar-wrap>.list>a{
+	border-right: 1px solid #fff;
+}
+#header .bar-wrap>.list>a.nav{
+	border-right: none;
+}
+#header .bar-wrap>.list:hover .bar-child{
+	display: block;
+}
+#header .list>a:hover{
+	text-shadow: 0px 0px 3px #fff;
+}
 #header .bar-child{
 	margin-top: 18px;
 	border: 1px solid #fff;
@@ -250,10 +256,14 @@ img{
 	background: rgba(255,255,255,.1);
 	display: none;
 }
-#header .bar-wrap>.list:hover .bar-child{
-	display:block;
-
+#header .bar-child>.list{
+	border-bottom: 1px solid #fff;
 }
+
+#header .bar-child>.list:last-child{
+	border-bottom: none;
+}
+
 #header>.logo{
 	position: absolute;
 	background: url("img/官网首页_logo.png") no-repeat;
@@ -294,18 +304,65 @@ img{
 }
 #header .monster1,.monster2{
 	position:absolute;
+	bottom:-100px;
 	width: 160px;
 	height: 160px;
+	background-color:#303052;
+	border-radius:50%;
 	z-index:9;
 }
 #header .monster1{
 	left:30px;
-	top:-95px;
 }
 #header .monster2{
 	left:230px;
-	top:-75px;
 }
+
+.monster-layer img{
+	height:80px;
+	margin-top:-20px;
+}
+#header .notice{
+	animation: monstermove 25s infinite linear;
+	text-align: center;
+	width: 200px;
+	position: absolute;
+	top: 20%;
+	left: 120%;	
+}
+@keyframes monstermove{
+	0%{
+		transform: translateX(0);
+	}
+	100%{
+		transform: translateX(-2000px);
+	}
+}
+#header .notice:hover{
+	animation-play-state: paused;
+}
+#header .notice a{
+	background: rgba(255,255,255,.1);
+	opacity: .6;
+	font-size: 12px;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 6px 10px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#header .notice .icon{
+	background: url('img/notice.gif') no-repeat;
+	height: 55px;
+	width: 55px;
+	background-size: contain;
+	margin: 3px auto;
+}
+
 
 
 /*免费公开课及轮播*/
@@ -321,7 +378,7 @@ img{
 	padding:40px 0 20px;
 }
 
-.carousel{
+#content .carousel{
 	position:relative;
 	max-width:1380px;
 	height: 547px;
@@ -330,6 +387,13 @@ img{
 	overflow:hidden;
 }
 
+#content .carousel .list:hover a{
+	background-color:#fff;
+	color:#303052;
+}
+#content .carousel .list:hover a h3{
+	color:#303052;
+}
 #content .carousel .arror{
 	position:absolute;
 	top:50%;
@@ -349,10 +413,10 @@ img{
 	right:-10px;
 	border-color:transparent transparent transparent #2e2e4f;
 }
-.carousel .pre.disable{
+#content .carousel .pre.disable{
 	border-color:transparent #ccc transparent transparent;
 }
-.carousel .next.disable{
+#content .carousel .next.disable{
 	border-color:transparent transparent transparent #ccc;
 }
 
@@ -363,8 +427,11 @@ img{
 }
 
 #content .list-wrap{
-	height:460px;
-	width:2800px;
+	position:relative;
+	top:50%;
+	transform:translateY(-50%);
+	/*height:460px;
+	width:2800px;*/
 
 }
 
@@ -656,7 +723,7 @@ img{
 	height:0;
 	border-width:16px;
 	border-style:solid;
-	border-color:transparent #ccc transparent transparent;
+	border-color:transparent #f78801 transparent transparent;
 }
 .event-ct .next{
 	position:absolute;
@@ -666,6 +733,13 @@ img{
 	height:0;
 	border-width:16px;
 	border-style:solid;
+	border-color: transparent transparent transparent #f78801;
+}
+
+.event-ct .pre.disable{
+	border-color:transparent #ccc transparent transparent;
+}
+.event-ct .next.disable{
 	border-color: transparent transparent transparent #ccc;
 }
 
@@ -696,35 +770,41 @@ img{
 	display:block;
 	font-size:16px;
 }
+
+
 #contact{
 	background-color:#8e93a5;
 	overflow:hidden;
 }
 .contact-wrap{
-	float:left;
-	margin-top:50px;
-	margin-left:60px;
+	position:relative;
 }
-.contact-wrap li{
-	position: relative;
-	bottom:-30px;
-	width: 90px;
-	height: 90px;
-	float: left;
-	margin-right: 40px;
+.contact-wrap>div{
+	position:absolute;
+	bottom:-180px;
+	width:80px;
+	height:80px;
+	background-color: #303052;
 	border-radius: 50%;
-	background-color: #2f2f51;
 }
-.contact-wrap .weibo{
-	float:right;
+.qq2{
+	left:30px;
 }
-.contact-wrap li>a{
-	display: block;
-	width: 90px;
-	height: 90px;
+.qq3{
+	left:200px;
+}
+.weibo{
+	right:100px;
+}
+.contact-wrap img{
+	width:100px;
+	margin-top:-60px;
+}
+.contact-wrap .qq2 img{
+	margin-top:-70px;
 }
 
-.qq2{
+/*.qq2{
 	background:url(img/qq2.png) center center no-repeat;
 	background-size:contain;
 }
@@ -745,7 +825,7 @@ img{
 .weibo{
 	background: url(img/weibo.png) center center no-repeat;
  	background-size: contain;
-}
+}*/
 
 #contact h4{
 	text-align:center;

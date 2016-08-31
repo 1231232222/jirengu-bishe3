@@ -28,13 +28,13 @@
 			<div class="meteor1"></div>
 			<div class="meteor2"></div>
 		</div>
-		<div class="mountain-layer">
+		<div class="mountain-layer clearfix">
 			<div class="mountain3"></div>
 			<div class="mountain2"></div>
 			<div class="mountain1"></div>
 		</div>
 		<div class="bar">
-			<ul class="bar-wrap">
+			<ul class="bar-wrap ">
 				<li class="list"><a href="#">课程 <i class="icon iconfont">&#xe79b;</i></a>
 					<ul class="bar-child">
 						<li class="list"><a href="#">视频</a></li>
@@ -58,9 +58,9 @@
 						<li class="list"><a href="#">学生博客</a></li>
 					</ul>
 				</li>
-				<li class="list"><a href="#">我 <i class="icon iconfont">&#xe79b;</i></a>
+				<li class="list"><a href="#" class='nav'>我 <i class="icon iconfont">&#xe79b;</i></a>
 					<ul class="bar-child">
-						<li class="list"><a href="#"></a></li>
+						<li class="list"><a href="#">soul</a></li>
 						<li class="list"><a href="#">设置</a></li>
 						<li class="list"><a href="#">课程</a></li>
 						<li class="list"><a href="#">书包</a></li>
@@ -72,7 +72,7 @@
 		<div class="logo"></div>
 		<div class="notice">
 			<a href="" title="天气"></a>
-			<div class=""></div>
+			<div class="icon"></div>
 		</div>
 		<div class="monster-layer">
 			<div class="monster1">
@@ -82,7 +82,7 @@
 			</div>
 			<div class="monster2">
 				<a href="http://wpa.qq.com/msgrd?v=3&uin=2054185664&site=qq&menu=yes" title="QQ联系辅导员">
-					<img src="img/talk.png" data-img="img/talk.gif" alt="">
+					<img src="img/talk.png" data-img="img/talk.png" data-hover-img="img/talk.gif" alt="">
 				</a>
 			</div>
 		</div>
@@ -152,7 +152,7 @@
 					</a>
 				</li>
 			</ul>
-			<div class="arror pre"></div>
+			<div class="arror pre disable"></div>
 			<div class="arror next"></div>
 		</div>
 	</div>
@@ -225,7 +225,7 @@
 						<a href="http://book.jirengu.com/jirengu-inc/jrg-vip8/members/%E9%99%88%E5%B0%8F%E8%8A%AC/recruit-new/recruit.html" style="background-image:url(http://jirengu.com/data/upload/2016/0818/12/57b5330f3f1b0.png)"></a>
 					</li>
 				</ul>
-				<div class="pre"></div>
+				<div class="pre disable"></div>
 				<div class="next"></div>
 			</div>
 			<ul class="timeline clearfix">
@@ -251,17 +251,23 @@
 
 	<!-- 联系-->
 	<div id="contact">
-		<ul class="contact-wrap clearfix">
-			<li class="qq2">
-				<a href="http://shang.qq.com/wpa/qunwpa?idkey=c9552e714cbc3e68d1d677f964f2c3fd0c2ff25d98876feaa3443a13bbb93c4c" title="端技术交流群2群：104892730"></a>
-			</li>
-			<li class="qq3">
-				<a href="http://shang.qq.com/wpa/qunwpa?idkey=11fff095f9f5cd4d0f504870e793b5abdb61fc96ed99a3b7d0b168965a080dfc" title="前端技术交流群3群：222459918"></a>
-			</li>
-			<li class="weibo">
-				<a href="http://weibo.com/jirengu" title="微博"></a>
-			</li>
-		</ul>
+		<div class="contact-wrap clearfix">
+			<div class="qq2">
+				<a href="http://shang.qq.com/wpa/qunwpa?idkey=c9552e714cbc3e68d1d677f964f2c3fd0c2ff25d98876feaa3443a13bbb93c4c" title="端技术交流群2群：104892730">
+					<img src="img/qq2.png" data-img="img/qq2.png" data-hover-img="img/qq2-hover.png" alt="">
+				</a>
+			</div>
+			<div class="qq3">
+				<a href="http://shang.qq.com/wpa/qunwpa?idkey=11fff095f9f5cd4d0f504870e793b5abdb61fc96ed99a3b7d0b168965a080dfc" title="前端技术交流群3群：222459918">
+					<img src="img/qq3.png" data-img="img/qq3.png" data-hover-img="img/qq3-hover.png" alt="">
+				</a>
+			</div>
+			<div class="weibo">
+				<a href="http://weibo.com/jirengu" title="微博">
+					<img src="img/weibo.png" alt="">
+				</a>
+			</div>
+		</div>
 
 		<h4>加入饥人谷，成为一名自豪的 Hunger 吧</h4>
 	</div>
@@ -288,7 +294,11 @@
 		</ul>
 	</div>	
 
-
+	<script src="js/carousel.js"></script>
+	<script src="js/carousel2.js"></script>
+	<script src="js/bgmove.js"></script>
+	<script src="js/weather.js"></script>
+	<script src="js/monster.js"></script>
 
 </body>
 </html>

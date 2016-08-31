@@ -1,0 +1,151 @@
+#content {
+  background: rgb(48, 48, 82);
+  text-align: center;
+}
+
+#content>h1 {
+  line-height: 60px;
+}
+
+#content>h2 {
+  font-size: 32px;
+  padding: 20px 0 10px 0;
+}
+
+.info {
+  background-image: url(images/intro-bg1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+.tree {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+  padding: 50px 0;
+  background-image: url(images/intro-mountain.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tree h4 {
+  width: 230px;
+  text-align: center;
+  border-radius: 5px;
+  border: solid 1px white;
+  padding: 5px 10px;
+}
+.tree p {
+  font-size: 24px;
+}
+.tree p:first-of-type {
+  position: relative;
+  left: 200px;
+}
+.tree h4:first-of-type {
+  position: relative;
+  left: 420px;
+}
+.tree p:nth-of-type(2) {
+  position: relative;
+  right: 100px;
+  bottom: 80px;
+}
+.tree h4:nth-of-type(2) {
+  position: relative;
+  right: 120px;
+  bottom: 80px;
+}
+.tree p:nth-of-type(3) {
+  position: relative;
+  left: 240px;
+  bottom: 80px;
+}
+.tree h4:nth-of-type(3) {
+  position: relative;
+  left: 450px;
+  bottom: 80px;
+}
+.tree p:nth-of-type(4) {
+  position: relative;
+  right: 140px;
+  bottom: 180px;
+}
+.tree h4:nth-of-type(4) {
+  position: relative;
+  right: 150px;
+  bottom: 180px;
+}
+.info img {
+  float: left;
+  margin-left: 300px;
+}
+.weekly {
+  text-align: left;
+  float: left;
+}
+.weekly ul {
+  width: 500px;
+  margin-top: 20px;
+}
+.weekly ul>li {
+  list-style: inherit;
+  float: left;
+  margin-right: 150px;
+  width: 100px;
+}
+
+.pre-list>li {
+  float: left;
+}
+
+.pre-list {
+  position: absolute;
+}
+
+.pre {
+  background-image: url(images/source-prev1.png);
+  height: 400px;
+  width: 1272px;
+  background-size: 1100px 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.pre-titles {
+  background: rgb(142, 147, 165);;
+  padding: 30px 0 30px 30px;
+}
+.pre-titles>li {
+  float: left;
+  margin-left: 100px;
+}
+.declaration {
+  padding-top: 30px;
+  background: rgb(142, 147, 165);
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: rgb(48, 48, 82);
+}
+.titles .pre-btn {
+  position: absolute;
+  height: 400px;
+  width: 40px;
+  background: red;
+  left: 0;
+  top: 0;
+}
+.titles .next-btn {
+  position: absolute;
+  height: 400px;
+  width: 40px;
+  background: red;
+  right: 0;
+  top: 0;
+}
+.titles>.carousel {
+  height: 400px;
+  position: relative;
+}
+.zoomIn {
+  transform:scale(1.15);
+}
