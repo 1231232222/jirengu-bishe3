@@ -25,14 +25,18 @@
 			<div class="meteorite1"></div>
 			<div class="meteorite2"></div>
 		</div>
+		<div class="weather">
+			<img src="img/weather.gif" alt="weather">
+			<a href="#" title="哈哈"></a>
+		</div>
 		<div class="mountains">
-			<div class="mountain1"></div>
-			<div class="mountain2"></div>
-			<div class="mountain3"></div>
+			<div class="mountain2 moveBox"></div>
+			<div class="mountain1 moveBox"></div>
+			<div class="mountain3 moveBox"></div>
 		</div>
 		<ul class="newWorld">
 			<li><a href="#"></a></li>
-			<li><a href="#" data-img="http://jirengu.com/addons/theme/stv1/_static/app/index-new/imgs/talk.gif"></a></li>
+			<li><a href="#"  class="moveable" data-img="http://jirengu.com/addons/theme/stv1/_static/app/index-new/imgs/talk.gif"></a></li>
 		</ul>
 		<ul class="nav">
 			<li class="hide">
@@ -47,7 +51,6 @@
 						<li><a href="#">讲师</a></li>
 					</ul>
 				</div>
-			
 			</li>
 			<li class="hide">
 				<a href="#">
@@ -100,9 +103,9 @@
 						<li><a href="#">退出</a></li>
 					</ul>
 				</div>
-		
 			</li>				
 		</ul>
+
 	</div>
 	<div class="content">
 		<div class="layout">
@@ -210,8 +213,8 @@
 				
 			</div>
 			<div class="ufos"></div>
-			<div class="mountainback"></div>
-			<div class="mountainbg"></div>
+			<div class="mountainback moveBox"></div>
+			<div class="mountainbg moveBox"></div>
 			<div class="hunger-works">
 				<img src="img/weekly.png" alt="饥人谷技术周刊">
 				<div class="weekly">
@@ -238,16 +241,28 @@
 				<li class="lessonItem carouselItem"><a href="#"></a></li>
 			</ul>
 			<a class="pre playPre" href="#"></a>
-			<a class="next playNext" href="#"></a>
+			<a class="next playNext" href=8"#"></a>
 		</div>
 		<div class="nowPart">
 			<ul class="clearfix nowItems">
-				<li class="nowItem"><a href="#" class="nowColor">轻分享·免费</a></li>
-				<li class="nowItem"><a href="#" class="">预约免费试听</a></li>
-				<li class="nowItem"><a href="#" class="">预约免费试听</a></li>
-				<li class="nowItem"><a href="#" class="">新班报名中</a></li>
+				<li class="nowItem">
+					<span class="nowNav"></span>
+					<a href="#" class="nowColor navWord">轻分享·免费</a>
+				</li>
+				<li class="nowItem">
+					<span class="nowNav hidden"></span>
+					<a href="#" class="navWord">预约免费试听</a>
+				</li>
+				<li class="nowItem">
+					<span class="nowNav hidden"></span>
+					<a href="#" class="navWord">预约免费试听</a>
+				</li>
+				<li class="nowItem">
+					<span class="nowNav hidden"></span>
+					<a href="#" class="navWord">新班报名中</a>
+				</li>
 			</ul>
-			<span class="nowNav"></span>
+			
 			<ul class="monster clearfix">
 				<li>
 					<a href="#" class="qq1"></a>
