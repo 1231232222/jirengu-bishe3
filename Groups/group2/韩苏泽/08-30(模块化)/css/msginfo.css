@@ -1,0 +1,35 @@
+/* 提示窗口*/
+div.msg-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: 50%;
+  border-radius: 6px;
+  box-shadow: 2px 2px 3px -3px #ccc;
+  padding: 10px;
+  transform: translateX(-50%);
+  line-height: 40px;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.8;
+}
+.msg-info.log {
+  background-color: green;
+}
+.msg-info.log:before{
+  position: relative;
+  top: 3px;
+  content: "\f00c";
+  font-size: 28px;
+}
+.msg-info.error {
+  background-color: red;
+}
+.msg-info.error:before {
+  position: relative;
+  top: 3px;
+  content: "\f06a";
+  font-size: 28px;
+
+}
