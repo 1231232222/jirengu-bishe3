@@ -124,6 +124,7 @@
     position: relative;
     height: 100%;
     text-align: center;
+    overflow: hidden;
 }
 .tree h2{
     position: relative;
@@ -267,7 +268,7 @@
 .tree-bg2{
     position: absolute;
     bottom: 0;
-    width: 110%;
+    width: 100%;
     margin-bottom: 390px;
     height: 368px;
     background: url(../img/shequ/shan2.png) bottom center no-repeat;
