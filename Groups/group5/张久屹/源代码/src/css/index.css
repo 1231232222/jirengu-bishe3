@@ -18,7 +18,7 @@ ul,li{
 
 	/*头部样式*/
 #header{
-	background: url('img/首页背景_.png');
+	background: url('../img/首页背景_.png');
 	background-size: cover;
 	height: 100%;
 	position: relative;
@@ -99,7 +99,7 @@ ul,li{
 	/*背景logo*/
 #header>.logo{
 	position: absolute;
-	background: url("img/官网首页_logo.png") no-repeat;
+	background: url("../img/官网首页_logo.png") no-repeat;
 	top: 28%;
 	left:27%;
 	height: 400px;
@@ -129,7 +129,7 @@ ul,li{
 }
 #header>.star-wrap>div{
 	position: absolute;
-	background: url('img/首页闪烁星星.png') no-repeat;
+	background: url('../img/首页闪烁星星.png') no-repeat;
 	background-size: contain;
 	height: 30px;
 	width: 30px;
@@ -178,7 +178,7 @@ ul,li{
 	}
 }
 #header>.metor-wrap .metor1{
-	background: url('img/首页流星.png') no-repeat;
+	background: url('../img/首页流星.png') no-repeat;
 	background-size: cover;
 	animation: starmove1 7s infinite linear;
 	animation-delay: 3s;
@@ -189,7 +189,7 @@ ul,li{
 	top: -45%;
 }
 #header>.metor-wrap .metor2{
-	background: url('img/首页流星.png') no-repeat;
+	background: url('../img/首页流星.png') no-repeat;
 	background-size: cover;
 	animation: starmove2 8s infinite linear;
 	position: absolute;
@@ -206,7 +206,7 @@ ul,li{
 	width: 100%;
 	height: 300px;
 	bottom: -15px;
-	background: url('img/背景山1.png') no-repeat;
+	background: url('../img/背景山1.png') no-repeat;
 	background-size: 100% 100%;
 }
 #header>.mountain-wrap .mountain2{
@@ -214,7 +214,7 @@ ul,li{
 	width: 100%;
 	height: 400px;
 	bottom: -15px;
-	background: url('img/背景山2.png') no-repeat;
+	background: url('../img/背景山2.png') no-repeat;
 	background-size: 100% 100%;
 }
 #header>.mountain-wrap .mountain3{
@@ -222,7 +222,7 @@ ul,li{
 	width: 100%;
 	height: 300px;
 	bottom: -15px;
-	background: url('img/背景山3.png') no-repeat;
+	background: url('../img/背景山3.png') no-repeat;
 	background-size: 100% 100%;
 }
 
@@ -255,7 +255,7 @@ ul,li{
 	/*通知组件样式*/
 @keyframes mymove{
 	0% { transform: translateX(0); }
-	100% { transform: translateX(-2000px); }
+	100% { transform: translateX(-2500px); }
 }
 #header>.notice{
 	animation: mymove 25s infinite linear;
@@ -283,10 +283,43 @@ ul,li{
 	white-space: nowrap;
 }
 #header>.notice .icon{
-	background: url('img/天气.gif') no-repeat;
+	background: url('../img/天气.gif') no-repeat;
 	height: 45px;
 	width: 45px;
 	background-size: cover;
+	margin: 3px auto;
+}
+
+#header>.notice1{
+	animation: mymove 25s infinite linear;
+	text-align: center;
+	width: 200px;
+	position: absolute;
+	top: 25%;
+	left: 150%;
+}
+#header>.notice1:hover{
+	animation-play-state: paused;
+}
+#header>.notice1 a{
+	background: rgba(255,255,255,.1);
+	opacity: .6;
+	font-size: 12px;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 6px 10px;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#header>.notice1 .icon{
+	background: url('../img/通知.gif') no-repeat;
+	height: 45px;
+	width: 55px;
+	background-size: contain;
 	margin: 3px auto;
 }
 
@@ -299,7 +332,7 @@ ul,li{
 	top: 18%;
 	position: absolute;
 	float: left;
-	background: url('img/首页-光晕.png') no-repeat;
+	background: url('../img/首页-光晕.png') no-repeat;
 	background-size: cover;
 	height: 600px;
 	width: 100%;
@@ -310,7 +343,7 @@ ul,li{
 	top: 18%;
 	position: absolute;
 	float: left;
-	background: url('img/首页-光晕.png') no-repeat;
+	background: url('../img/首页-光晕.png') no-repeat;
 	transform: scaleX(-1400px);    /*翻转图片*/
 	background-size: cover; 
 	height: 600px;
@@ -384,11 +417,11 @@ ul,li{
 
 	/*轮播背景图*/
 .carousles .list>a.bg0{
-	background-image: url('img/缩放轮播-img/bg0.png');
+	background-image: url('../img/缩放轮播-img/bg0.png');
 	background-size: cover;
 }
 .carousles .list>a.bg1{
-	background-image: url('img/缩放轮播-img/bg1.png');
+	background-image: url('../img/缩放轮播-img/bg1.png');
 	background-size: cover;
 	text-align: right;
 }
@@ -396,11 +429,11 @@ ul,li{
 	border: 3px solid rgb(255,85,21);
 }
 .carousles .list>a.bg2{
-	background-image: url('img/缩放轮播-img/bg2.png');
+	background-image: url('../img/缩放轮播-img/bg2.png');
 	background-size: cover;
 }
 .carousles .list>a.bg3{
-	background-image: url('img/缩放轮播-img/bg3.png');
+	background-image: url('../img/缩放轮播-img/bg3.png');
 	background-size: cover;
 	text-align: right;
 }
@@ -408,7 +441,7 @@ ul,li{
 	border: 3px solid rgb(0,189,177);
 }
 .carousles .list>a.bg4{
-	background-image: url('img/缩放轮播-img/bg4.png');
+	background-image: url('../img/缩放轮播-img/bg4.png');
 	background-size: cover;
 	text-align: right;
 }
@@ -470,7 +503,7 @@ ul,li{
 	position: absolute;
 	left: -5%;
 	width: 110%;
-	background: url('img/雪山-img/intro-bg1.png') no-repeat;
+	background: url('../img/雪山-img/intro-bg1.png') no-repeat;
 	background-size: cover;
 	height: 900px;
 } 
@@ -479,7 +512,7 @@ ul,li{
 	left: -5%;
 	top: 130px;
 	width: 110%;
-	background: url('img/雪山-img/intro-bg2.png') no-repeat;
+	background: url('../img/雪山-img/intro-bg2.png') no-repeat;
 	background-size: cover;
 	height: 400px;
 }
@@ -496,7 +529,7 @@ ul,li{
 	z-index: 10;
 }
 .layout .press-img{
-	background: url('img/雪山-img/weekly.png') no-repeat;
+	background: url('../img/雪山-img/weekly.png') no-repeat;
 	background-size: cover;
 	height: 220px;
 	width: 290px;
@@ -550,7 +583,7 @@ ul,li{
 	top: 80px;
 	height: 200px;
 	width: 100%;
-	background: url('img/雪山-img/卫星背景.png') no-repeat;
+	background: url('../img/雪山-img/卫星背景.png') no-repeat;
 	background-size: cover;
 }
 
@@ -560,7 +593,7 @@ ul,li{
 	top: 56px;
 	left: 50%;
 	transform: translateX(-50%);
-	background: url('img/雪山-img/snow.png') no-repeat;
+	background: url('../img/雪山-img/snow.png') no-repeat;
 	background-size: cover;
 	height: 513px;
 	width: 533px;
@@ -573,25 +606,25 @@ ul,li{
 	width: 50px;
 }
 .layout>.snow .layou.g1{
-	background: url('img/雪山-img/1.gif') no-repeat;
+	background: url('../img/雪山-img/1.gif') no-repeat;
 	background-size: cover;
 	right: 146px;
 	top: 81px;
 }
 .layout>.snow .layou.g2{
-	background: url('img/雪山-img/2.gif') no-repeat;
+	background: url('../img/雪山-img/2.gif') no-repeat;
 	background-size: 90%;
 	left: 203px;
 	top: 144px;
 }
 .layout>.snow .layou.g3{
-	background: url('img/雪山-img/3.gif') no-repeat;
+	background: url('../img/雪山-img/3.gif') no-repeat;
 	background-size: 80%;
 	right: 91px;
 	top: 274px;
 }
 .layout>.snow .layou.g4{
-	background: url('img/雪山-img/4.gif') no-repeat;
+	background: url('../img/雪山-img/4.gif') no-repeat;
 	background-size: cover;
 	left: 180px;
 	bottom: 136px;

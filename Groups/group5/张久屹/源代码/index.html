@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="src/css/index.css">
 	<meta charset="utf-8">
 	<title>饥人谷-最有爱的前端社区</title>
 
@@ -87,10 +86,16 @@
 
 
 		<!-- 首屏通知滚动小恶魔 -->
-		<div class="notice">
+		<div class="notice ">
 			<a href="#" title="天气"></a>
 			<div class="icon"></div>
 		</div>
+
+		<div class="notice1">
+			<a href="#" title="今黑八点半若愚老师有课，记得上课哦~">今黑八点半若愚老师有课,记得上课哦~</a>
+			<div class="icon"></div>
+		</div>	
+
 
 
 		<!-- 首屏-背景山 -->
@@ -102,10 +107,10 @@
 
 		 <!-- 首屏联系-小恶魔 -->
 		<div class="with left">
-			<a href="#"><img src="img/首页小图1.gif" alt="走进新世界" title="不要犹豫，来吧"></a></div>
+			<a href="#"><img src="src/img/首页小图1.gif" alt="走进新世界" title="不要犹豫，来吧"></a></div>
 		<div class="with right">
 			<a href="#">
-				<img src="img/联系教导员-静态.png" data-img="img/联系教导员-静态.png" data-hover-img="img/联系-动态.gif" alt="来跟我聊聊" title="妹子，来聊会~">
+				<img src="src/img/联系教导员-静态.png" data-img="src/img/联系教导员-静态.png" data-hover-img="src/img/联系-动态.gif" alt="来跟我聊聊" title="妹子，来聊会~">
 			</a>
 		</div>
 	</div>
@@ -245,22 +250,22 @@
 			<ul class="img-ct">
 				<li class="list">
 					<a href="#">
-						<img src="img/全屏轮播-img/1.png" alt="">
+						<img src="src/img/全屏轮播-img/1.png" alt="">
 					</a>
 				</li>
 				<li class="list">
 					<a href="#">
-						<img src="img/全屏轮播-img/2.png" alt="">
+						<img src="src/img/全屏轮播-img/2.png" alt="">
 					</a>
 				</li>
 				<li class="list">
 					<a href="#">
-						<img src="img/全屏轮播-img/3.png" alt="">
+						<img src="src/img/全屏轮播-img/3.png" alt="">
 					</a>
 				</li>
 				<li class="list">
 					<a href="#">
-						<img src="img/全屏轮播-img/4.png" alt="">
+						<img src="src/img/全屏轮播-img/4.png" alt="">
 					</a>
 				</li>		
 			</ul>
@@ -291,17 +296,17 @@
 			<p>加入饥人谷，成为一名自豪的 Hunger 吧!</p>
 			<div class="round left">
 				<a href="#">
-					<img class="qq1" src="img/底部小恶魔-img/qq1.png"  alt="">
-					<img class="qq2" src="img/底部小恶魔-img/qq1-hover.png" alt="" >
+					<img class="qq1" src="src/img/底部小恶魔-img/qq1.png"  alt="">
+					<img class="qq2" src="src/img/底部小恶魔-img/qq1-hover.png" alt="" >
 				</a>
 			</div>
 			<div class="round right">
-				<img class="qq1" src="img/底部小恶魔-img/qq2.png" alt="">
-				<img class="qq2" src="img/底部小恶魔-img/qq2-hover.png" alt="">
+				<img class="qq1" src="src/img/底部小恶魔-img/qq2.png" alt="">
+				<img class="qq2" src="src/img/底部小恶魔-img/qq2-hover.png" alt="">
 			</div>
 			<div class="round_small">
 				<a href="#">
-					<img src="img/底部小恶魔-img/weibo.png" alt="">
+					<img src="src/img/底部小恶魔-img/weibo.png" alt="">
 				</a>	
 			</div>			
 		</div>
@@ -327,7 +332,7 @@
 			<ul class="wrap">
 				<li class="list">
 					<a href="">
-						<img src="img/底部小恶魔-img/police.png" alt=""> 
+						<img src="src/img/底部小恶魔-img/police.png" alt=""> 
 						浙公网安备 33010802005164号 
 					</a>
 				</li>
@@ -339,6 +344,6 @@
 
 
 
-	<script src="index.js"></script>
+	<script src="lib/require.min.js" data-main="src/js/main"></script>
 </body>
 </html>
