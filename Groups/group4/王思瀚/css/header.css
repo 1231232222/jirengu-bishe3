@@ -1,0 +1,324 @@
+html,body,ul,li,p,h1,h2,h3,h4,div{
+    margin:0;
+    padding:0;
+    list-style: none;
+    font-family: Arial,"Microsoft YaHei",sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+html,body{
+    /*width:100%;*/
+    height: 100%;
+    overflow-x:hidden;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.tra{
+    display: inline-block;
+    width:0;
+    height:0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position: relative;
+    top:-2px;
+}
+.header{
+    position: relative;
+    height:100%;
+    background:radial-gradient(#61617b 10%,#2f2f52 80%);
+    overflow: hidden;
+}
+.nav-ul{
+    position: absolute;
+    top:40px;
+    right:70px;
+    height: 35px;
+    border:1px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.1);
+}
+.nav-ul>li{
+    float: left;
+    line-height: 35px;
+    padding:0  30px ;
+    border-right: 1px solid #fff;
+    position: relative;
+    z-index:2;
+}
+.nav-ul>li:nth-child(5){
+    padding: 0 46px;
+}
+.nav-ul>li:last-child{
+    border:none;
+    padding-right: 45px;
+}
+.nav-ul>li a:hover{
+    font-weight: bolder;
+}
+.nav-ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.nav:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.inner-nav-ul{
+    display: none;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    position: absolute;
+    top:100%;
+    left:5px;
+    background-color: rgba(255,255,255,0.1);
+}
+.textnow{
+    position: absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    padding-top: 20px;
+}
+.inner-nav-ul>li{
+    color: #fff;
+    padding: 5px 33px;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.inner-nav-ul>li img{
+    border-radius: 50%;
+    transition: .8s;
+}
+.inner-nav-ul>li img:hover{
+
+}
+.inner-nav-ul>li:hover{
+    font-weight: bold;
+}
+.inner-nav-ul>li:last-child{
+    border: none;
+}
+.nav-ul>li:hover .inner-nav-ul{
+    display: block;
+}
+.logo{
+    position: absolute;
+    background: url(../img/logo.png) no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 25vw;
+    z-index: 3;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.layer-notice{
+
+    z-index: 5;
+    text-align: center;
+}
+.notice-move{
+    position: absolute;
+    top:16%;
+    animation: noticemove 40s linear infinite;
+    left:102%;
+}
+@keyframes noticemove{
+    0%{transform: translate(0,0)}
+    100%,60%{transform:translate(-1600px,0)}
+}
+.notice-a{
+    display: block;
+    padding: 3px 5px;
+    background: rgba(255,255,255,.1);
+    font-size: 13px;
+    box-shadow: 0 0 3px #fff;
+    border-radius: 3px;
+    width: 200px;
+    height:18px;
+    opacity: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: noticehide 40s linear infinite;
+}
+@keyframes noticehide {
+    0%,10%,50%{opacity: 0}
+    12%,48%{opacity: 1}
+}
+.notice-img{
+    display: inline-block;
+    background: url("../img/notice3.gif");
+    background-size: contain;
+    width: 50px;
+    height:50px;
+}
+.monster-red{
+    position: absolute;
+    bottom: -100px;
+    left:30px;
+    width: 160px;
+    height: 160px;
+    background-color: #303052;
+    border-radius: 50%;
+    z-index: 3;
+}
+.monster img{
+    position: absolute;
+    height:80px;
+    bottom: 0;
+    top:-30px;
+    left:30px;
+    cursor: pointer;
+}
+.monster-blue{
+    position: absolute;
+    bottom: -100px;
+    left: 230px;
+    width: 160px;
+    height: 160px;
+    background-size: contain;
+    background-color: #303052;
+    border-radius: 50%;
+    z-index: 3;
+}
+.shadow>div{
+    position: absolute;
+    bottom: 0;
+    width: 1400px;
+    height: 560px;
+    background: url(../img/shadow.png) center center no-repeat;
+    background-size: cover;
+    z-index: 1;
+
+
+}
+.shadow .shadow1{
+    left:0;
+    animation:mymove 600s linear infinite;
+}
+.shadow .shadow2{
+    left:70%;
+    animation:mymove2 600s linear infinite;
+    transform: rotateY(180deg);
+}
+@keyframes mymove {
+    0% {transform: translate(0,0)}
+    50%{transform:translate(-1400px,0)}
+    50.01%{transform: translate(1400px,0)}
+    100%{transform: translate(0,0)}
+}
+@keyframes mymove2 {
+    0%{transform: translate(0,0)}
+    99.99%{transform: translate(-2880px,0)}
+    100%{transform: translate(0,0)}
+}
+.star{
+    z-index:2;
+    position: absolute;
+    width:21px;
+    height: 21px;
+    background: url("../img/star.png");
+    background-size: contain;
+}
+.layer-star .pos1{
+    left:10%;
+    top:60%;
+    animation: starblink 2s 0s infinite;
+}
+.layer-star .pos2{
+    left:30%;
+    top:50%;
+    animation: starblink 2s 0.8s infinite;
+}
+.layer-star .pos3{
+    left:40%;
+    top:45%;
+    animation: starblink 2s 0.7s infinite;
+}
+.layer-star .pos4{
+    left: 60%;
+    top:55%;
+    animation: starblink 2s 1.3s infinite;
+}
+.layer-star .pos5{
+    left:71%;
+    top:70%;
+    animation: starblink 2s 1.6s infinite;
+}
+.layer-star .pos6{
+    left:85%;
+    top:40%;
+    animation: starblink 2s 1.6s infinite;
+}
+.layer-star .pos7{
+    left:90%;
+    top:65%;
+    animation: starblink 2s 0s infinite;
+}
+@keyframes starblink {
+    0%,100%{transform: scale(1)}
+    50%{transform: scale(.3)}
+}
+
+.meteor1 {
+    background: url("../img/meteor.png")center center no-repeat;
+    width: 64px;
+    height:64px;
+    background-size: contain;
+    z-index:3;
+    position: absolute;
+    right: -68px;;
+    top:0;
+    animation: meteorshot1 10s 0s linear infinite;
+}
+@keyframes meteorshot1 {
+    0%{transform: translate(0,0);opacity: 1}
+    60%{transform: translate(-1000px,1000px);opacity: 1}
+    100%,61%{opacity: 0}
+}
+.meteor2 {
+    background: url("../img/meteor.png")center center no-repeat;
+    width: 64px;
+    height:64px;
+    background-size: contain;
+    z-index:3;
+    position: absolute;
+    left:500px;
+    top:-60px;
+    animation: meteorshot2 10s 1.6s linear infinite;
+}
+@keyframes meteorshot2 {
+    0%{transform: translate(0,0);opacity: 1}
+    60%{transform: translate(-1000px,1000px);opacity: 1}
+    100%,61%{opacity: 0}
+}
+.mountain{
+    height:100%;
+}
+.mountain div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 110%;
+    margin-left: -5%;
+    margin-bottom: -20px;
+    height: 100%;
+    background-size: 100vw 50vh;
+    z-index: 1;
+}
+.m1{
+    background: url("../img/mountain1.png") center bottom no-repeat;
+}
+.m2{
+    background: url("../img/mountain2.png")center bottom no-repeat;
+}
+.m3{
+    background: url("../img/mountain3.png")center bottom no-repeat;
+}

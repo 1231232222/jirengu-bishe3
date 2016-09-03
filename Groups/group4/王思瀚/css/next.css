@@ -1,0 +1,165 @@
+.next{
+    position: relative;
+}
+.next>h2{
+    color:#fff;
+    font-size: 32px;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #2f2f51;
+}
+.layer-next{
+    position: relative;
+}
+.layer-next>h2{
+    position: relative;
+    background-color: #2f2f51;
+    color:#fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+}
+.layer-next .carousel2{
+    position: relative;
+    height: 500px;
+    background-color: #8E93A5;
+    overflow: hidden;
+}
+.carousel2 .carousel2-wrap{
+    position: absolute;
+    height: 400px;
+    background-color: #252545;
+}
+.carousel2 .carousel2-wrap>li{
+    float: left;
+    height: 400px;
+    text-align: center;
+}
+.carousel2 .carousel2-wrap>li img{
+    height: 400px;
+}
+.carousel2 .carousel2-wrap:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.carousel2 .arrow2{
+    position: absolute;
+    top: 40%;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    z-index: 99;
+}
+.carousel2 .next2{
+    right: -16px;
+    border-right: 16px solid transparent;
+    border-top: 16px solid transparent;
+    border-left: 16px solid #f78801;
+    border-bottom: 16px solid transparent;
+}
+.carousel2 .pre2{
+    left: -16px;
+    border-right: 16px solid #ccc;
+    border-top: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+}
+.carousel2 .tab-wrap{
+    position: absolute;
+    left: 0;
+    top: 400px;
+    font-size: 17px;
+}
+.carousel2 .tab-wrap>li{
+    float: left;
+    margin-left: 20px;
+    color:#fff;
+    cursor: pointer;
+}
+.carousel2 .tab-wrap:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.carousel2 .tab-wrap .icon{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    border-top: 10px solid #8e93a5;
+    border-left: 10px solid #8e93a5;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.carousel2 .tab-wrap .bk{
+    border-top: 10px solid #252545;
+    border-left: 10px solid #252545;
+}
+.carousel2 .tab-wrap .active2{
+    color:#252545;
+}
+
+
+
+
+.section-contact {
+    background-color: #8e93a5;
+    min-height: 40px;
+    position: relative;
+}
+.section-contact .contact{
+    float: left;
+    position: relative;
+}
+.section-contact .contact li{
+    float: left;
+    width: 90px;
+    height: 90px;
+    background-color: #335;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-left: 30px;
+    position: relative;
+    top:30px;
+}
+.section-contact:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.section-contact .contact img{
+    display: block;
+    position: relative;
+    top:-30px;
+    left:5px;
+    width: 90px;
+    height: 90px;
+}
+.section-contact .social{
+    float: right;
+}
+.section-contact .social li{
+    float: right;
+    width: 60px;
+    height: 60px;
+    background-color: #335;
+    border-radius: 50%;
+    margin-right: 30px;
+    margin-top: 60px;
+    position: relative;
+    top:30px;
+}
+.section-contact .social img{
+    width:60px;
+    height:60px;
+    position: relative;
+    top:-25px;
+}
+.section-contact  h4{
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    margin-left: -125px;
+}

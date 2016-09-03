@@ -1,0 +1,35 @@
+.footer{
+    /*position: relative;*/
+    background-color: #335;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px;
+    bottom:0;
+}
+
+.layout ul{
+    position: relative;
+    left:650px;
+}
+.layout ul:nth-child(2){
+    left:670px;
+}
+.layout ul:last-child{
+    left:620px;
+}
+.footer .layout ul li{
+    float: left;
+}
+.footer .layout ul:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.footer .layout  ul li>a{
+    color: #fff;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.footer .layout img {
+    vertical-align: middle;
+}

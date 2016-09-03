@@ -1,0 +1,331 @@
+.content{
+    height:800px;
+    background-color: #303052;
+    padding: 20px;
+}
+.content>h2{
+    margin: 0 auto;
+    width: 200px;
+    font-size: 30px;
+    color:#fff;
+}
+.content .carousel{
+    position: relative;
+    height: 600px;
+    margin: 10px auto;
+    min-width: 500px;
+    overflow: hidden;
+}
+.carousel .carousel-warp{
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel .carousel-warp .list{
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 19px;
+    float: left;
+    min-height: 240px;
+    transition: .5s;
+}
+.carousel .carousel-warp:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.carousel .carousel-warp .list>a{
+    box-sizing: border-box;
+    display: block;
+    background-color: #29394d;
+    border: 8px solid #29394d;
+    padding: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: .5s;
+    height: 100%;
+}
+.carousel .carousel-warp .list>a:hover{
+    background-color: #fff;
+    color:#000;
+}
+.carousel .carousel-warp .list a hr{
+    display: inline-block;
+    width: 46px;
+    height: 9px;
+    background-color: orange;
+    border:none;
+    margin: 15px 0;
+    /*这块的是不是外边距合并了,修改为inlineblok后消失*/
+}
+.carousel .carousel-warp .list h3{
+    font-size: 30px;
+}
+.carousel .carousel-warp .list a p{
+    font-size: 18px;
+}
+.carousel .carousel-warp .list .bg1{
+    text-align: left;
+    background-image: url('../img/carousel/bg1.png');
+    background-size: cover;
+}
+.carousel .carousel-warp .list .bg2{
+    text-align: right;
+    background-image: url('../img/carousel/bg2.png');
+    background-size: cover;
+}
+.carousel .carousel-warp .list .bg3{
+    text-align: right;
+    background-image: url('../img/carousel/bg3.png');
+    background-size: cover;
+}
+.carousel .carousel-warp .list .bg4{
+    text-align: right;
+    background-image: url('../img/carousel/bg4.png');
+    background-size: cover;
+}
+.carousel .carousel-warp .list .bg5{
+    text-align: left;
+    background-image: url('../img/carousel/bg1.png');
+    background-size: cover;
+}
+.carousel .arrow{
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+.carousel .next{
+    right: -16px;
+    border-right: 16px solid transparent;
+    border-top: 16px solid transparent;
+    border-left: 16px solid #2E2E4F;
+    border-bottom: 16px solid transparent;
+}
+.carousel .pre{
+    left: -16px;
+    border-right: 16px solid #ccc;
+    border-top: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-bottom: 16px solid transparent;
+}
+.active{
+    transform: scale(1.2);
+    z-index: 15;
+}
+
+.tree{
+    background: radial-gradient(#21213e 40%,#303052,#303052);
+    text-align: center;
+    height: 988px;
+    overflow: hidden;
+}
+
+.tree h2{
+    position: relative;
+    color: #ffffff;
+    top:40px;
+    font-size: 30px;
+}
+.tree p{
+    position: relative;
+    color: #ffffff;
+    top: 60px;;
+}
+.tree-container{
+    position: relative;
+    height: 900px;
+    width:100%;
+    overflow: hidden;
+}
+.tree-inner {
+    background: url("../img/shequ/shangu.png")  no-repeat;
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    margin-left: -260px;
+    margin-bottom: 300px;
+    z-index: 3;
+}
+.tree-inner img.mon1{
+    position: absolute;
+    left:308px;
+    top:70px;
+    height:50px;
+}
+
+.tree-inner h3.mon1{
+    position: absolute;
+    left:370px;
+    top:40px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.tree-inner div.mon1{
+    color: #ffffff;
+    position: absolute;
+    top:90px;
+    left:420px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
+}
+.tree-inner img.mon2{
+    position: absolute;
+    left:210px;
+    top:130px;
+    height:38px;
+}
+
+.tree-inner h3.mon2{
+    position: absolute;
+    left:70px;
+    top:80px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.tree-inner div.mon2{
+    color: #ffffff;
+    position: absolute;
+    top:130px;
+    left:-110px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
+}
+.tree-inner img.mon3{
+    position: absolute;
+    left:359px;
+    top:255px;
+    height:40px;
+}
+
+.tree-inner h3.mon3{
+    position: absolute;
+   right: -80px;
+   top:235px;
+    color: #ffffff;
+    font-size: 24px;
+    width: 200px;
+
+}
+
+.tree-inner div.mon3{
+    color: #ffffff;
+    position: absolute;
+    top:280px;
+    left:440px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
+}
+.tree-inner img.mon4{
+    position: absolute;
+    left:170px;
+    top:305px;
+    height:50px;
+}
+
+.tree-inner h3.mon4{
+    position: absolute;
+    left:30px;
+    top:295px;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.tree-inner div.mon4{
+    color: #ffffff;
+    position: absolute;
+    top:340px;
+    left:-190px;
+    border:1px solid #ffffff;
+    border-radius: 4px;
+    width:249px;
+    padding: 10px;
+}
+.tree-bg1{
+    position: absolute;
+    width:110%;
+    left:0;
+    bottom:0;
+    height: 825px;
+    background: url(../img/shequ/shan1.png) bottom center no-repeat;
+    background-size: cover;
+    z-index: 2;
+}
+.tree-bg2{
+    position: absolute;
+    bottom: 0;
+    width: 110%;
+    margin-bottom: 390px;
+    height: 368px;
+    background: url(../img/shequ/shan2.png) bottom center no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+.tree-star{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 600px;
+    width: 100%;
+    height:249px;
+    background:url(../img/shequ/star.png)bottom center no-repeat;
+    background-size: cover;
+    z-index:0;
+}
+.weekly{
+    position: relative;
+    z-index:3;
+    width: 800px;
+    text-align: left;
+    margin: -290px auto 0;
+}
+.weekly img{
+    float: left;
+    width:300px;
+}
+.weekly-intro{
+    color: #ffffff;
+    margin-left: 320px;
+}
+.weekly h3{
+    font-size: 32px;
+    padding:10px 0;
+}
+.weekly  p.weekly-p{
+    font-size: 16px;
+    padding:0 10px;
+    position: relative;
+    top:0;
+}
+.btn{
+    color:#fff;
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #e36265;
+    padding:3px 10px;
+    border-radius: 12px;
+}
+.weekly ul{
+    position: relative;
+    left:20px;
+    width: 50%;
+    float: left;
+    margin-top: 10px;
+}
+.weekly ul li{
+    list-style-type: disc;
+}

@@ -1,0 +1,446 @@
+html,body {
+	height: 100%;
+}
+
+.header {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	background-color: rgb(47,47,82);
+}
+.header > .nav {
+	height: 60px;
+	line-height: 60px;
+	margin-top: 90px;
+	margin-right: 100px;
+	border: 1px solid #fff;
+	border-radius: 6px;
+	float: right;
+	font-size: 26px;
+}
+.header > .nav > li {
+	float: left;
+	border-right: 1px solid #fff;
+}
+.header > .nav > li > a {
+	display: block;
+	padding: 0 20px;
+	color: #fff;
+}
+.header .background-layer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.header .mountain-list {
+	width: 100%;
+	height: 100%;
+}
+.header .mountain-list > .moun-1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/moun-1.png) bottom left no-repeat;
+}
+.header .mountain-list > .moun-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/moun-2.png)  right bottom no-repeat;
+}
+.header .mountain-list > .moun-3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/moun-3.png) 60px bottom  no-repeat;
+}
+.header .shadow-list {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.header .shadow-list > .shadow-1 {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/starts-list.png) 0 80px no-repeat;
+}
+.header .logo {
+	position: absolute;
+	top: 25%;
+	left: 28%;
+	width: 100%;
+	height: 100%;
+	background: url(../img/jirengu.png) 0 0 no-repeat;
+}
+
+.main {
+	background: rgb(48,48,82);
+}
+.main > .free-course {
+	color: #fff;
+}
+.free-course > h2 {
+	text-align: center;
+	padding: 30px 0;
+	font-size: 44px;
+}
+.free-course .slider-wrap {
+	width: 100%;
+}
+.free-course .slider > li {
+	float: left;
+	box-sizing: border-box;
+	width: 33.33%;
+	height: 360px;
+	padding: 20px;
+	background: #fff;
+	text-align: right;
+	border: 1px solid rgb(48,48,82);
+}
+.free-course .slider > li > a {
+	display: block;
+	box-sizing: border-box;
+	height: 100%;
+	padding: 20px;
+	color: #fff;
+	background-color: rgb(48,48,82);
+}
+.free-course .slider h4 {
+	margin-top: 60px;
+	margin-bottom: 20px;
+}
+.free-course .slider h4+p {
+	margin-bottom: 40px;
+}
+.free-course .slider .item-1 {
+	background-image: url(../img/course-1.png);
+	background-position: 0 bottom;
+	background-repeat: no-repeat;
+}
+.free-course .slider .item-2 {
+	background-image: url(../img/course-2.png);
+	background-position: 0 bottom;
+	background-repeat: no-repeat;
+}
+.free-course .slider .item-3 {
+	text-align: left;
+	background-image: url(../img/course-3.png);
+	background-position: right bottom;
+	background-repeat: no-repeat;
+}
+
+
+
+/* 饥人谷介绍内容 start */
+.introduct-wrap {
+	position: relative;
+	z-index: 1;
+	background: url(../img/tree-shan-1.png) 0 bottom no-repeat;
+	background-size: contain;
+}
+.introduct-wrap .jirengu {
+	padding-top: 100px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 70px;
+	color: #fff;
+}
+
+.introduct-wrap .jirengu > h4 {
+	font-size: 44px;
+	padding-bottom: 20px;
+}
+
+.introduct-wrap .introduct-tree {
+	width: 770px;
+	height: 690px;
+	margin: 0 auto;
+	background: url(../img/tree.png) 0 0 no-repeat;
+	background-size: contain;
+}
+
+.introduct-tree {
+	position: relative;
+	z-index: 2;
+	padding-top: 2px;
+	color: #ccc;
+}
+.introduct-tree .info-list > li {
+	position: relative;
+	width: 350px;
+	padding: 10px;
+	font-size: 18px;
+}
+.introduct-tree .info-list > li  h4 {
+	margin-bottom: 15px;
+	font-size: 28px;
+}
+.introduct-tree .info-list p {
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	padding: 10px;
+}
+.introduct-tree .info-list > li .align-right{
+	text-align: right;
+}
+.introduct-tree .info-list > li .left-indent {
+	text-indent: -20px;
+}
+.introduct-tree .i-mon {
+	position: absolute;
+	display: block;
+	width: 80px;
+	height: 90px;
+	background-image: url(../img/tree-monster-list.png);
+	background-repeat: no-repeat;
+}
+.introduct-tree .item-1 {
+	margin-top: 80px; 
+	margin-left: 530px;
+}
+.introduct-tree .item-2 {
+	margin-top: -90px;
+	margin-left: -100px;
+}
+.introduct-tree .item-3 {
+	margin-top: 40px;
+	margin-left: 600px;
+}
+.introduct-tree .item-4 {
+	margin-top: -110px;
+	margin-left: -150px;
+}
+.introduct-tree .item-1 .i-mon {
+	top: 20px;
+	left: -80px;
+	background-position: -15px 0;
+}
+.introduct-tree .item-2 .i-mon {
+    top: 0;
+	right: -80px;
+	background-position: 0 -100px;
+}
+.introduct-tree .item-3 .i-mon {
+	top: -20px;
+	left: -100px;
+	background-position: 0 -195px;
+}
+.introduct-tree .item-4 .i-mon {
+	top: -10px;
+	right: -90px;
+	background-position: -17px -285px;
+}
+.introduct-wrap .move-mountain {
+	position: absolute;
+	z-index: 0;
+	bottom: -5px;
+	left: -5px;
+	width: 100%;
+	height: 400px;
+	background: url(../img/tree-mountain-2.png) 0 0 no-repeat;
+}
+.introduct-wrap .bg-star-list {
+	position: absolute;
+	top: 100px;
+	left: 0;
+	width: 100%;
+	height: 490px;
+	background: url(../img/tree-stars.png) center no-repeat;
+}
+/* 饥人谷介绍内容 end */
+.journal {
+	padding-top: 30px;
+	padding-bottom: 80px;
+	padding-left: 50%;
+	font-size: 20px;
+	line-height: 1.5;
+	background: rgb(115,121,144) url(../img/weekly.png) 30% 20px no-repeat;
+}
+
+.journal > h4 {
+	font-size: 44px;
+	margin-bottom: 30px;
+}
+
+.journal .btn {
+	display: block;
+	width: 110px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 20px;
+	margin-top: 25px;
+	text-align: center;
+	background: rgb(227, 98, 101);
+}
+
+.near-course {
+	position: relative;
+	background: rgb(48, 48, 82);
+}
+.near-course > h4 {
+	text-align: center;
+	font-size: 44px;
+	padding-top: 40px;
+	padding-bottom: 30px;
+	color: #fff;
+}
+.near-course .slider {
+
+}
+
+.near-course .slider > li {
+	padding-top: 80px;
+	padding-left: 90px;
+	color: #fff;
+}
+
+.near-course .slider .article > p {
+	font-size: 48px;
+}
+.near-course .slider .article > p + p {
+	margin-top: -20px;
+	font-size: 48px; 
+	text-indent: 200px;
+}
+.near-course .slider .speaker {
+	font-size: 32px;
+	margin-top: 80px;
+}
+
+.near-course .slider .speak-info {
+	text-indent: 60px;
+	margin-top: 15px;
+}
+
+.near-course .slider .strong {
+	font-size: 90px;
+	color: rgb(247, 136, 1);
+}
+
+.near-course .more-info {
+	color: #fff;
+	display: block;
+	width: 110px;
+	padding: 10px 0;
+	margin-top: 10px;
+	margin-left: 285px;
+	text-align: center;
+	background: rgb(247, 136, 1);
+	border-radius: 20px;
+}
+
+.near-course .slider .item-1 {
+	background: url(../img/huojian.png) right bottom no-repeat;
+	background-size: contain;
+	padding-bottom: 30px;
+}
+
+
+
+/**/
+.time-line {
+	background-color: rgb(142, 147, 165);
+	font-size: 26px;
+	padding-top: 45px;
+	text-align: center;
+}
+
+.time-line .time-list {
+	padding-bottom: 90px;
+}
+
+.time-line .time-list > span {
+	position: relative;
+	padding: 0 70px;
+}
+
+.time-line .i-arrow {
+	/*display: none;*/
+	position: absolute;
+	top: -47px;
+	left: 50%;
+	margin-left: -17px;
+	width: 0;
+	height: 0;
+	border-top: 17px solid rgb(48, 48, 82);
+	border-right: 17px solid transparent;
+	border-bottom: 17px solid transparent;
+	border-left: 17px solid rgb(48, 48, 82);
+}
+
+.time-line .monster-list {
+	padding-left: 35px;
+	padding-right: 90px;
+}
+
+.time-line .i-monster {
+	position: relative;
+	z-index: 12;
+	display: block;
+	float: left;
+	width: 80px;
+	height: 90px;
+	background-image: url(../img/time-monster-list.png);
+	background-repeat: no-repeat;
+	overflow: hidden;
+	margin-right: 20px;
+}
+
+.time-line .mon-1 {
+	background-position: -8px 0;
+}
+
+.time-line .mon-2 {
+	background-position: -13px -100px;
+}
+
+.time-line .mon-3 {
+	background-position: -10px -200px;
+}
+
+.time-line .mon-weixin {
+	height: 60px;
+	margin-top: 30px;
+	background-position: 0 -300px;
+}
+
+.time-line .mon-weibo {
+	height: 60px;
+	margin-top: 30px;
+	background-position: 0 -370px;
+}
+
+.time-line .join-us {
+	text-align: center;
+	margin-top: -20px;
+	font-size: 20px;
+}
+
+/**/
+
+/* 底部样式 start */
+.footer {
+	background-color: rgb(48, 48, 82);
+	padding-top: 25px;
+	padding-bottom: 40px;
+	font-size: 14px;
+	line-height: 1.5;
+	text-align: center;
+	color: #fff;
+}
+
+.footer a {
+	color: #fff;
+}

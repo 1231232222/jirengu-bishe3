@@ -1,0 +1,129 @@
+#header {
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+#header>ul {
+  position: absolute;
+  right: 100px;
+  top: 50px;
+}
+#header>ul>li {
+  float: left;
+  position: relative;
+}
+＃header>ul>li ul {
+  position: absolute;
+}
+#header:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.nav {
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.mountain1, .mountain2, .mountain3 {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.logo {
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+#header:after {
+  content: "";
+  background: green;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.nav>li {
+  position: relative;
+  border-style: none solid none none;
+  border-width: 1px;
+  border-color: white;
+}
+.nav>li:last-child {
+  border-width: 0;
+}
+.nav>li>a {
+  display: block;
+  padding: 10px 30px;
+}
+.nav>li:hover ul {
+  display: block;
+}
+.nav>li>ul {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  display: none;
+}
+
+.nav>li>ul>li {
+  line-height: 40px;
+  border-style: solid solid none solid;
+  border-color: white;
+  border-width: 1px;
+}
+.nav>li>ul>li:first-child {
+  border-radius: 5px 5px 0 0;
+}
+.nav>li>ul>li:last-child {
+  border: 1px solid white;
+  border-radius: 0 0 5px 5px;
+}
+
+.bg {
+  height: 100%;
+  background: rgb(58, 58, 91);
+  background-image: url(images/shadow.png);
+}
+.public-classes {
+  position: absolute;
+  left: 0;
+}
+.public-classes>li {
+  width: 30%;
+  height: 200px;
+  float: left;
+  background: white;
+  padding: 20px;
+  transition: transform 1s;
+}
+.public-classes>li>div {
+  height: 100%;
+  background: rgb(41, 57, 77);
+}
+.class-carousel {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+.class-carousel>.pre-btn {
+  height: 100%;
+  width: 40px;
+  left: 0;
+  top: 0;
+  background: green;
+  position: absolute;
+}
+.class-carousel>.next-btn {
+  height: 100%;
+  width: 40px;
+  right: 0;
+  top: 0;
+  background: green;
+  position: absolute;
+}

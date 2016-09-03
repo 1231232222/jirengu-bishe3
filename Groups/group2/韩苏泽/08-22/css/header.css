@@ -1,0 +1,459 @@
+/*初始化*/
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+img, ins, kbd, q, s, samp, small, strike, strong, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+ol, ul {list-style: none; }
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ”; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+a {
+  color: white;
+  text-decoration: none;
+}
+/*header*/
+html,body,#header {
+  height: 100%;
+}
+body{
+  font-family: serif,Arial,"Microsoft YaHei",sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #fff;
+  background: #303052;
+}
+#header{
+  position: relative;
+  padding: 1px;
+  background-color: #303052;
+
+}
+.layers {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(#61617b,#2f2f52 80%);
+  z-index: 0;
+}
+/*star-cloud-shadows*/
+.layer-shadows1,
+.layer-shadows2 {
+  position: absolute;
+  width: 1400px;
+  height: 560px;
+  background: url(../images/shadow.png) center center no-repeat;
+  background-size: cover;
+  bottom: 0;
+  z-index: 1;
+}
+
+.layer-shadows1{
+  left: 0;
+  animation: shadowmove1 600s linear infinite;
+}
+
+.layer-shadows2{
+  left: 1400px;
+  transform: rotate(180deg);
+  animation: shadowmove2 600s linear infinite;
+}
+
+@keyframes shadowmove1 {
+  0%,
+  100%  { transform: translateX(0);}
+  50% { transform: translateX(-1400px);}
+  50.01% {transform: translateX(1400px)}
+}
+
+@keyframes shadowmove2 {
+
+  0%,
+  100%  { transform: translateX(0);}
+  99.99% { transform: translateX(-2800px);}
+}
+
+/*star-shadows*/
+
+.layer-stars .star {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background: url(../images/star.png) center center no-repeat;
+  background-size: contain;
+  animation:startwinkle 6s linear infinite;
+  z-index: 2;
+}
+
+.layer-stars .style1 {
+  animation-delay: 1s;
+}
+.layer-stars .style2 {
+  animation-delay: 2s;
+}
+.layer-stars .style3 {
+  animation-delay: 3s;
+}
+
+.layer-stars .pos-1 {
+  left: 10%;
+  top: 60%;
+}
+.layer-stars .pos-2 {
+  left: 20%;
+  top: 54%;
+}
+.layer-stars .pos-3 {
+  left: 30%;
+  top: 48%;
+}
+.layer-stars .pos-4 {
+  left: 40%;
+  top: 52%;
+}
+.layer-stars .pos-5 {
+  left: 50%;
+  top:  56%;
+}
+
+.layer-stars .pos-6 {
+  left: 60%;
+  top:  68%;
+}
+.layer-stars .pos-7 {
+  left: 70%;
+  top:  42%;
+}
+.layer-stars .pos-8 {
+  left: 80%;
+  top: 48%;
+}
+
+
+@keyframes startwinkle {
+ 0%,
+ 100% {transform: scale(0.3,0.3);}
+ 50% {transform: scale(1,1);}
+}
+
+/*layer-meteor1*/
+.layer-meteors>div {
+  position: absolute;
+  width: 64px;
+  height:64px;
+  background: url(../images/meteor.png) center center no-repeat;
+  background-size: contain;
+  z-index: 3;
+}
+.layer-meteor1 {
+  left:500px;
+  top: -68px;
+  animation: meteor1 10s linear infinite;
+}
+.layer-meteor2 {
+  right: -68px;
+  top: 0;
+  animation: meteor2 10s linear infinite;
+}
+
+@keyframes meteor1 {
+  0,
+  100% {
+    left:500px;
+    top: -68px;
+    visibility:visible;
+  }
+  50% {
+    left:-68px;
+    top: 500px;
+    visibility:visible;
+  }
+  50.1% {
+    left:-68px;
+    top: 500px;
+    visibility: hidden;
+  }
+  99.9% {
+    left:500px;
+    top: -68px;
+    visibility: hidden;
+  }
+}
+
+@keyframes meteor2 {
+  0,
+  100% {
+    right: -68px;
+    top: 0;
+    visibility: visible;
+  }
+  50% {
+    right: 868px;
+    top: 800px;
+    visibility: visible;
+  }
+  50.1% {
+    right: 868px;
+    top: 800px;
+    visibility: hidden;
+  }
+  99.9% {
+    right: -68px;
+    top: 0;
+    visibility: hidden;
+  }
+}
+
+/*logo*/
+.layer-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  height: 360px;
+  transform: translate(-50%,-50%);
+  background: url(../images/logo.png) center center no-repeat;
+  background-size:contain;
+  z-index: 5;
+}
+
+.layer-mountains>div {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 110%;
+  height: 100%;
+  margin-left: -5%;
+  margin-bottom: -20px;
+  background-size: contain;
+  z-index: 4;
+}
+.layer-mountain1 {
+  background: url(../images/mountain1.png) center bottom no-repeat;
+}
+.layer-mountain2 {
+  background: url(../images/mountain2.png) center bottom no-repeat;
+}
+.layer-mountain3 {
+  background: url(../images/mountain3.png) center bottom no-repeat;
+}
+/*notice*/
+.layer-notice {
+  width: 100%;
+}
+.notice {
+  position: absolute;
+  right: -200px;
+  width: 200px;
+  z-index: 6;
+
+}
+.notice-top0,
+.notice-top2 {
+  top: 20%;
+}
+.notice-top1,
+.notice-top3 {
+  top: 30%;
+}
+.notice-move {
+  animation: noticemove 54s linear infinite;
+}
+
+.move1,
+.move3 {
+ animation-delay: 1s;
+}
+
+.notice-move:hover {
+  animation-play-state: paused;child-nav
+}
+.notice-ct{
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 3px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.icon-notice {
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+}
+.icon-notice0,
+.icon-notice1,
+.icon-notice2,
+.icon-notice3 {
+  background: url(../images/notice.gif) center center no-repeat;
+  background-size: contain;
+}
+.notice .weather {
+  height: 38px;
+  width: 38px;
+  background: url(../images/notice3.gif) center center no-repeat;
+  background-size: contain;
+}
+
+@keyframes noticemove {
+  0
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  0.1% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  38% {
+    transform: translateX(-1350px);
+    opacity: 0.3;
+  }
+  39.99% {
+    transform: translateX(-1400px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+
+}
+
+/*layer-monster*/
+.layer-monster>div {
+  position: absolute;
+  bottom: -100px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #303052;
+  z-index: 6;
+}
+.layer-monster .monster-gate{
+   left:30px;
+}
+.layer-monster .monster-talk{
+  left: 230px;
+}
+
+.monster-gate img  {
+  height: 80px;
+  margin-top: -20px;
+  margin-left: 45px;
+}
+.monster-talk img {
+  height: 80px;
+  margin-top: -20px;
+  margin-left: 30px;
+}
+
+/*layer-nav*/
+.layer-nav-wrap {
+  position: relative;
+  margin-top: 40px;
+  margin-right: 80px;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.layer-nav a {
+  display: block;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+.layer-nav a:hover {
+  font-weight: bolder;
+}
+.layer-nav .parent-link .dropdown{
+  display: none;
+}
+.layer-nav .parent-link:hover .dropdown {
+  display: block;
+}
+.layer-nav {
+ float: right;
+ border: 1px solid #fff;
+ border-radius: 8px;
+ text-align: center;
+}
+.layer-nav>li {
+ position: relative;
+ float:left;
+ width: 100px;
+ height: 36px;
+ line-height: 36px;
+ border-right: 1px solid #fff;
+}
+.layer-nav>li:last-child {
+ border-right: 0;
+}
+.layer-nav .dropdown {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding-top: 18px;
+}
+.layer-nav .child-nav{
+ border: 1px solid #fff;
+ border-radius: 6px;
+}
+.layer-nav .child-nav.hidden {
+  display: none;
+}
+.layer-nav .child-nav li {
+  border-bottom: 1px solid #fff;
+}
+.layer-nav .child-nav li:last-child {
+  border-bottom: 0;
+}
+.layer-nav .parent-link:after {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  border: 5px solid transparent;
+  border-top: 5px solid #fff;
+}
+.layer-nav .userinfo .user {
+  position: relative;
+  height:50px;
+}
+.layer-nav .userinfo .user .small {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+}
+.layer-nav .userinfo .user:hover .small {
+  opacity: 0;
+}
+.layer-nav .userinfo .user span {
+  display: block;
+  height: 40px;
+  width: 40px;
+  transform: translateY(5px);
+  margin: auto;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  color: transparent;
+}
+
+.layer-nav .userinfo .user:hover span {
+  color: #fff;
+  background: #371c4d;
+}
