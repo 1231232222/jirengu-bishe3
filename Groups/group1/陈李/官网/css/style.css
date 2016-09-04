@@ -17,7 +17,7 @@ a {
 	color: #fff;
 }
 .layout  {
-	max-width: 1460px;
+	max-width: 1008px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -312,13 +312,13 @@ header {
 }
 #carousel h2 {
 	font-size: 32px;
-	padding-top: 40px;
-	padding-bottom: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 .mod-carousel li a {
 	display: block;
-	width: 450px;
-	height: 450px;
+	width: 300px;
+	height: 300px;
 	padding: 20px;
 	text-align: right;
 	background-size: cover;
@@ -346,28 +346,28 @@ header {
 }
 .mod-carousel h3 {
 	font-size: 30px;
-	padding-top: 30px;
-	padding-bottom: 20px;
+	padding-top: 15px;
+	padding-bottom: 10px;
 }
 .mod-carousel p {
 	font-size: 20px;
-	padding-bottom: 30px;
+	padding-bottom: 20px;
 }
 .mod-carousel span {
 	display: block;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	font-size: 20px;
 }
 .mod-carousel .tri {
 	position: absolute;
 }
 .mod-carousel .tri-left {
-	top: 46%;
+	top: 200px;
 	right: -22px;
 }
 .mod-carousel .tri-right {
-	top: 46%;
+	top: 200px;
 	left: -22px;
 }
 .tri-left.active {
@@ -430,7 +430,7 @@ header {
 }
 .mod-tree img {
 	position: absolute;
-	width: 55;
+	width: 55px;
 	height: 45px;
 }
 .mod-tree h3 {
