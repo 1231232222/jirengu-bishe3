@@ -5,7 +5,6 @@ function Carousel($node){
     this.itemCount = this.item.length;
     this.pre = $node.find('.tri-right');
     this.next = $node.find('.tri-left');
-    this.Title = $('.notice-title');
 
     this.imgCt.css({
         width: this.itemCount* this.itemWidth
@@ -26,20 +25,10 @@ Carousel.prototype = {
         _this.next.on('click',function(){
             _this.doNext()
         });
-        _this.Title.find('li').on('mouseenter',function(){
-            var idx = $(this).index();
-            if(idx<_this.curIdx){
-                _this.doPre(_this.curIdx- idx)
-            }
-            else{
-                _this.doNext(idx- _this.curIdx)
-            }
-        })
     },
 
-    doPre: function(idx){
+    doPre: function(){
         var _this = this;
-        idx = idx || 1;
         if(this.curIdx === 0){
             _this.pre.addClass('active');
             return
@@ -48,18 +37,16 @@ Carousel.prototype = {
             _this.isAnimate = true;
             _this.doScaleLeft();
             _this.imgCt.animate({
-                left: '+=' + _this.itemWidth* idx
+                left: '+=' + _this.itemWidth
             },function(){
-                _this.curIdx = (_this.itemCount+ _this.curIdx- idx)% _this.itemCount;
-                _this.setTitle();
+                _this.curIdx = (_this.itemCount+ _this.curIdx- 1)% _this.itemCount;
                 _this.isAnimate = false
             })
         }
     },
 
-    doNext: function(idx){
+    doNext: function(){
         var _this = this;
-        idx = idx || 1;
         if(this.curIdx === 3){
             _this.next.addClass('active');
             return
@@ -68,10 +55,9 @@ Carousel.prototype = {
             _this.isAnimate = true;
             _this.doScaleRight();
             _this.imgCt.animate({
-                left: '-=' + _this.itemWidth* idx
+                left: '-=' + _this.itemWidth
             },function(){
-                _this.curIdx = (_this.curIdx+ idx)% _this.itemCount;
-                _this.setTitle();
+                _this.curIdx = (_this.curIdx+ 1)% _this.itemCount;
                 _this.isAnimate = false
             })
         }
@@ -85,11 +71,7 @@ Carousel.prototype = {
     doScaleLeft: function(){
         this.item.removeClass('active').eq(this.curIdx).addClass('active');
         this.next.removeClass('active')
-    },
-
-    setTitle: function(){
-        this.Title.children().removeClass('hover').eq(this.curIdx).addClass('hover')
-   }
+    }
 };
 
 module.exports = Carousel;

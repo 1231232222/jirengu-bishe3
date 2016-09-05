@@ -1,15 +1,29 @@
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './entry.js',
+    entry: "./src/js/entry.js",
     output: {
-        path: __dirname,
-        filename: 'bundle.js'
+        path: 'dist/js',
+        filename: "merge.js"
     },
-    module: {
-        loaders: [
-            {test: /\.css$/, loader: 'style!css'},
-            { test: /\.(png|gif)$/, loader: "file-loader?name=img/[hash:8].[name].[ext]" }
-        ]
-    }
-}
+    resolve: {
+        aligns: {
+            jquery: './node_modules/jquery/dist/jquery.min.js'
+        }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+            },
+            output: {
+                comments: false,
+            },
+        }),
+    ]
+};

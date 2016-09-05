@@ -316,7 +316,7 @@ header {
 .mod-carousel li a {
 	display: block;
 	width: 300px;
-	height: 300px;
+	height: 350px;
 	padding: 20px;
 	text-align: right;
 	background-size: cover;
@@ -343,19 +343,19 @@ header {
 	border: none;
 }
 .mod-carousel h3 {
-	font-size: 30px;
+	font-size: 20px;
 	padding-top: 15px;
 	padding-bottom: 10px;
 }
 .mod-carousel p {
-	font-size: 20px;
+	font-size: 15px;
 	padding-bottom: 20px;
 }
 .mod-carousel span {
 	display: block;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	font-size: 20px;
+	font-size: 15px;
 }
 .mod-carousel .tri {
 	position: absolute;
