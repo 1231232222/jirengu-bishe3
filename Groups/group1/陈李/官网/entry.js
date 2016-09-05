@@ -27,3 +27,8 @@ new TinyShake($layer);
 
 var $tree = $('#tree');
 new TinyShake($tree);
+
+// css
+require('./css/style.css');
+
+
