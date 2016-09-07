@@ -1,0 +1,26 @@
+{
+  "name": "jriengu",
+  "version": "1.0.0",
+  "description": "webpack gulp",
+  "main": "src/js/entry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chenli",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.21.0",
+    "file-loader": "^0.9.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^1.2.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.4.2",
+    "jquery": "^3.1.0",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2"
+  }
+}
