@@ -57,7 +57,7 @@
   padding: 30px 26px;
   border: 1px solid #ccc;
   background-color: #fff;
-  transition: 0.3s;
+  transition: 0.3s transform;
 }
 .mod-carousel .pannel.scale {
   transform: scale(1.2,1.2);

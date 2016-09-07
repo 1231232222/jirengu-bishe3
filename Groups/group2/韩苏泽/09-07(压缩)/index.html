@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>饥人谷-最有爱的前端学习网站</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/msginfo.css">
   </head>
   <body>
   <div id="header">
@@ -287,7 +289,7 @@
             </li>
             <li class="form-bottom clearfix">
               <div class="submit-btn"><input type="submit" class="btn submit"  value="登陆"></div>
-              <div class="remember"><input type="checkbox" name="login-remember"><span>记住我</span></div>
+              <div class="remember"><input id = "rememberBtn"type="checkbox" name="login-remember"><label for="rememberBtn">记住我</label></div>
             </li>
           </ul>
         </form>
@@ -323,6 +325,6 @@
       </div>
     </div>
   </div>
-   <script data-main="js/main.js" src="js/lib/require.js"></script>
+   <script data-main="js/app/main.js" src="js/lib/require.js"></script>
   </body>
 </html>

@@ -9,7 +9,7 @@ function($, utils) {
     this.$container = $container;
     this.messagegQueue = [];
     this.maxLen = 4; //我们只提供4种类型monster样式 [.icon-notice0,1,2,3,] 和 [.notice-top0,1,2,3]
-    this.hasExecuteInit = false;
+    this.clock = null;
   };
 
   FlyMonsterFn.prototype.add = function(msg){
@@ -40,16 +40,17 @@ function($, utils) {
   };
 
   FlyMonsterFn.prototype.startFly = function(){
-    var clock,
-        idx = 0,
-        _self = this;
+    var _self = this;
 
-    this.append(idx, this.messagegQueue[idx++]);
-    clock = setInterval(function(){
-      if(idx < _self.messagegQueue.length) {
-        _self.append(idx, _self.messagegQueue[idx++]);
+    if (this.clock) {  // 如果存在clock,说明有定时加入页面
+      return;
+    }
+    this.append(idx, this.messagegQueue.shift());
+    this.clock = setInterval(function(){
+      if ( _self.messagegQueue.length > 0 ) {
+        _self.append(idx, this.messagegQueue.shift());
       } else {
-        clearInterval(clock);
+        clearInterval(_self.clock);
       }
 
     }, 6000);   //  css的 延时时间 / 这个时间 一定要是基数倍 因为我设置了2层 这样就不会撞车...
@@ -57,10 +58,7 @@ function($, utils) {
 
 
   FlyMonsterFn.prototype.init = function() {
-    if(!this.hasExecuteInit) {
-      this.hasExecuteInit = true;
       this.startFly();
-    }
   };
 
   return {
