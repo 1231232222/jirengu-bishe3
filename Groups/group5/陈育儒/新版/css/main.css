@@ -11,7 +11,7 @@ body {
 	height: 100%;
 	position: relative;
 	overflow: hidden;
-	background:  radial-gradient(rgb(70,70,80), rgb(47, 47, 82) 95%);
+	background:  radial-gradient(rgb(70,70,90), rgb(47, 47, 82) 95%);
 }
 .header > .nav {
 	position: relative;
@@ -27,12 +27,55 @@ body {
 }
 .header .nav > li {
 	float: left;
+	position: relative;
+	width: 90px;
 	border-right: 1px solid #fff;
 }
 .header .nav a {
 	display: block;
-	padding: 0 20px;
 	color: #fff;
+	text-align: center;
+}
+.header .nav .inner {
+	display: none;
+	position: absolute;
+	top: 100%;
+	padding-top: 10px;
+}
+.header .nav > li:hover {
+	background-color: #ddd;
+}
+.header .nav > li:hover .inner{
+	display: block;
+}
+.header .nav  a:hover {
+	background-color: #ddd;
+	color: #333;
+}
+.header .nav .item-list {
+	border: 1px solid #fff;
+	border-radius: 6px;
+}
+.header .nav .inner a {
+	display: block;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #fff;
+	text-align: center;
+}
+.header .nav .i-arrow {
+	display: inline-block;	
+	vertical-align: middle;
+	margin: 0 5px;
+	border-width: 8px 8px 0px 8px;
+	border-style: solid ;
+	border-color: #fff transparent transparent transparent;
+	transition: all 0.3s;
+}
+.header .nav > li:hover .i-arrow {
+	transform: rotate(180deg);
+	transition: all 0.3s;
 }
 .header .background-layer {
 	position: absolute;
@@ -45,30 +88,33 @@ body {
 }
 .header .mountain-list > .moun-1 {
 	position: absolute;
-	z-index: 4;
+	z-index: 3;
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	background: url(../img/moun-1.png) bottom left no-repeat;
+	height: 300px;
+	background: url(../img/mountain-1.png) right bottom  no-repeat;
+	background-size: 130% 100%
 }
 .header .mountain-list > .moun-2 {
 	position: absolute;
-	z-index: 5;
-	top: 0;
+	z-index: 2;
+	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	background:  url(../img/moun-2.png)  right bottom no-repeat;
+	height: 350px;
+	background:  url(../img/mountain-2.png)  right bottom no-repeat;
+	background-size: 100% 350px;
 }
 .header .mountain-list > .moun-3 {
 	position: absolute;
-	z-index: 3;
-	top: 0;
+	z-index: 1;
+	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	background: url(../img/moun-3.png) 60px bottom  no-repeat;
+	height: 400px;
+	background: url(../img/mountain-3.png) bottom left no-repeat;
+	background-size: 100% 100%;
 }
 .header .sky-list {
 
@@ -76,7 +122,7 @@ body {
 .header .sky-list .sky-1,
 .header .sky-list .sky-2 {
 	position: absolute;
-	z-index: 1;
+	z-index: -1;
 	width: 100%;
 	height: 100%;
 	background: url(../img/starts-list.png) 0 80px no-repeat;
@@ -161,9 +207,6 @@ body {
 	top: 400px;
 	left: 930px;
 }
-.header .fly-star-ct  {
-
-}
 
 @keyframes fly-star {
 	0% { opacity:0.7}
@@ -197,6 +240,68 @@ body {
 	background:  url(../img/flystar.png) no-repeat 0 0;
 	background-size: contain;
 }
+@keyframes fly-notice {
+	0% {
+		left: 100%
+	}
+	100% {
+		left: -50%;
+	}
+}
+.header > .notice {
+	position: absolute;
+	top: 150px;
+	right: 330px;
+	width: 50px;
+	height: 50px;
+	z-index: 9;
+	background: url(../img/notice3.gif) no-repeat 0 0;
+	background-size: contain;
+	animation: fly-notice  48s  linear infinite ;
+}
+.header > .notice .tip {
+	display: none;
+	position: absolute;
+	top: -100%;
+	width: 300px;
+	padding: 10px;
+	margin-left: -135px;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	color: #fff;
+	background: rgb(48,48,82);
+}
+.header > .notice .tip:before {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 5px solid #fff;
+	border-width: 10px;
+	border-style: solid;
+	border-color: #fff transparent transparent  transparent;
+}
+.header > .notice .tip:after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-top: -2px;
+	transform: translateX(-50%);
+	border-width: 10px;
+	border-style: solid;
+	border-color: rgb(48,48,82) transparent transparent  transparent;
+}
+.header > .notice:hover {
+	animation-play-state:paused;
+}
+.header > .notice:hover .tip {
+	display: block;
+}
+
+/* header 结束 */
+
 .main {
 	background: rgb(48,48,82);
 }
@@ -235,13 +340,20 @@ body {
 	text-align: right;
 	border: 1px solid rgb(48,48,82);
 }
-.free-course .slider > li > a {
+.free-course li > a {
 	display: block;
 	box-sizing: border-box;
 	height: 100%;
 	padding: 20px;
 	color: #fff;
+	border: 5px solid rgb(48,48,82);
 	background-color: rgb(48,48,82);
+	transition: background-color 0.3s;
+}
+.free-course li > a:hover {
+	background-color: #fff;
+	transition: all 0.3s;
+	color: rgb(48,48,82);
 }
 .free-course .slider h4 {
 	margin-top: 60px;
@@ -270,7 +382,7 @@ body {
 .free-course .slider-page .btn-next {
 	position: absolute;
 	top: 50%;
-	font-size: 44px;
+	font: 700 48px consolas;
 	padding: 100px 0;
 	margin-top: -122px;
 	cursor: pointer;
@@ -307,130 +419,107 @@ body {
 	margin-bottom: 70px;
 	color: #fff;
 }
-/* 翻转效果 start */
-
-.fliper-wrap {
-	perspective: 1000px;
-}
-.fliper-wrap .fliper{
+.snow-tree {
 	position: relative;
-	transform-style: preserve-3d;
-	transition: 1s;
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	background: url(../img/snow-tree.png) no-repeat 0 0;
+	background-size: contain;
 }
-.fliper-wrap:hover .fliper {
-	transition: 1s;
-	transform: rotateY(180deg);
+.snow-tree .monster-list {
+
+}
+.snow-tree .monster-list img {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+}
+.snow-tree .monster-list .i-mon1 {
+	top: 75px;
+	left: 320px;
+}
+.snow-tree .monster-list .i-mon2 {
+	height: 43px;
+	top: 125px;
+	left: 190px;
+}
+.snow-tree .monster-list .i-mon3 {
+	top: 245px;
+	left: 360px;
+}
+.snow-tree .monster-list .i-mon4 {
+	top: 310px;
+	left: 160px;
+}
+.snow-tree .introduct-info > li {
+	position: absolute;
+}
+.snow-tree .text-align-right {
+	text-align: right;
 }
 
-.fliper-wrap .front,.fliper-wrap .back {
-	backface-visibility: hidden;
+.snow-tree .introduct-info h4 {
+	margin-bottom: 10px;
+	font-size: 22px;
+
+	color: #fff;
+	font-weight: normal;
+}
+.snow-tree .introduct-info .info-1 {
+	top: 30px;
+	left: 390px;
+	width: 250px;
+}
+.snow-tree .introduct-info .info-2 {
+	top: 90px;
+	left: -90px;
+	width: 250px;
+}
+.snow-tree .introduct-info .info-3 {
+	top: 230px;
+	left: 430px;
+	width: 250px;
+}
+.snow-tree .introduct-info .info-4 {
+	top: 280px;
+	left: -120px;
+	width: 250px;
+}
+
+.snow-tree .introduct-info p {
+	font-size: 14px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	color: #fff;
+}
+.introduct-wrap .background-layer {
+	position: absolute;
+	z-index: -1;
+	bottom: 0px;
+	left: 0;
+	width: 100%;
+	height: 600px;
+	background: url(../img/tree-mountain.png) no-repeat 0 bottom;
+	background-size: contain;
+}
+.introduct-wrap .mountain {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/tree-mountain-2.png) no-repeat 0 bottom;
+}
+.introduct-wrap .tree-stars {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	top: 0;
-	left: 0;
+	background: url(../img/tree-stars.png) no-repeat 0 -110px;
+	background-size: contain;
 }
-
-.fliper-wrap .front {
-	z-index: 1;
-}
-.fliper-wrap .back {
-	transform: rotateY(180deg);
-}
-/* 翻转效果 end */
-
-.introduct-wrap .wrap {
-	float: left;
-	width: 33.3%;
-	box-sizing: border-box;
-	padding:0 30px;
-}
-.introduct-wrap h4 {
-	padding: 15px 0;
-	text-align: center;
-	font-size: 24px;
-}
-.introduct-wrap .content {
-	background: linear-gradient(to bottom right,#fff,#83848a);
-	box-shadow: 0 0 5px 0 #ccc;
-}
-.introduct-wrap .fliper .back{
-	background: linear-gradient(to top left,#fff,#83848a);
-}
-.introduct-wrap .introduct-list {
-	width: 960px;
-	margin: 0 auto;
-}
-.introduct-wrap .introduct-list dt {
-	color: #fff;
-	text-align: center;
-	font-size: 24px;
-	margin-bottom: 20px;
-}
-.introduct-wrap .tutor-list .content {
-	height: 180px;
-	font-size: 14px;
-	line-height: 1.5;
-	text-align: center;
-	margin-bottom: 30px;
-	padding-bottom: 50px;
-	color: #333;
-}
-.introduct-wrap .tutor-list .tutor-img {
-	display: block;
-	width: 110px;
-	height: 110px;
-	margin: 10px auto;
-	border-radius: 55px;
-}
-
-.tutor-detail ul {
-	padding-left: 10px;
-	padding-bottom: 10px;
-	font-size: 20px;
-	line-height: 1.5;
-	text-align: left;
-}
-.tutor-detail .btn-course {
-	display: block;
-	width: 70px;
-	height: 24px;
-	line-height:24px;
-	margin: 0 auto;
-	border: 1px solid #333;
-	border-radius: 3px;
-
-	background: rgb(48,48,90);
-	color: #fff;
-}
-.tutor-detail ul > li:before{
-	content:'';
-	display: inline-block;
-	vertical-align: middle;
-	margin-top: -2px;
-	margin-right: 20px;
-	width: 6px;
-	height: 6px;
-	border-radius: 3px;
-	background: #333;
-}
-
-.teach-list {
-	padding-bottom: 50px;
-	font-size: 14px;
-	color: #000;
-}
-.teach-list .content {
-	padding: 5px 20px 15px 20px;
-	line-height: 1.5;
-}
-.teach-list .wrap:hover {
-	transition-property: width height;
-	transition-duration:  0.3s;
-	transform: scale(1.1);
-}
-
-	/* 饥人谷介绍内容 end */
+/* 饥人谷介绍内容 end */
 .journal {
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -495,12 +584,11 @@ body {
 .near-course .slider-page .btn-prev,
 .near-course .slider-page .btn-next {
 	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	font-size: 52px;
-	font-weight: 700;
+	top: 0;
 	padding: 100px 0;
 	color: #fff;
+	margin-top: 45px;
+	font: 700 90px consolas;
 }
 .near-course .slider-page .btn-prev {
 	left: 10px;
