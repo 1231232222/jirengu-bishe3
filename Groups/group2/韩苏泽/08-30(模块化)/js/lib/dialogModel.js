@@ -1,4 +1,4 @@
-define(['jquery', 'utils', 'mock', 'app/validataFn', 'msginfo'], function($, utils, mock, validataFn, msg) {
+define(['jquery', 'utils', 'mock', 'app/validataFn', 'msgInfo'], function($, utils, mock, validataFn, msg) {
   // dialogModel 窗口的模板方法
   var dialogModel = (function() {
     var DialogModelFn = function() {};
