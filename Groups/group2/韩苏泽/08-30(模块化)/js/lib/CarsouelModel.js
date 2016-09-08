@@ -3,11 +3,12 @@ define(['jquery', 'utils', 'CarsouelFactory'],
 function($, utils, CarsouelFactory) {
 
 
+
   // 两行模型
   var TwoColState = function(carsouel) {
     this.carsouel = carsouel;
     this.maxWidth = 768;
-    this.minWidth = 100;
+    this.minWidth = 320;
     this.col = 2;
   }
   TwoColState.prototype.initState = function() {
@@ -16,7 +17,7 @@ function($, utils, CarsouelFactory) {
         $content = $('#content'),
         screenWidth,
         containerLeft;
-
+    console.log($content.width(), this.maxWidth, screenWidth);
     screenWidth = Math.min($content.width(), this.maxWidth);
     screenWidth = Math.max(screenWidth, this.minWidth);
     carsouel.width = screenWidth / this.col;
@@ -29,7 +30,6 @@ function($, utils, CarsouelFactory) {
     carsouel.$container.css('left', containerLeft);
     carsouel.$lists.css('width', carsouel.width);
     carsouel.$lists.css('height', carsouel.width);
-
 
     // 两行不需要缩放
     carsouel.$lists.removeClass('scale');

@@ -2,7 +2,6 @@
 // @method add  将飞翔的monster的格式消息加入messagegQueue队列中
 // @method init 开始执行
 // @startFly 依次取出messagegQueue中的消息,使用append方法加入界面，动画效果是由css部分实现
-//
 define(['jquery', 'utils'],
 function($, utils) {
   var FlyMonsterFn = function($container) {
@@ -10,13 +9,14 @@ function($, utils) {
     this.messagegQueue = [];
     this.maxLen = 4; //我们只提供4种类型monster样式 [.icon-notice0,1,2,3,] 和 [.notice-top0,1,2,3]
     this.clock = null;
+    this.num = 0;
   };
 
   FlyMonsterFn.prototype.add = function(msg){
     this.messagegQueue.push(msg);
   };
 
-  FlyMonsterFn.prototype.append = function(idx, msg) {
+  FlyMonsterFn.prototype.append = function(msg) {
     var html ='',
     $node,
     $notice,
@@ -28,7 +28,7 @@ function($, utils) {
     html += '</div>';
     $node = $(html);
     $node.find('.notice-ct').text(msg.data).attr('title', msg.data);
-    noticeIdx = idx % this.maxLen;
+    noticeIdx = this.num++ % this.maxLen;
     $node.find('.icon-notice').addClass('icon-notice' + noticeIdx);
     if (msg.type === 'weather') {
       $node.find('.icon-notice').addClass('weather');
@@ -42,13 +42,13 @@ function($, utils) {
   FlyMonsterFn.prototype.startFly = function(){
     var _self = this;
 
-    if (this.clock) {  // 如果存在clock,说明有定时加入页面
+    if (this.clock) {  // 如果存在clock,说明有定时器执行加入元素
       return;
     }
-    this.append(idx, this.messagegQueue.shift());
+    this.append(this.messagegQueue.shift());
     this.clock = setInterval(function(){
       if ( _self.messagegQueue.length > 0 ) {
-        _self.append(idx, this.messagegQueue.shift());
+        _self.append(_self.messagegQueue.shift());
       } else {
         clearInterval(_self.clock);
       }
