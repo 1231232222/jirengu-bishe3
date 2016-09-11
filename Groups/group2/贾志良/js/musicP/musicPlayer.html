@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>material design</title>
+	<style>
+		body,div,p,ul,li{
+			margin: 0;
+			padding:0;
+			font-family: Freesia,"微软雅黑";
+		}
+		@font-face{
+			font-family: Freesia;
+			src:url('css/Freesia.otf');
+		}
+		html{
+			height:100%;
+		}
+		body{
+			background:linear-gradient(to top right,#fff,#f2572d);
+			height:100%;
+		}
+		span.iconfont{
+			font-size: 40px;
+			color: #555;
+		}
+		div.container{
+			width:830px;
+			height:500px;
+			position: absolute;
+			top:50%;
+			left:50%;
+			transform: translate(-50%,-50%);
+			box-shadow: 1px 1px 80px #777;
+			overflow: hidden;
+			
+		}
+		div.weather{
+			width:556px;
+			height:100%;
+			background: #f6ffe3;
+			padding: 50px;
+			box-sizing: border-box;
+			position: relative;
+			transition: all .3s;
+			overflow: hidden;
+		}
+		div.lyricsZone{
+			left:-556px;
+			width:506px;
+			height: 100%;
+			top:0;
+			padding:50px;
+			padding-left: 100px;
+			position: absolute;
+			overflow: hidden;
+			box-sizing: border-box;
+			z-index: 1;
+			opacity: 0;
+		}
+
+	
+		div.lyricsZone p.lrcItem{
+			font-size: 18px;
+			color: #000;
+			text-shadow: 1px 1px 1px #444;
+			line-height: 3;
+			text-align: left;
+			opacity: 0.5;
+		}
+		div.lyricsZone p.lrcItem.nowLyric{
+			opacity: 1;
+		}
+		div.timeZone{
+			position: relative;
+		}
+		p.calender,p.month{
+			font-size: 40px;
+			color:#666;
+			margin-bottom: 10px;
+		}
+		p.location{
+			position: absolute;
+			top:0;
+			right: 0;
+			font-size: 35px;
+			line-height: 104px;
+			color:#444;
+		}
+		p.location span.font{
+			font-size: 50px;
+		}
+		p.today{
+			margin-top: 30px;
+			opacity: 0.6;
+			color:#f34c40;
+		}
+		p.today span.temp{
+			font-size: 100px;
+			font-weight: lighter;
+		}
+		p.today span.todayExpress{
+			font-size: 100px;
+			color:#f34c40;
+			margin-left: 50px;
+
+		}
+		ul.clearfix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		div.forecast{
+			margin-top: 30px;
+			color:#777;
+		}
+		div.forecast p.weekday{
+			margin-bottom: 15px;
+			font-size:13px;
+		}
+		ul.forecast>li{
+			float:left;
+			width:114px;
+			list-style-type: none;
+			text-align: center;
+		}
+		ul.forecast span.iconfont{
+			font-size: 25px;
+		}
+		div.forecast p.temp{
+			margin-top: 15px;
+			font-size: 13px;
+		}
+		div.musicCon{
+			position: absolute;
+			top:0;
+			right:0;
+			width:274px;
+			height:100%;
+			overflow: hidden;
+		}
+		div.music{
+			width:100%;
+			height:100%;
+			position: absolute;
+			transform: scale(1.1);
+			top:0;
+			right: 0;
+			background: url(./img/22.gif) -550px no-repeat;
+			background-size: cover;
+		}
+		div.musicCon div.operate{
+			position: absolute;
+			top:0;
+			right:0;
+			width:100%;
+			height:100%;
+			background: rgba(0,0,0,0.5);
+			padding:20px;
+			box-sizing: border-box;
+
+		}
+		div.operate span.playNext,div.operate span.pause{
+			font-size: 40px;
+			color:#fff;
+			position: absolute;
+			top:60%;
+		}
+		div.operate p{
+			font-size: 40px;
+			color:#fff;
+		}
+		div.operate p.songName{
+			margin:50px 0 10px 0;
+			width:100%;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		div.operate p.singerName{
+			opacity: 0.8;
+			font-size: 25px;
+			margin-left: 5px;
+		}
+		div.operate span.iconfont.pause{
+			left:50%;
+			transform: translate(-50%,-50%);
+		}
+		div.operate span.iconfont.playNext{
+			transform: translateY(-50%);
+			left:65%;
+			font-size: 35px;
+		}
+		a.more{
+			display: inline-block;
+			width:50px;
+			line-height: 50px;
+			position: absolute;
+			bottom: -50px;
+			text-decoration: none;
+		}
+		a.more span.font{
+			color:#fff;
+		}
+	</style>
+	<link rel="stylesheet" href="css/icon/iconfont.css">
+</head>
+<body>
+	<div class="container">
+		<div class="lyricsZone">
+		
+		</div>
+		<div class="weather">
+	
+			<div class="timeZone">
+				<div class="time">
+					<p class="calender">N/A</p>
+					<p class="month">N/A</p>
+					<p class="location">
+						<span class="font iconfont">&#xe64f</span>
+						<span class="city">
+							N/A
+						</span>
+						
+					</p>
+
+				</div>
+			</div>
+			<p class="today">
+				<span class="temp">
+					N/A
+				</span>
+				<span class="font iconfont todayExpress">
+					N/A
+				</span>
+			</p>
+			<div class="forecast">
+				<ul class="forecast clearfix">
+					<li>
+						<p class="weekday">N/A</p>
+						<span class="font iconfont location">
+						N/A
+						</span>
+						<p class="temp">N/A</p>
+					</li>
+					<li>
+						<p class="weekday">N/A</p>
+						<span class="font iconfont">N/A</span>
+						<p class="temp">N/A</p>
+					</li>
+					<li>
+						<p class="weekday">N/A</p>
+						<span class="font iconfont">N/A</span>
+						<p class="temp">N/A</p>
+					</li>
+					<li>
+						<p class="weekday">N/A</p>
+						<span class="font iconfont">N/A</span>
+						<p class="temp">N/A</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="musicCon">
+			<div class="music moveBox">
+				
+			</div>
+			<div class="operate">
+					<p class="songName">
+						N/A
+					</p>
+					<p class="singerName">
+						N/A	
+					</p>
+					<a href="#">
+						<span class="font iconfont pause">
+							&#xe606
+						</span>
+					</a>
+					<a href="#">
+						<span class="font iconfont playNext">
+							&#xe639
+						</span>
+					</a>
+					<a href="#" class="more">
+						<span class="font iconfont">
+							&#xe60b
+						</span>
+					</a>
+			</div>
+		</div>
+
+	</div>
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+	<script src="js/music.js"></script>
+</body>
+</html
